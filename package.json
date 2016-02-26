@@ -6,7 +6,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "start-proxy": "ember server --proxy http://localhost:8000"
+    "start-proxy": "ember server --proxy http://localhost:8000",
+    "test": "ember test"
   },
   "repository": {
     "type": "git",
