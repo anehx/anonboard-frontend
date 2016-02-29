@@ -11,14 +11,15 @@ module.exports = function(defaults) {
       optional: [ 'es7.decorators', 'es7.asyncFunctions' ],
     },
     sassOptions: {
-      extension: 'sass'
+      extension: 'sass',
+      includePaths: [ 'bower_components/Bootflat/bootflat/scss' ]
     },
     'ember-cli-qunit': {
       useLintTree: false
     }
   })
 
-  app.import('bower_components/fingerprintjs2/fingerprint2.js')
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css')
 
   return app.toTree()
 }

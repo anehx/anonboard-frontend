@@ -6,5 +6,6 @@ export default Route.extend({
     this._super(...arguments)
 
     controller.set('navigation', injectService())
+    controller.get('navigation').load()
   }
 })
