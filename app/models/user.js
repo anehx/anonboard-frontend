@@ -1,6 +1,24 @@
 import Model from 'ember-data/model'
 import attr  from 'ember-data/attr'
 
+/**
+ * The user model
+ *
+ * @class User
+ * @extends Ember.Model
+ * @public
+ */
 export default Model.extend({
-  fingerprint: attr('string')
+
+  /**
+   * The identifier of the user
+   *
+   * This is a generated sha256 hash
+   * of the users IP and UserAgent
+   *
+   * @property {string} identifier
+   * @public
+   */
+  identifier: attr('string')
+
 })

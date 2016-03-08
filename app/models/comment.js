@@ -5,9 +5,45 @@ import {
   belongsTo
 } from 'ember-data/relationships'
 
+/**
+ * The comment model
+ *
+ * @class Comment
+ * @extends Ember.Model
+ * @public
+ */
 export default Model.extend({
-  user:     belongsTo('user'),
-  thread:   belongsTo('thread'),
-  content:  attr('string'),
-  created:  attr('moment')
+
+  /**
+   * The user who created the thread
+   *
+   * @property {User} user
+   * @public
+   */
+  user: belongsTo('user'),
+
+  /**
+   * The thread of the comment
+   *
+   * @property {Thread} user
+   * @public
+   */
+  thread: belongsTo('thread'),
+
+  /**
+   * The content of the comment
+   *
+   * @property {string} content
+   * @public
+   */
+  content: attr('string'),
+
+  /**
+   * The datetime when the comment was created
+   *
+   * @property {moment} created
+   * @public
+   */
+  created: attr('moment')
+
 })

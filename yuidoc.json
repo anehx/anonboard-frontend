@@ -1,0 +1,34 @@
+{
+  "name": "anonboard",
+  "description": "The Ember.js frontend for AnonBoard",
+  "version": "0.0.0",
+  "options": {
+    "paths": [
+      "app"
+    ],
+    "helpers": [
+      "node_modules/yuidoc-lucid-theme/helpers/helpers.js"
+    ],
+    "themedir": "node_modules/yuidoc-lucid-theme",
+    "exclude": "vendor",
+    "outdir": "docs",
+    "yuidoc": {
+      "linkNatives": true,
+      "quiet": true,
+      "parseOnly": false,
+      "lint": false
+    },
+    "external": {
+      "data": [
+        {
+          "base": "http://emberjs.com/api/",
+          "json": "http://builds.emberjs.com/tags/v2.4.1/ember-docs.json"
+        },
+        {
+          "base": "http://emberjs.com/api/data/",
+          "json": "http://builds.emberjs.com/tags/v2.4.0/ember-data-docs.json"
+        }
+      ]
+    }
+  }
+}

@@ -5,9 +5,46 @@ import {
   hasMany
 } from 'ember-data/relationships'
 
+/**
+ * The topic model
+ *
+ * @class Topic
+ * @extends Ember.Model
+ * @public
+ */
 export default Model.extend({
-  name:        attr('string'),
-  identifier:  attr('string'),
+
+  /**
+   * The name of the topic
+   *
+   * @property {string} name
+   * @public
+   */
+  name: attr('string'),
+
+  /**
+   * The identifier of the topic
+   * (this is used in the url)
+   *
+   * @property {string} identifier
+   * @public
+   */
+  identifier: attr('string'),
+
+  /**
+   * The description of the topic
+   *
+   * @property {string} description
+   * @public
+   */
   description: attr('string'),
-  threads:     hasMany('thread')
+
+  /**
+   * The threads in the topic
+   *
+   * @property {Thread[]} threads
+   * @public
+   */
+  threads: hasMany('thread')
+
 })
