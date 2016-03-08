@@ -4,12 +4,9 @@
   "disable_watching": true,
   "launch_in_ci": [
     "PhantomJS",
-    "Firefox",
-    "Chromium"
+    "Firefox"
   ],
   "launch_in_dev": [
-    "PhantomJS",
-    "Firefox",
-    "Chromium"
+    "PhantomJS"
   ]
 }
