@@ -29,7 +29,7 @@ before_script:
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
     cd "$TRAVIS_BUILD_DIR"
-    npm run docs
+    npm run doc
     cd docs
     git init
     git checkout -b gh-pages
