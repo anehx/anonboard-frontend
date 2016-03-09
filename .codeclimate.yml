@@ -1,0 +1,19 @@
+engines:
+  duplication:
+    enabled: false
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.js"
+
+exclude_paths:
+- config/
+- dist/
+- node_modules/
+- bower_components/
+- tests/
+- vendor/
+- mirage/
