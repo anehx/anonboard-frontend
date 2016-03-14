@@ -9,12 +9,12 @@ import {
 /**
  * The thread model
  *
+ * @namespace models
  * @class Thread
- * @extends Ember.Model
+ * @extends DS.Model
  * @public
  */
 export default Model.extend({
-
   /**
    * The user who created the thread
    *
@@ -62,5 +62,4 @@ export default Model.extend({
    * @public
    */
   comments: hasMany('comment')
-
 })

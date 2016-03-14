@@ -22,7 +22,7 @@
       "data": [
         {
           "base": "http://emberjs.com/api/",
-          "json": "http://builds.emberjs.com/tags/v2.4.1/ember-docs.json"
+          "json": "http://builds.emberjs.com/tags/v2.4.2/ember-docs.json"
         },
         {
           "base": "http://emberjs.com/api/data/",

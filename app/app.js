@@ -1,13 +1,23 @@
+import RSVP             from 'rsvp'
 import Ember            from 'ember'
-import Resolver         from 'ember/resolver'
+import Application      from 'ember-application'
+import Resolver         from './resolver'
 import loadInitializers from 'ember-load-initializers'
 import config           from './config/environment'
 
-let App
+window.Promise = RSVP.Promise
 
 Ember.MODEL_FACTORY_INJECTIONS = true
 
-App = Ember.Application.extend({
+/**
+ * Anonboard frontend app
+ *
+ * @namespace application
+ * @class AnonboardApplication
+ * @extends Ember.Application
+ * @public
+ */
+const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
   Resolver

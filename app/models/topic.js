@@ -8,12 +8,12 @@ import {
 /**
  * The topic model
  *
+ * @namespace models
  * @class Topic
- * @extends Ember.Model
+ * @extends DS.Model
  * @public
  */
 export default Model.extend({
-
   /**
    * The name of the topic
    *
@@ -46,5 +46,4 @@ export default Model.extend({
    * @public
    */
   threads: hasMany('thread')
-
 })

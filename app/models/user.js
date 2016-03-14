@@ -4,12 +4,12 @@ import attr  from 'ember-data/attr'
 /**
  * The user model
  *
+ * @namespace models
  * @class User
- * @extends Ember.Model
+ * @extends DS.Model
  * @public
  */
 export default Model.extend({
-
   /**
    * The identifier of the user
    *
@@ -20,5 +20,4 @@ export default Model.extend({
    * @public
    */
   identifier: attr('string')
-
 })
