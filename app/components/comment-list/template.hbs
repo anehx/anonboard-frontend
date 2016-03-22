@@ -1,0 +1,14 @@
+<ul class="media-list">
+  {{#each comments as |comment|}}
+    <li class="media">{{comment.content}}</li>
+  {{/each}}
+</ul>
+
+<div class="row">
+  <div class="col-md-4 pull-right">
+    <form {{action 'add' on='submit'}}>
+      {{textarea value=comment class='form-control form-group'}}
+      <button type="submit" class="btn btn-primary pull-right">Add comment</button>
+    </form>
+  </div>
+</div>

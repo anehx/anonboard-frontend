@@ -11,6 +11,8 @@
     "moment-timezone": "^0.5.1",
     "pretender": "~0.12.0",
     "Bootflat": "^2.0.4",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "showdown": "^1.3.0",
+    "font-awesome": "~4.5.0"
   }
 }

@@ -11,6 +11,14 @@ import injectService from 'ember-service/inject'
  */
 export default Route.extend({
   /**
+   * Navigation service
+   *
+   * @property {NavigationService} navigation
+   * @public
+   */
+  navigation: injectService(),
+
+  /**
    * Setup controller hook
    *
    * @method setupController
@@ -23,6 +31,16 @@ export default Route.extend({
     this._super(...arguments)
 
     controller.set('navigation', injectService())
-    controller.get('navigation').load()
+  },
+
+  /**
+   * Before model hook, fetches navigation entries
+   *
+   * @method beforeModel
+   * @return {void}
+   * @public
+   */
+  beforeModel() {
+    this.get('navigation').load()
   }
 })

@@ -1,10 +1,3 @@
-<h2>{{model.name}}</h2>
-<em>{{model.description}}</em>
-
-<br>
-
-{{#each model.threads as |thread|}}
-  {{#link-to 'topic.thread' thread.id}}
-    {{moment-format thread.created 'DD.MM.YYYY HH:mm'}}: {{thread.title}}<br>
-  {{/link-to}}
-{{/each}}
+{{#liquid-bind model use='fade' as |topic|}}
+  {{thread-list threads=model pagination=true}}
+{{/liquid-bind}}

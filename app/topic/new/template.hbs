@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-6">
+    {{input type='text' class='form-control' value=model.title}}
+    {{textarea class='form-control' value=model.content}}
+  </div>
+  <div class="col-md-6">
+    Preview
+    <h3>{{model.title}}</h3>
+    {{markdown-to-html markdown=model.content}}
+  </div>
+</div>

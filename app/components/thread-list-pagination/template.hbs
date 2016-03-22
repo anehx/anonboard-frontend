@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-6">
+    <ul class="pagination">
+      <li>
+        {{#link-to 'topic' (query-params page=1) title='First page'}}
+          {{fa-icon 'angle-double-left'}}
+        {{/link-to}}
+      </li>
+      {{#each entries as |entry|}}
+        <li class="{{if entry.active 'active'}} {{if entry.disabled 'disabled'}}">
+          {{#link-to 'topic' (query-params page=entry.page) title=entry.title}}
+            {{#if entry.icon}}
+              {{fa-icon entry.icon}}
+            {{/if}}
+            {{entry.label}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+      <li>
+        {{#link-to 'topic' (query-params page=pagination.pages) title='Last page'}}
+          {{fa-icon 'angle-double-right'}}
+        {{/link-to}}
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-6">
+    <div class="per-page pull-right">
+      Display per page:
+      <div class="btn-group">
+      {{#link-to 'topic' (query-params page=pagination.page limit=1)   class='btn btn-default'}}10{{/link-to}}
+      {{#link-to 'topic' (query-params page=pagination.page limit=20)  class='btn btn-default'}}20{{/link-to}}
+      {{#link-to 'topic' (query-params page=pagination.page limit=50)  class='btn btn-default'}}50{{/link-to}}
+      {{#link-to 'topic' (query-params page=pagination.page limit=100) class='btn btn-default'}}100{{/link-to}}
+      </div>
+    </div>
+  </div>
+</div>

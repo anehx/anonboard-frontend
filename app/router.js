@@ -23,6 +23,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('topic', { path: '/t/:identifier' }, function() {
     this.route('thread', { path: '/:id' })
+    this.route('new')
   })
 })
 

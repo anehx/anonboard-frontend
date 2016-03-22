@@ -1,1 +1,10 @@
-{{outlet}}
+{{#liquid-bind model use='fade' as |topic|}}
+  <header class="page-header">
+    <h2>
+      {{topic.name}} <small>{{topic.description}}</small>
+      {{#link-to 'topic.new' tagName='button' class='btn btn-primary pull-right'}}Add thread{{/link-to}}
+    </h2>
+  </header>
+{{/liquid-bind}}
+
+{{liquid-outlet}}

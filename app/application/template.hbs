@@ -1,13 +1,7 @@
-<main class="row">
-  <nav class="col-md-2">
-    <ul class="nav nav-pills nav-stacked">
-      {{#each navigation.entries as |topic|}}
-      {{#active-link}}{{#link-to 'topic' topic.identifier}}{{topic.name}}{{/link-to}}{{/active-link}}
-      {{/each}}
-    </ul>
-  </nav>
-
-  <section class="col-md-10">
-  {{liquid-outlet}}
+<main>
+  {{top-navigation}}
+  <section class="container">
+    {{bread-crumbs}}
+    {{liquid-outlet}}
   </section>
 </main>
