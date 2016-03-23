@@ -1,6 +1,6 @@
 <ul class="media-list">
   {{#each comments as |comment|}}
-    <li class="media">{{comment.content}}</li>
+    {{comment-list-item comment=comment}}
   {{/each}}
 </ul>
 

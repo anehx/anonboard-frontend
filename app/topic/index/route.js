@@ -1,12 +1,36 @@
-import Route from 'ember-route'
+import Route                from 'ember-route'
+import PaginationRouteMixin from 'anonboard/mixins/pagination-route'
 
-export default Route.extend({
-  queryParams: {
-    limit: { refreshModel: true },
-    page:  { refreshModel: true },
-    sort:  { refreshModel: true }
-  },
+/**
+ * Topic index route
+ *
+ * @class TopicIndexRoute
+ * @namespace routes
+ * @extends Ember.Route
+ * @uses PaginationRouteMixin
+ * @public
+ */
+export default Route.extend(PaginationRouteMixin, {
+  /**
+   * The name of the model to fetch
+   *
+   * @property {String} modelName
+   * @default 'thread'
+   * @public
+   */
+  modelName: 'thread',
 
+  /**
+   * Model hook to fetch threads for a topic
+   *
+   * @method model
+   * @param {Object} params The query params
+   * @param {Number} params.limit How many vehicle-checks should be queried
+   * @param {Number} params.page  The page to fetch
+   * @param {String} params.sort  Sorting direction
+   * @return {Thread[]} A list of threads
+   * @public
+   */
   async model(params) {
     let { limit, page, sort } = params
 
@@ -16,12 +40,12 @@ export default Route.extend({
 
     let topic = await this.modelFor('topic')
 
-    return this.store.query('thread', {
+    return this.store.query(this.get('modelName'), {
       page,
       sort,
-      filter: { topic: topic.id },
-      include: 'user',
-      'page_size': limit
+      'page_size': limit,
+      'filter':    { topic: topic.get('id') },
+      'include':   'user'
     })
   }
 })

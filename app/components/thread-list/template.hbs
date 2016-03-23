@@ -1,19 +1,6 @@
 <ul class="media-list">
   {{#each threads as |thread|}}
-    {{#link-to 'topic.thread' thread.topic.identifier thread.id tagName='li' class='media media-hover'}}
-      <div class="media-body">
-        <h3 class="media-heading">
-          {{thread.title}}
-          {{#if showLabel}}
-            <span class="label label-primary pull-right">
-              {{thread.topic.name}}
-            </span>
-          {{/if}}
-        </h3>
-        <p>User: {{thread.user.identifier}}</p>
-        <p>Date: {{moment-format thread.created 'DD.MM.YYYY HH:mm'}}</p>
-      </div>
-    {{/link-to}}
+    {{thread-list-item thread=thread showTopicLabel=showTopicLabel}}
   {{/each}}
 </ul>
 

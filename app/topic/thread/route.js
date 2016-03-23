@@ -10,8 +10,14 @@ import injectService from 'ember-service/inject'
  * @public
  */
 export default Route.extend({
-
+  /**
+   * Notify service
+   *
+   * @property {EmberNotify.NotifyService} notify
+   * @public
+   */
   notify: injectService(),
+
   /**
    * The model hook to fetch the thread
    *
@@ -52,7 +58,7 @@ export default Route.extend({
      * Action to add a new comment
      *
      * @method addComment
-     * @param {string} content The comment content to add
+     * @param {String} content The comment content to add
      * @return {void}
      * @public
      */
@@ -64,6 +70,8 @@ export default Route.extend({
 
       try {
         await comment.save()
+
+        this.get('notify').success('Comment added')
       }
       catch (e) {
         this.get('notify').error(e)

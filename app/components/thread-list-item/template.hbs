@@ -1,1 +1,15 @@
-{{yield}}
+{{#link-to 'topic.thread' thread.topic.identifier thread.id tagName='li' class='media media-hover'}}
+  <h3 class="media-heading">
+    {{thread.title}}
+    <small>by {{thread.user.identifier}}</small>
+    {{#if showTopicLabel}}
+      <span class="label label-primary pull-right">
+        {{thread.topic.name}}
+      </span>
+    {{/if}}
+    <span class="label label-info pull-right">
+      {{moment-format thread.created 'DD.MM.YYYY HH:mm'}}
+    </span>
+  </h3>
+  {{truncate-multiline text=thread.content lines=2 showButton=false}}
+{{/link-to}}

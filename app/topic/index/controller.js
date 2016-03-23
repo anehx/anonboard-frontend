@@ -1,11 +1,22 @@
-import Controller from 'ember-controller'
+import Controller                from 'ember-controller'
+import PaginationControllerMixin from 'anonboard/mixins/pagination-controller'
 
-export default Controller.extend({
-  queryParams: [ 'page', 'limit', 'sort' ],
-
-  limit: 10,
-
-  sort: 'created',
-
-  page: 1
+/**
+ * Topic index controller
+ *
+ * @class TopicIndexController
+ * @namespace controllers
+ * @extends Ember.Controller
+ * @uses PaginationControllerMixin
+ * @public
+ */
+export default Controller.extend(PaginationControllerMixin, {
+  /**
+   * The default sorting order
+   *
+   * @property {String} sort
+   * @default '-created'
+   * @public
+   */
+  sort: '-created'
 })

@@ -1,4 +1,4 @@
 <h3>{{model.title}}</h3>
 {{markdown-to-html markdown=model.content}}
 
-{{thread-comments comments=model.comments on-add=(route-action 'addComment')}}
+{{comment-list comments=model.comments on-add=(route-action 'addComment')}}
