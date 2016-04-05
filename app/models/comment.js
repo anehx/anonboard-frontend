@@ -8,7 +8,6 @@ import {
 /**
  * The comment model
  *
- * @namespace models
  * @class Comment
  * @extends DS.Model
  * @public
@@ -33,7 +32,7 @@ export default Model.extend({
   /**
    * The content of the comment
    *
-   * @property {string} content
+   * @property {String} content
    * @public
    */
   content: attr('string'),

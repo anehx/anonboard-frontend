@@ -1,0 +1,73 @@
+:--component
+  position: fixed
+  top: 0
+  bottom: 0
+  width: $nav-side-width
+  left: -$nav-side-width
+  overflow: auto
+  z-index: 2
+  background-color: $mui-accent-color
+  transition: transform 0.2s
+  transform: translate(0px)
+
+  &.side-nav--visible
+    transform: translate($nav-side-width)
+
+  .side-nav-header
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    color: mui-color('white')
+    padding: 25px
+
+    img
+      max-width: 180px
+
+  .side-nav-divider
+    display: flex
+    height: 1px
+    margin: 5px 0
+    background-color: $mui-accent-color-light
+
+  .side-nav-list
+    padding: 10px 0 0
+    display: flex
+    flex-direction: column
+    margin: 0
+    list-style: none
+
+  .side-nav-list-item
+    display: flex
+    flex-direction: column
+
+    > a
+      display: flex
+      flex-grow: 1
+      justify-content: space-between
+      align-items: center
+      padding: 15px 25px
+      text-decoration: none
+      transition: background-color .2s ease, box-shadow .2s ease
+      color: mui-color('white')
+
+      &:hover, &.active
+        background-color: $mui-accent-color-dark
+        box-shadow: inset 3px 0 0 0 $mui-primary-color
+
+.search
+  display: flex
+  align-items: center
+  color: mui-color('white')
+  padding: 15px 25px
+  font-weight: 300
+
+  input
+    background: transparent
+    border: none
+    margin-left: 10px
+
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &::-webkit-input-placeholder
+      color: mui-color('white')

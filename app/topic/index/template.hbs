@@ -1,3 +1,1 @@
-{{#liquid-bind model use='fade' as |topic|}}
-  {{thread-list threads=model pagination=true}}
-{{/liquid-bind}}
+{{thread-list threads=model pagination=true limit=limit page=page}}

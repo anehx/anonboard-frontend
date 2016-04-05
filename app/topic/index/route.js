@@ -1,11 +1,11 @@
 import Route                from 'ember-route'
 import PaginationRouteMixin from 'anonboard/mixins/pagination-route'
+import injectService        from 'ember-service/inject'
 
 /**
  * Topic index route
  *
  * @class TopicIndexRoute
- * @namespace routes
  * @extends Ember.Route
  * @uses PaginationRouteMixin
  * @public
@@ -19,6 +19,28 @@ export default Route.extend(PaginationRouteMixin, {
    * @public
    */
   modelName: 'thread',
+
+  /**
+   * Navigation service
+   *
+   * @property {NavigationService}
+   * @public
+   */
+  navigation: injectService(),
+
+  /**
+   * Before model hook, hide navigation
+   * after every model change
+   *
+   * @method beforeModel
+   * @return {Boolean} Whether the navigation is visible
+   * @public
+   */
+  beforeModel() {
+    this._super(...arguments)
+
+    return this.get('navigation').set('visible', false)
+  },
 
   /**
    * Model hook to fetch threads for a topic

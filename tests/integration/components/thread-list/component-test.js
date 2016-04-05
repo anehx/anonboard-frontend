@@ -19,5 +19,5 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{thread-list threads=threads}}`)
 
-  assert.equal(this.$('ul.media-list li').length, 1)
+  assert.equal(this.$('> div').length, 1)
 })

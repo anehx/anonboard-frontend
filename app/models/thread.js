@@ -1,15 +1,17 @@
-import Model from 'ember-data/model'
-import attr  from 'ember-data/attr'
+import Model    from 'ember-data/model'
+import attr     from 'ember-data/attr'
+import computed from 'ember-computed-decorators'
 
 import {
   hasMany,
   belongsTo
 } from 'ember-data/relationships'
 
+export const PREVIEW_LENGTH = 25
+
 /**
  * The thread model
  *
- * @namespace models
  * @class Thread
  * @extends DS.Model
  * @public
@@ -34,7 +36,7 @@ export default Model.extend({
   /**
    * The title of the comment
    *
-   * @property {string} title
+   * @property {String} title
    * @public
    */
   title: attr('string'),
@@ -42,10 +44,21 @@ export default Model.extend({
   /**
    * The content of the thread
    *
-   * @property {string} content
+   * @property {String} content
    * @public
    */
   content: attr('string'),
+
+  /**
+   * The preview of the content (first 25 words)
+   *
+   * @property {String} preview
+   * @public
+   */
+  @computed('content')
+  preview(content) {
+    return content.split(' ').splice(0, PREVIEW_LENGTH).join(' ')
+  },
 
   /**
    * The date and time when the thread was created

@@ -1,15 +1,19 @@
-{{#link-to 'topic.thread' thread.topic.identifier thread.id tagName='li' class='media media-hover'}}
-  <h3 class="media-heading">
+<strong class="thread-list-item-header">
+  <div>
     {{thread.title}}
-    <small>by {{thread.user.identifier}}</small>
+    <small class="mui--hidden-xs mui--hidden-sm mui--hidden-md">by {{thread.user.identifier}}</small>
+  </div>
+  <div>
+    <span class="label label--secondary pull-right">
+      {{#if thread.created}}
+        {{moment-format thread.created 'DD.MM.YYYY HH:mm'}}
+      {{/if}}
+    </span>
     {{#if showTopicLabel}}
-      <span class="label label-primary pull-right">
+      <span class="label label--primary pull-right">
         {{thread.topic.name}}
       </span>
     {{/if}}
-    <span class="label label-info pull-right">
-      {{moment-format thread.created 'DD.MM.YYYY HH:mm'}}
-    </span>
-  </h3>
-  {{truncate-multiline text=thread.content lines=2 showButton=false}}
-{{/link-to}}
+  </div>
+</strong>
+{{thread.preview}}...

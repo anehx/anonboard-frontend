@@ -1,9 +1,12 @@
-<ul class="media-list">
-  {{#each threads as |thread|}}
-    {{thread-list-item thread=thread showTopicLabel=showTopicLabel}}
-  {{/each}}
-</ul>
+{{#each threads as |thread|}}
+  {{thread-list-item thread=thread showTopicLabel=showTopicLabel}}
+{{^}}
+  <h1>Ooops</h1>
+  <h2>
+    Sadly, we did not found any threads in this topic
+  </h2>
+{{/each}}
 
-{{#if (and threads.meta (not disablePagination))}}
-  {{thread-list-pagination pagination=threads.meta.pagination}}
+{{#if (and (and threads.meta (not disablePagination)) threads)}}
+  {{thread-list-pagination pagination=threads.meta.pagination limit=limit page=page}}
 {{/if}}

@@ -2,12 +2,9 @@ import Transform from 'ember-data/transform'
 import moment    from 'moment'
 
 /**
- * The moment transform
+ * Transform to conver datetime strings to
+ * moment objects and back
  *
- * Transforms datetime strings to
- * moment objects
- *
- * @namespace transforms
  * @class MomentTransform
  * @extends DS.Transform
  * @public
@@ -17,7 +14,7 @@ export default Transform.extend({
    * Deserialize datetime strings to moment objects
    *
    * @method deserialize
-   * @param {string} serialized The string to convert
+   * @param {String} serialized The string to convert
    * @return {moment} The deserialized date
    * @public
    */
@@ -30,7 +27,7 @@ export default Transform.extend({
    *
    * @method serialize
    * @param {moment} deserialized The moment object to convert
-   * @return {string} The serialized date
+   * @return {String} The serialized date
    * @public
    */
   serialize(deserialized) {

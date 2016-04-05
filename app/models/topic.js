@@ -8,7 +8,6 @@ import {
 /**
  * The topic model
  *
- * @namespace models
  * @class Topic
  * @extends DS.Model
  * @public
@@ -17,7 +16,7 @@ export default Model.extend({
   /**
    * The name of the topic
    *
-   * @property {string} name
+   * @property {String} name
    * @public
    */
   name: attr('string'),
@@ -26,7 +25,7 @@ export default Model.extend({
    * The identifier of the topic
    * (this is used in the url)
    *
-   * @property {string} identifier
+   * @property {String} identifier
    * @public
    */
   identifier: attr('string'),
@@ -34,7 +33,7 @@ export default Model.extend({
   /**
    * The description of the topic
    *
-   * @property {string} description
+   * @property {String} description
    * @public
    */
   description: attr('string'),

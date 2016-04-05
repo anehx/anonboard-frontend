@@ -20,7 +20,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{comment-list comments=comments on-add=addComment}}`)
 
-  assert.equal(this.$('ul.media-list li').length, 1)
+  assert.equal(this.$('> div').length, 1)
 
   this.$('form textarea').val('test comment').change()
   this.$('form button').click()

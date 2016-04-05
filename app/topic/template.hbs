@@ -1,10 +1,8 @@
-{{#liquid-bind model use='fade' as |topic|}}
-  <header class="page-header">
-    <h2>
-      {{topic.name}} <small>{{topic.description}}</small>
-      {{#link-to 'topic.new' tagName='button' class='btn btn-primary pull-right'}}Add thread{{/link-to}}
-    </h2>
-  </header>
-{{/liquid-bind}}
+{{#top-header title=model.name sub=model.description}}
+  {{#link-to 'topic.index' model tagName='button' class='mui-btn mui-btn--accent pull-left'}}All threads{{/link-to}}
+  {{#link-to 'topic.new' tagName='button' class='mui-btn mui-btn--accent pull-right'}}New thread{{/link-to}}
+{{/top-header}}
 
-{{liquid-outlet}}
+<div class="mui-container">
+  {{liquid-outlet}}
+</div>

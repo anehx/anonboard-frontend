@@ -1,10 +1,11 @@
-import Route from 'ember-route'
+import Route         from 'ember-route'
 import injectService from 'ember-service/inject'
 
 /**
- * The topic thread route
+ * Route to display a single thread with
+ * it's comment and functionality to create
+ * a new comment
  *
- * @namespace routes
  * @class TopicThreadRoute
  * @extends Ember.Route
  * @public
@@ -34,20 +35,6 @@ export default Route.extend({
   },
 
   /**
-   * Setup controller hook, set breadcrumb label
-   *
-   * @method setupController
-   * @param {TopicThreadController} controller The topic thread controller
-   * @param {Thread} model The thread model
-   * @return {void}
-   */
-  setupController(controller, model) {
-    this._super(...arguments)
-
-    controller.set('breadCrumb', model.get('title'))
-  },
-
-  /**
    * The actions for the topic thread route
    *
    * @property {Object} actions
@@ -59,7 +46,7 @@ export default Route.extend({
      *
      * @method addComment
      * @param {String} content The comment content to add
-     * @return {void}
+     * @return {Boolean} Whether the comment is saved
      * @public
      */
     async addComment(content) {
@@ -75,7 +62,10 @@ export default Route.extend({
       }
       catch (e) {
         this.get('notify').error(e)
+
+        return false
       }
+      return true
     }
   }
 })

@@ -1,0 +1,45 @@
+:--component
+  display: flex
+  flex-direction: column
+  padding: 10px
+  border-radius: 2px
+  background-color: mui-color('grey', '100')
+  margin: 7px 0
+  cursor: pointer
+  transition: background-color .2s ease
+
+  &:hover
+    background-color: $mui-primary-color-light
+
+.thread-list-item-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 16px
+  font-weight: 500
+  margin: 0
+  color: mui-color('grey', '900')
+
+  small
+    color: mui-color('grey')
+    font-weight: 500
+
+.label
+  display: inline-block
+  padding: 3px 6px
+  font-size: 75%
+  line-height: 1
+  font-weight: 500
+  text-align: center
+  white-space: nowrap
+  vertical-align: baseline
+  border-radius: 2px
+  margin-left: 5px
+  color: mui-color('white')
+  background-color: mui-color('grey')
+
+  &.label--primary
+    background-color: $mui-primary-color
+
+  &.label--secondary
+    background-color: $mui-primary-color-dark

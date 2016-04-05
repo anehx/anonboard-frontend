@@ -3,16 +3,15 @@ import JSONAPIAdapter from 'ember-data/adapters/json-api'
 /**
  * The default application adapter
  *
- * @namespace adapters
  * @class ApplicationAdapter
  * @extends DS.JSONAPIAdapter
  * @public
  */
 export default JSONAPIAdapter.extend({
   /**
-   * The API namespace
+   * The namespace for the API
    *
-   * @property {string} namespace
+   * @property {String} namespace
    * @default 'api/v1'
    * @public
    */

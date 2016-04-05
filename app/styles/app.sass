@@ -1,37 +1,57 @@
-@import 'bootflat/global'
+@import 'mui/colors'
 
-$pagination-background-color-active: $aqua-dark;
+$mui-primary-color:       mui-color('cyan', '500')
+$mui-primary-color-dark:  mui-color('cyan', '700')
+$mui-primary-color-light: mui-color('cyan', '300')
 
-@import 'bootflat'
+$mui-accent-color:        mui-color('grey', '800')
+$mui-accent-color-dark:   mui-color('grey', '900')
+$mui-accent-color-light:  mui-color('grey', '700')
 
-.navbar
-  border-radius: 0
+$mui-base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif
+$mui-base-font-weight: 300
 
-.media
-  padding: 1.5rem
-  border-radius: .5rem
-  background-color: $lightgray-light
-  transition: background-color .5s ease
-  color: $darkgray-dark
+@import 'mui'
+@import 'font-awesome'
 
-  p
-    margin: .5rem 0
+$sm: '(min-width: 544px)'
+$md: '(min-width: 768px)'
+$lg: '(min-width: 992px)'
+$xl: '(min-width: 1200px)'
 
-.media-heading
-  font-size: 1.5rem
-  margin-bottom: 1rem
+$nav-side-width: 250px
 
-  small
-    color: $darkgray-light
+@import 'pod-styles'
 
-  .label
-    margin-left: 5px
+html
+  height: 100%
 
-.media-hover
-  cursor: pointer
+body
+  min-height: 100vh
+  display: flex
 
-  &:hover
-    background-color: transparentize($aqua-light, .5)
+  &.ember-application > .ember-view
+    flex-grow: 1
 
-.per-page
-  margin: 20px 0
+.mui-container
+  @media #{$sm}
+    width: $mui-container-sm
+
+  @media #{$md}
+    width: $mui-container-md
+
+  @media #{$lg}
+    width: $mui-container-lg
+
+  @media #{$xl}
+    width: $mui-container-xl
+
+.liquid-container, .liquid-child
+  display: flex
+  flex-grow: 1
+  flex-direction: column
+  overflow: visible
+
+.liquid-container
+  &.liquid-animating, &.liquid-animating .liquid-child
+    overflow: hidden

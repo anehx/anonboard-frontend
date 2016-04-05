@@ -4,7 +4,6 @@ import injectService from 'ember-service/inject'
 /**
  * The navigation service
  *
- * @namespace services
  * @class NavigationService
  * @extends Ember.Service
  * @public
@@ -19,6 +18,15 @@ export default Service.extend({
   store: injectService(),
 
   /**
+   * Is the navigation visible?
+   *
+   * @property {Boolean} visible
+   * @default false
+   * @public
+   */
+  visible: false,
+
+  /**
    * The navigation entries
    *
    * @property {Topic[]} entries
@@ -30,10 +38,10 @@ export default Service.extend({
    * Hook to load the entries from the store
    *
    * @method load
-   * @return {void}
+   * @return {Topic[]} The loaded entries
    * @public
    */
   load() {
-    this.set('entries', this.get('store').findAll('topic'))
+    return this.set('entries', this.get('store').findAll('topic'))
   }
 })

@@ -14,5 +14,5 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{thread-list-pagination pagination=pagination}}`)
 
-  assert.equal(this.$('ul.pagination li').length, 24)
+  assert.equal(this.$('ul.pagination li').length, 10) // this has to be 10 to be sure it truncates
 })

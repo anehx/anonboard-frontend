@@ -22,19 +22,5 @@ export default Route.extend({
     let [ topic ] = await this.store.queryRecord('topic', { filter: { identifier } })
 
     return topic
-  },
-
-  /**
-   * Setup controller hook, set breadcrumb label
-   *
-   * @method setupController
-   * @param {TopicController} controller The topic controller
-   * @param {Topic} model The topic model
-   * @return {void}
-   */
-  setupController(controller, model) {
-    this._super(...arguments)
-
-    controller.set('breadCrumb', model.get('name'))
   }
 })

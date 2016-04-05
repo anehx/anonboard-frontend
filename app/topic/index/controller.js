@@ -5,7 +5,6 @@ import PaginationControllerMixin from 'anonboard/mixins/pagination-controller'
  * Topic index controller
  *
  * @class TopicIndexController
- * @namespace controllers
  * @extends Ember.Controller
  * @uses PaginationControllerMixin
  * @public

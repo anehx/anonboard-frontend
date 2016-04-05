@@ -12,15 +12,23 @@ module.exports = function(defaults) {
     },
     sassOptions: {
       extension: 'sass',
-      includePaths: [ 'bower_components/Bootflat/bootflat/scss' ]
+      includePaths: [ 'bower_components/mui/src/sass' ]
     },
+    emberCliFontAwesome: {
+      useScss: true
+    },
+    autoprefixer: {
+      browsers: [ 'last 2 versions' ],
+      cascade: false
+    },
+    googleFonts: [
+      'Open+Sans:300',
+      'Raleway:300'
+    ],
     'ember-cli-qunit': {
       useLintTree: false
     }
   })
-
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css')
-  app.import('bower_components/bootstrap/dist/js/bootstrap.js')
 
   return app.toTree()
 }

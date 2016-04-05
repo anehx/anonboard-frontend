@@ -8,5 +8,5 @@ moduleForComponent('thread-list-item', 'Integration | Component | thread list it
 test('it renders', function(assert) {
   this.render(hbs`{{thread-list-item}}`)
 
-  assert.equal(this.$().text().trim(), '')
+  assert.notEqual(this.$().text().trim(), '')
 })

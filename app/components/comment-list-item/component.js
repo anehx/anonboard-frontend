@@ -1,6 +1,12 @@
 import Component from 'ember-component'
 
-export default Component.extend({
-  tagName: 'li',
-  classNames: [ 'media', 'comment' ]
-})
+/**
+ * Component to display a single comment
+ * in a list of comments
+ *
+ * @class CommentListItemComponent
+ * @extends Ember.Component
+ * @todo
+ * @public
+ */
+export default Component.extend({})

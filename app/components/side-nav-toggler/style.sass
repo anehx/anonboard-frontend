@@ -1,0 +1,46 @@
+:--component
+  display: flex
+  position: fixed
+  left: 15px
+  top:  15px
+  border: 0
+  padding: 0
+  margin: 0
+  background-color: transparent
+  z-index: 3
+  cursor: pointer
+  height: 23px
+
+  &.side-nav-toggler--side-nav--visible .toggle-icon
+    background-color: transparent
+
+    &::before
+      transform: rotate(-45deg)
+      background-color: mui-color('white')
+
+    &::after
+      transform: rotate(45deg) translate(1px, 1px)
+      background-color: mui-color('white')
+
+.toggle-icon, .toggle-icon::before, .toggle-icon::after
+  display: flex
+  width: 32px
+  height: 3px
+  background-color: mui-color('black')
+  transition: all .2s ease
+
+.toggle-icon
+  position: relative
+
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    transform-origin: 3px center
+
+  &::before
+    top: 10px
+
+  &::after
+    top: -10px

@@ -4,7 +4,6 @@ import injectService from 'ember-service/inject'
 /**
  * The default application route
  *
- * @namespace routes
  * @class ApplicationRoute
  * @extends Ember.Route
  * @public
@@ -24,23 +23,23 @@ export default Route.extend({
    * @method setupController
    * @param {ApplicationController} controller The controller for the route
    * @param {Object} model The model for the route
-   * @return {void}
+   * @return {NavigationService} The navigation service
    * @public
    */
   setupController(controller, model) {
     this._super(...arguments)
 
-    controller.set('navigation', injectService())
+    return controller.set('navigation', injectService())
   },
 
   /**
    * Before model hook, fetches navigation entries
    *
    * @method beforeModel
-   * @return {void}
+   * @return {Topic[]} The fetched navigation entries
    * @public
    */
   beforeModel() {
-    this.get('navigation').load()
+    return this.get('navigation').load()
   }
 })

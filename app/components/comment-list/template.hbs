@@ -4,11 +4,14 @@
   {{/each}}
 </ul>
 
-<div class="row">
-  <div class="col-md-4 pull-right">
+<div class="mui-row">
+  <div class="mui-col-md-4 pull-right">
     <form {{action 'add' on='submit'}}>
-      {{textarea value=comment class='form-control form-group'}}
-      <button type="submit" class="btn btn-primary pull-right">Add comment</button>
+      <div class="mui-textfield mui-textfield--float-label">
+        {{textarea value=comment class='form-control form-group'}}
+        <label>Comment</label>
+      </div>
+      <button type="submit" class="mui-btn mui-btn--primary pull-right">Add comment</button>
     </form>
   </div>
 </div>
