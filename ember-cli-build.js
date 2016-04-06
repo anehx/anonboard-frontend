@@ -30,5 +30,7 @@ module.exports = function(defaults) {
     }
   })
 
+  app.import('vendor/mui.min.js')
+
   return app.toTree()
 }
