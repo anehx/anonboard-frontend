@@ -1,5 +1,7 @@
 :--component
   position: fixed
+  display: flex
+  flex-direction: column
   top: 0
   bottom: 0
   width: $nav-side-width
@@ -27,8 +29,11 @@
   .side-nav-divider
     display: flex
     height: 1px
-    margin: 5px 0
     background-color: $mui-accent-color-light
+
+  .side-nav-content
+    overflow-y: auto
+    height: 100%
 
   .side-nav-list
     padding: 10px 0 0

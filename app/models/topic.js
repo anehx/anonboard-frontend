@@ -39,6 +39,15 @@ export default Model.extend({
   description: attr('string'),
 
   /**
+   * The amount of threads published
+   * in the topic the last 24 hours
+   *
+   * @property {Number} threadsLastDay
+   * @public
+   */
+  threadsLastDay: attr('number'),
+
+  /**
    * The threads in the topic
    *
    * @property {Thread[]} threads

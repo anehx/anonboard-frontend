@@ -2,17 +2,33 @@
   {{#link-to 'index'}}<img src="http://publicdomainvectors.org/photos/provider_internetsvg.png">{{/link-to}}
 </header>
 
-<span class="side-nav-divider"></span>
+<section class="side-nav-search">
+  <span class="side-nav-divider"></span>
 
-<section class="side-nav-content">
   <label class="search">
     {{fa-icon 'search'}}
     {{input type='text' placeholder='Search Topics' value=search}}
   </label>
+
   <span class="side-nav-divider"></span>
+</section>
+
+<section class="side-nav-content">
   <ul class="side-nav-list">
     {{#each entries as |topic|}}
-      <li class="side-nav-list-item">{{#link-to 'topic' topic.identifier}}{{topic.name}}{{/link-to}}</li>
+      <li class="side-nav-list-item">
+        {{#link-to 'topic' topic.identifier}}
+          {{topic.name}}
+          {{#if topic.threadsLastDay}}
+          <span
+          class="label label--primary"
+          title="{{topic.threadsLastDay}} thread{{if (gt topic.threadsLastDay 1) 's'}} in the last 24 hours"
+          >
+              {{topic.threadsLastDay}}
+            </span>
+          {{/if}}
+        {{/link-to}}
+      </li>
     {{/each}}
   </ul>
 </section>
