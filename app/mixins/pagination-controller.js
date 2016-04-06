@@ -4,7 +4,6 @@ import Mixin from 'ember-metal/mixin'
  * Pagination controller mixin
  *
  * @class PaginationControllerMixin
- * @namespace mixins
  * @extends Ember.Mixin
  * @public
  */

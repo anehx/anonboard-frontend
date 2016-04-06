@@ -12,7 +12,6 @@ Ember.MODEL_FACTORY_INJECTIONS = true
 /**
  * Anonboard frontend app
  *
- * @namespace application
  * @class AnonboardApplication
  * @extends Ember.Application
  * @public

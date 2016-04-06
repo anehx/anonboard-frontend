@@ -2,7 +2,7 @@ import Transform from 'ember-data/transform'
 import moment    from 'moment'
 
 /**
- * Transform to conver datetime strings to
+ * Transform to convert datetime strings to
  * moment objects and back
  *
  * @class MomentTransform

@@ -3,7 +3,6 @@ import Route from 'ember-route'
 /**
  * The topic route
  *
- * @namespace routes
  * @class TopicRoute
  * @extends Ember.Route
  * @public

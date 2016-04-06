@@ -4,7 +4,6 @@ import config      from './config/environment'
 /**
  * The default router
  *
- * @namespace application
  * @class Router
  * @extends Ember.Router
  * @public
