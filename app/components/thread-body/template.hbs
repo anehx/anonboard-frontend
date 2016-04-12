@@ -1,0 +1,8 @@
+<h1>
+  {{thread.title}}
+  {{#if preview}}
+    <span class="label label--secondary pull-right">Draft</span>
+  {{/if}}
+</h1>
+
+{{markdown-to-html markdown=thread.content class='thread-content'}}

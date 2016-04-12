@@ -1,4 +1,5 @@
 import Component from 'ember-component'
+import injectService from 'ember-service/inject'
 
 /**
  * Component to display a single thread
@@ -9,6 +10,7 @@ import Component from 'ember-component'
  * @public
  */
 export default Component.extend({
+  routing: injectService('-routing'),
   /**
    * Class names of the component
    *
@@ -31,7 +33,7 @@ export default Component.extend({
   click(e) {
     e.preventDefault()
 
-    return this.get('router').transitionTo(
+    return this.get('routing.router').transitionTo(
       'topic.thread',
       this.get('thread.topic.identifier'),
       this.get('thread.id')

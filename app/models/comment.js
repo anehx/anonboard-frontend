@@ -2,7 +2,8 @@ import Model from 'ember-data/model'
 import attr  from 'ember-data/attr'
 
 import {
-  belongsTo
+  belongsTo,
+  hasMany
 } from 'ember-data/relationships'
 
 /**
@@ -43,5 +44,13 @@ export default Model.extend({
    * @property {moment} created
    * @public
    */
-  created: attr('moment')
+  created: attr('moment'),
+
+  /**
+   * The referenced comments
+   *
+   * @property {Comment[]} referenced
+   * @public
+   */
+  referenced: hasMany('comment')
 })

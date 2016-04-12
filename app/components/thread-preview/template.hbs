@@ -1,0 +1,13 @@
+<div class="thread-preview-header">
+  Preview
+  <span class="thread-preview-toggler pull-right" {{action 'toggleVisible'}}>
+    {{fa-icon 'chevron-down' class=(if visible 'rotate-180' '')}}
+  </span>
+</div>
+<div class="thread-preview-body {{if visible 'thread-preview-body--visible'}}">
+{{#if (and thread.title thread.content)}}
+  {{thread-body thread=thread preview=true}}
+{{else}}
+  No content and title yet...
+{{/if}}
+</div>

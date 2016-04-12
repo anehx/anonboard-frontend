@@ -24,6 +24,7 @@ Router.map(function() {
     this.route('thread', { path: '/:id' })
     this.route('new')
   })
+  this.route('notfound', { path: '/*path' })
 })
 
 export default Router

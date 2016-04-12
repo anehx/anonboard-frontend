@@ -5,3 +5,7 @@
 {{#main-content}}
   {{liquid-outlet}}
 {{/main-content}}
+
+{{outlet 'error'}}
+
+{{notification-container notifications=notifications position='top'}}

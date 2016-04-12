@@ -1,1 +1,9 @@
-{{comment.content}}
+<div class="comment-list-item-header">
+  #{{comment.id}}
+  by {{comment.user.identifier}}
+  created at {{moment-format comment.created 'DD.MM.YYYY HH:mm'}}
+</div>
+<div class="comment-list-item-body">
+  {{comment.content}}
+  foo: {{foo}}
+</div>

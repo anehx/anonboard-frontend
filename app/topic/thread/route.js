@@ -1,5 +1,5 @@
-import Route         from 'ember-route'
-import injectService from 'ember-service/inject'
+import Route           from 'ember-route'
+import { formatError } from 'anonboard/utils/error'
 
 /**
  * Route to display a single thread with
@@ -12,14 +12,6 @@ import injectService from 'ember-service/inject'
  */
 export default Route.extend({
   /**
-   * Notify service
-   *
-   * @property {EmberNotify.NotifyService} notify
-   * @public
-   */
-  notify: injectService(),
-
-  /**
    * The model hook to fetch the thread
    *
    * @method model
@@ -30,6 +22,12 @@ export default Route.extend({
    */
   async model({ id }) {
     let [ thread ] = await this.store.queryRecord('thread', { filter: { id }, include: 'topic,comments' })
+
+    if (!thread) {
+      this.notifications.error(`404: Thread with ID '${id}' not found.`)
+
+      this.transitionTo('topic', this.modelFor('topic'))
+    }
 
     return thread
   },
@@ -46,26 +44,23 @@ export default Route.extend({
      *
      * @method addComment
      * @param {String} content The comment content to add
-     * @return {Boolean} Whether the comment is saved
+     * @return {void}
      * @public
      */
     async addComment(content) {
-      let comment = this.store.createRecord('comment', {
-        thread: this.get('currentModel'),
-        content
-      })
-
       try {
+        let comment = this.store.createRecord('comment', {
+          thread: this.get('currentModel'),
+          content
+        })
+
         await comment.save()
 
-        this.get('notify').success('Comment added')
+        this.notifications.success('Comment was successfully added.')
       }
       catch (e) {
-        this.get('notify').error(e)
-
-        return false
+        this.notifications.error(formatError(e))
       }
-      return true
     }
   }
 })

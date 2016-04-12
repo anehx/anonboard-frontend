@@ -1,17 +1,7 @@
-<ul class="media-list">
-  {{#each comments as |comment|}}
+{{#each thread.comments as |comment|}}
+  {{#liquid-if (not comment.isNew)}}
     {{comment-list-item comment=comment}}
-  {{/each}}
-</ul>
+  {{/liquid-if}}
+{{/each}}
 
-<div class="mui-row">
-  <div class="mui-col-md-4 pull-right">
-    <form {{action 'add' on='submit'}}>
-      <div class="mui-textfield mui-textfield--float-label">
-        {{textarea value=comment class='form-control form-group'}}
-        <label>Comment</label>
-      </div>
-      <button type="submit" class="mui-btn mui-btn--primary pull-right">Add comment</button>
-    </form>
-  </div>
-</div>
+{{comment-form thread=thread on-submit=(action 'addComment')}}

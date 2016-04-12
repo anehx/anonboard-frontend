@@ -1,20 +1,17 @@
 <div class="mui-row">
-  <div class="mui-col-md-6">
+  <div class="mui-col-md-6 mui-col-sm-12 mui-col-xs-12">
     <h1>New Thread</h1>
-    <div class="mui-textfield mui-textfield--float-label">
-      {{input type='text' value=model.title}}
+    <div class="mui-textfield">
       <label>Title</label>
+      {{input type='text' value=model.title tabindex=1}}
     </div>
-    <div class="mui-textfield mui-textfield--float-label">
-      {{textarea value=model.content}}
+    <div class="mui-textfield">
       <label>Content</label>
+      {{textarea value=model.content rows=10 tabindex=2}}
     </div>
+    <button class="mui-btn mui-btn--primary pull-right" {{action 'save'}}>Save</button>
   </div>
-  <div class="mui-col-md-6">
-    <h1>Preview</h1>
-    <div class="preview">
-      <h2>{{model.title}}</h2>
-      {{markdown-to-html markdown=model.content}}
-    </div>
+  <div class="mui-col-md-6 mui-col-sm-12 mui-col-xs-12">
+    {{thread-preview thread=model}}
   </div>
 </div>

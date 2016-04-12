@@ -11,15 +11,6 @@ import Component from 'ember-component'
  */
 export default Component.extend({
   /**
-   * The content of the new comment
-   *
-   * @property {String} comment
-   * @default ''
-   * @public
-   */
-  comment: '',
-
-  /**
    * Comment list component actions
    *
    * @property {Object} actions
@@ -29,15 +20,12 @@ export default Component.extend({
     /**
      * Add comment action
      *
-     * @method add
+     * @method addComment
+     * @param {Comment} comment The comment to be added
      * @return {void}
-     * @public {Boolean} Whether the action succeeded
      */
-    add() {
-      this.sendAction('on-add', this.get('comment'))
-      this.set('comment', '')
-
-      return true
+    addComment(comment) {
+      this.sendAction('on-add-comment', comment)
     }
   }
 })

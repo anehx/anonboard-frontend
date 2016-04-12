@@ -17,8 +17,14 @@ export default Route.extend({
    * @return {Topic} The topic
    * @public
    */
-  async model({ identifier }) {
+  async model({ identifier }, transition) {
     let [ topic ] = await this.store.queryRecord('topic', { filter: { identifier } })
+
+    if (!topic) {
+      this.notifications.error(`404: Topic with identifier '${identifier}' not found.`)
+
+      this.transitionTo('index')
+    }
 
     return topic
   }

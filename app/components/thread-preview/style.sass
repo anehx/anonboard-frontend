@@ -1,0 +1,32 @@
+:--component
+  display: flex
+  flex-direction: column
+  margin-top: 20px
+  border: thin solid mui-color('grey', '200')
+
+.thread-preview-toggler
+  cursor: pointer
+
+  i
+    transition: transform .2s ease
+
+    &.rotate-180
+      transform: rotate(180deg)
+
+.thread-preview-header
+  padding: 10px
+  background-color: mui-color('grey', '100')
+  border-bottom: thin solid mui-color('grey', '200')
+
+.thread-preview-body
+  max-height: 0
+  padding: 0 10px
+  overflow: hidden
+  transition: max-height .2s ease, padding .2s ease
+
+  > div > h1
+    margin-top: 0
+
+  &--visible
+    max-height: 500px
+    padding: 10px
