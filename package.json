@@ -4,7 +4,7 @@
   "description": "The Ember.js frontend for AnonBoard",
   "private": true,
   "scripts": {
-    "build": "ember build",
+    "build": "ember build --prod",
     "start": "ember server --proxy http://localhost:8000",
     "test": "ember test",
     "doc": "ember ember-cli-yuidoc"
