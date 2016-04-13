@@ -14,18 +14,29 @@ export default Route.extend({
    * @method model
    * @param {Object} params The given parameters to search the store
    * @param {String} params.identifier The identifier of the topic
-   * @return {Topic} The topic
+   * @return {Topic|undefined} The topic to the given identifier
    * @public
    */
-  async model({ identifier }, transition) {
+  async model({ identifier }) {
     let [ topic ] = await this.store.queryRecord('topic', { filter: { identifier } })
 
-    if (!topic) {
-      this.notifications.error(`404: Topic with identifier '${identifier}' not found.`)
+    return topic
+  },
+
+  /**
+   * Transition back to index and fire a notification
+   * if no model is given
+   *
+   * @method afterModel
+   * @param {Topic|undefined} model The model of this route
+   * @return {void}
+   * @public
+   */
+  afterModel(model) {
+    if (!model) {
+      this.notifications.error('404: Topic not found.')
 
       this.transitionTo('index')
     }
-
-    return topic
   }
 })

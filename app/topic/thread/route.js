@@ -17,7 +17,7 @@ export default Route.extend({
    * @method model
    * @param {Object} params The given parameters to search the store
    * @param {String} params.id The id of the thread
-   * @return {Thread} The thread for the given id
+   * @return {Thread|undefined} The thread for the given id
    * @public
    */
   async model({ id }) {
@@ -30,6 +30,23 @@ export default Route.extend({
     }
 
     return thread
+  },
+
+  /**
+   * Transition back to topic and fire a notification
+   * if no model is given
+   *
+   * @method afterModel
+   * @param {Thread|undefined} model The model of this route
+   * @return {void}
+   * @public
+   */
+  afterModel(model) {
+    if (!model) {
+      this.notifications.error('404: Thread not found.')
+
+      this.transitionTo('topic', this.modelFor('topic'))
+    }
   },
 
   /**

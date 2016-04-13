@@ -8,5 +8,5 @@ moduleForComponent('comment-list-item', 'Integration | Component | comment list 
 test('it renders', function(assert) {
   this.render(hbs`{{comment-list-item}}`)
 
-  assert.equal(this.$().text().trim(), '')
+  assert.notEqual(this.$().text().trim(), '')
 })

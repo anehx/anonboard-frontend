@@ -14,9 +14,6 @@ module.exports = function(defaults) {
       extension: 'sass',
       includePaths: [ 'bower_components/mui/src/sass' ]
     },
-    emberCliFontAwesome: {
-      useScss: true
-    },
     autoprefixer: {
       browsers: [ 'last 2 versions' ],
       cascade: false
@@ -25,6 +22,9 @@ module.exports = function(defaults) {
       'Open+Sans:300',
       'Raleway:300'
     ],
+    'ember-font-awesome': {
+      useScss: true
+    },
     'ember-cli-qunit': {
       useLintTree: false
     }
