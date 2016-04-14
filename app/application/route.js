@@ -42,7 +42,11 @@ export default Route.extend({
    */
   beforeModel() {
     this._configureNotifications()
-    this.get('navigation').load()
+
+    this.get('navigation').set(
+      'entries',
+      this.store.findAll('topic')
+    )
   },
 
   /**

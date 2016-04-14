@@ -32,7 +32,7 @@ export default Component.extend({
    * @property {String[]} classNameBindings
    * @public
    */
-  classNameBindings: [ 'navigation.visible:side-nav-toggler--side-nav--visible' ],
+  classNameBindings: [ 'navigation.visible:side-nav-toggler--crossed' ],
 
   /**
    * On click event handler

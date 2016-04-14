@@ -34,3 +34,33 @@ body
 
 h1, h2, h3, h4, h5
   word-break: break-all
+
+.main-content
+  max-height: 100%
+  overflow: hidden
+
+  @media #{$xl}
+    margin-left: 0
+    transition: margin-left .2s ease
+
+    &.main-content--pushed
+      margin-left: $nav-side-width
+
+.overlay
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0,0,0,0)
+  pointer-events: none
+  z-index: 1
+  transition: background-color .2s ease
+
+  &--visible
+    background-color: rgba(0,0,0,0.2)
+    pointer-events: all
+
+    @media #{$xl}
+      background-color: rgba(0,0,0,0)
+      pointer-events: none

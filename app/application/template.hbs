@@ -2,10 +2,17 @@
 
 {{side-nav}}
 
-{{#main-content}}
+<main class="main-content {{if navigation.visible 'main-content--pushed'}}">
   {{liquid-outlet}}
-{{/main-content}}
+</main>
 
 {{outlet 'error'}}
 
 {{notification-container notifications=notifications position='top'}}
+
+{{#if navigation.visible}}
+  <div
+    class="overlay {{if navigation.visible 'overlay--visible'}}"
+    onclick={{action (mut navigation.visible) false}}
+  ></div>
+{{/if}}

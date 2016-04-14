@@ -29,20 +29,6 @@ export default Route.extend(PaginationRouteMixin, {
   navigation: injectService(),
 
   /**
-   * Before model hook, hide navigation
-   * after every model change
-   *
-   * @method beforeModel
-   * @return {Boolean} Whether the navigation is visible
-   * @public
-   */
-  beforeModel() {
-    this._super(...arguments)
-
-    return this.get('navigation').set('visible', false)
-  },
-
-  /**
    * Model hook to fetch threads for a topic
    *
    * @method model
