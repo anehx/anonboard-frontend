@@ -1,5 +1,5 @@
 import Component from 'ember-component'
-import injectService from 'ember-service/inject'
+import service   from 'ember-service/inject'
 
 /**
  * Component to display a single thread
@@ -10,7 +10,15 @@ import injectService from 'ember-service/inject'
  * @public
  */
 export default Component.extend({
-  routing: injectService('-routing'),
+  /**
+   * Routing service to transition to
+   * another route on click
+   *
+   * @property {Ember.RoutingService} routing
+   * @public
+   */
+  routing: service('-routing'),
+
   /**
    * Class names of the component
    *

@@ -1,6 +1,5 @@
 import Route                from 'ember-route'
 import PaginationRouteMixin from 'anonboard/mixins/pagination-route'
-import injectService        from 'ember-service/inject'
 
 /**
  * Topic index route
@@ -21,18 +20,10 @@ export default Route.extend(PaginationRouteMixin, {
   modelName: 'thread',
 
   /**
-   * Navigation service
-   *
-   * @property {NavigationService}
-   * @public
-   */
-  navigation: injectService(),
-
-  /**
    * Model hook to fetch threads for a topic
    *
    * @method model
-   * @param {Object} params The query params
+   * @param {Object} params       The query params
    * @param {Number} params.limit How many vehicle-checks should be queried
    * @param {Number} params.page  The page to fetch
    * @param {String} params.sort  Sorting direction

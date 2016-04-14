@@ -1,5 +1,5 @@
-import Route         from 'ember-route'
-import injectService from 'ember-service/inject'
+import Route   from 'ember-route'
+import service from 'ember-service/inject'
 
 /**
  * The default application route
@@ -15,21 +15,21 @@ export default Route.extend({
    * @property {NavigationService} navigation
    * @public
    */
-  navigation: injectService(),
+  navigation: service('navigation'),
 
   /**
    * Setup controller hook
    *
    * @method setupController
    * @param {ApplicationController} controller The controller for the route
-   * @param {Object} model The model for the route
-   * @return {NavigationService} The navigation service
+   * @param {*} model The model for the route
+   * @return {void}
    * @public
    */
   setupController(controller, model) {
     this._super(...arguments)
 
-    return controller.set('navigation', injectService())
+    controller.set('navigation', service('navigation'))
   },
 
   /**
@@ -44,7 +44,7 @@ export default Route.extend({
     this._configureNotifications()
 
     this.get('navigation').set(
-      'entries',
+      '_allEntries',
       this.store.findAll('topic')
     )
   },

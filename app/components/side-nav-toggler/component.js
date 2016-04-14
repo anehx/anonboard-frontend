@@ -1,5 +1,5 @@
-import Component     from 'ember-component'
-import injectService from 'ember-service/inject'
+import Component from 'ember-component'
+import service   from 'ember-service/inject'
 
 /**
  * Button to toggle the navigation
@@ -24,7 +24,7 @@ export default Component.extend({
    * @property {NavigationService} navigation
    * @public
    */
-  navigation: injectService(),
+  navigation: service('navigation'),
 
   /**
    * Class name bindings
@@ -41,12 +41,12 @@ export default Component.extend({
    *
    * @event click
    * @param {jQuery.Event} e The jquery event
-   * @return {Boolean} Whether the navigation is visible
+   * @return {void}
    * @public
    */
   click(e) {
     e.preventDefault()
 
-    return this.get('navigation').toggleProperty('visible')
+    this.toggleProperty('navigation.visible')
   }
 })

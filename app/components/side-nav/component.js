@@ -1,6 +1,9 @@
-import Component            from 'ember-component'
-import injectService        from 'ember-service/inject'
-import computed, { oneWay } from 'ember-computed-decorators'
+import Component from 'ember-component'
+import service   from 'ember-service/inject'
+
+import computed, {
+  oneWay
+} from 'ember-computed-decorators'
 
 /**
  * The top navigation component
@@ -42,7 +45,7 @@ export default Component.extend({
    * @property {NavigationService} navigation
    * @public
    */
-  navigation: injectService(),
+  navigation: service('navigation'),
 
   /**
    * Is the side-nav visible?
@@ -50,33 +53,15 @@ export default Component.extend({
    * @property {Boolean} visible
    * @public
    */
-  @oneWay('navigation.visible') visible: true,
-
-  /**
-   * Search string to filter entries
-   *
-   * @property {String} search
-   * @public
-   */
-  search: null,
+  @oneWay('navigation.visible')
+  visible: true,
 
   /**
    * The entries which are displayed in the navigation
-   * filtered by the search string
    *
-   * @property {Topic[]} displayedEntries
+   * @property {Topic[]} entries
    * @public
    */
-  @computed('navigation.entries.[]', 'search')
-  entries(entries, search) {
-    if (!search) {
-      return entries
-    }
-
-    let re = new RegExp(search, 'i')
-
-    return entries.filter(e => {
-      return e.get('name').search(re) >= 0
-    })
-  }
+  @oneWay('navigation.entries')
+  entries: []
 })
