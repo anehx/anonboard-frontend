@@ -23,7 +23,6 @@ export default Component.extend({
    * Class names of the component
    *
    * @property {String[]} classNames
-   * @default [ 'mui-panel' ]
    * @public
    */
   classNames: [ 'mui-panel' ],
@@ -35,13 +34,13 @@ export default Component.extend({
    *
    * @event click
    * @param {jQuery.Event} e The jquery event
-   * @return {Ember.Transition} The transition object
+   * @return {void}
    * @public
    */
   click(e) {
     e.preventDefault()
 
-    return this.get('routing.router').transitionTo(
+    this.get('routing.router').transitionTo(
       'topic.thread',
       this.get('thread.topic.identifier'),
       this.get('thread.id')

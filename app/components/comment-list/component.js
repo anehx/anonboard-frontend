@@ -11,7 +11,7 @@ import Component from 'ember-component'
  */
 export default Component.extend({
   /**
-   * Comment list component actions
+   * Comment list actions
    *
    * @property {Object} actions
    * @public
@@ -20,7 +20,7 @@ export default Component.extend({
     /**
      * Add comment action
      *
-     * @method addComment
+     * @method actions.addComment
      * @param {Comment} comment The comment to be added
      * @return {void}
      */

@@ -34,7 +34,6 @@ export default Component.extend({
    * Class names
    *
    * @property {String[]} classNames
-   * @default [ 'mui--z1' ]
    * @public
    */
   classNames: [ 'mui--z1' ],
