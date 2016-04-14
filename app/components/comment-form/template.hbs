@@ -1,9 +1,9 @@
-<div class="mui-col-md-6 mui-col-sm-12 mui-col-xs-12 pull-right">
+<div class="mui-col-md-6 mui-col-sm-12 mui-col-xs-12 mui--pull-right">
   <div class="mui-textfield">
     {{textarea value=comment rows=3 maxlength=maxLength required=true}}
     <label>Comment ({{charsLeft}} char{{if (not-eq charsLeft 1) 's'}} left)</label>
   </div>
-  <button type="submit" class="mui-btn mui-btn--primary pull-right" {{action 'add'}}>
+  <button type="submit" class="mui-btn mui-btn--primary mui--pull-right" {{action 'add'}}>
     Add comment
   </button>
 </div>
