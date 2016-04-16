@@ -10,6 +10,7 @@ import Component from 'ember-component'
  * @public
  */
 export default Component.extend({
+  selectedComment: null,
   /**
    * Comment list actions
    *
@@ -26,6 +27,16 @@ export default Component.extend({
      */
     addComment(comment) {
       this.sendAction('on-add-comment', comment)
+    },
+
+    selectComment(comment) {
+      this.set('selectedComment', comment)
+      console.log('select')
+    },
+
+    deselectComment(comment) {
+      this.set('selectedComment', null)
+      console.log('deselect')
     }
   }
 })

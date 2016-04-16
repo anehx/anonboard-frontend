@@ -4,5 +4,11 @@
   created at {{moment-format comment.created 'DD.MM.YYYY HH:mm'}}
 </div>
 <div class="comment-list-item-body">
-  {{comment.content}}
+  {{#each parts as |part|}}
+    {{comment-content-part part
+      comment=comment
+      on-mouse-enter=(action 'selectComment')
+      on-mouse-leave=(action 'deselectComment')
+    }}
+  {{/each}}
 </div>

@@ -1,6 +1,11 @@
 {{#each thread.comments as |comment|}}
   {{#liquid-if (not comment.isNew)}}
-    {{comment-list-item comment=comment}}
+    {{comment-list-item
+      comment=comment
+      selectedComment=selectedComment
+      on-select-comment=(action 'selectComment')
+      on-deselect-comment=(action 'deselectComment')
+    }}
   {{/liquid-if}}
 {{/each}}
 

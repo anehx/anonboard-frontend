@@ -2,6 +2,11 @@
   padding: 8px 8px 8px 15px
   border-left: 5px solid mui-color('grey', '400')
   margin-bottom: 10px
+  transition: border-left .2s ease, background-color .2s ease
+
+  &.selected
+    border-left-color: $mui-primary-color
+    background-color: transparentize($mui-primary-color, 0.8)
 
 .comment-list-item-header
   font-weight: 500

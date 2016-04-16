@@ -19,11 +19,13 @@ Ember.MODEL_FACTORY_INJECTIONS = true
 const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver,
+
   customEvents: {
-    paste: "paste",
-    cut: "cut"
+    paste: 'paste',
+    cut:   'cut'
   },
+
+  Resolver
 })
 
 loadInitializers(App, config.modulePrefix)
