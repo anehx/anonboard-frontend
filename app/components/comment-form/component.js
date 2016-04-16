@@ -48,6 +48,21 @@ export default Component.extend({
     return max - len
   },
 
+  @computed('comments')
+  configHash(comments) {
+    return {
+      '@': {
+        type: 'list',
+        defaultHint: null,
+        sectionTitle: null,
+        content: comments.map(c => {
+          return { value: c.id, label: `Comment #${c.id}` }
+        })
+      }
+    }
+  },
+
+
   /**
    * Actions of the comment form
    *
@@ -66,6 +81,12 @@ export default Component.extend({
       this.sendAction('on-submit', this.get('comment'))
 
       this.set('comment', '')
-    }
+    },
+
+    searchValueChange() { return true },
+    modifierAutoComplete() { return true },
+    search() { return true },
+    inputFocusedIn() { return true },
+    inputFocusedOut() { return true },
   }
 })

@@ -1,14 +1,17 @@
 {
   "name": "anonboard",
   "dependencies": {
-    "ember": "~2.5.0",
+    "bootstrap": "~3.3.6",
+    "ember": "2.4.2",
     "ember-cli-shims": "0.1.1",
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
+    "eonasdan-bootstrap-datetimepicker": "4.17.37",
     "Faker": "~3.1.0",
     "font-awesome": "~4.5.0",
+    "jquery": "2.1.4",
     "lodash": "~4.10.0",
-    "moment": "^2.12.0",
+    "moment": "2.12.0",
     "moment-timezone": "^0.5.1",
     "mui": "^0.5.1",
     "pretender": "~1.0.0"

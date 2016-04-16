@@ -4,4 +4,4 @@
   {{/liquid-if}}
 {{/each}}
 
-{{comment-form thread=thread on-submit=(action 'addComment')}}
+{{comment-form comments=thread.comments thread=thread on-submit=(action 'addComment')}}
