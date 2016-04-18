@@ -21,6 +21,15 @@ export default Component.extend({
   classNames: [ 'mui-row' ],
 
   /**
+   * The comments which we can mention
+   *
+   * @property {Comment[]} comments
+   * @default []
+   * @public
+   */
+  comments: [],
+
+  /**
    * Max length of a comment
    *
    * @property {Number} maxLength
@@ -48,20 +57,19 @@ export default Component.extend({
     return max - len
   },
 
+  /**
+   * The data to show in the typeahead
+   * popup
+   *
+   * @property {Object[]} data
+   * @public
+   */
   @computed('comments')
-  configHash(comments) {
-    return {
-      '@': {
-        type: 'list',
-        defaultHint: null,
-        sectionTitle: null,
-        content: comments.map(c => {
-          return { value: c.id, label: `Comment #${c.id}` }
-        })
-      }
-    }
+  data(comments) {
+    return comments.map(c => {
+      return { value: c.id, label: `Comment ${c.id}` }
+    })
   },
-
 
   /**
    * Actions of the comment form
@@ -81,12 +89,6 @@ export default Component.extend({
       this.sendAction('on-submit', this.get('comment'))
 
       this.set('comment', '')
-    },
-
-    searchValueChange() { return true },
-    modifierAutoComplete() { return true },
-    search() { return true },
-    inputFocusedIn() { return true },
-    inputFocusedOut() { return true },
+    }
   }
 })

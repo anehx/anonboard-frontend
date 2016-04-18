@@ -1,24 +1,29 @@
-import { moduleForComponent, test } from 'ember-qunit';
-import hbs from 'htmlbars-inline-precompile';
+import { moduleForComponent, test } from 'ember-qunit'
+import hbs from 'htmlbars-inline-precompile'
 
 moduleForComponent('comment-content-part', 'Integration | Component | comment content part', {
   integration: true
-});
+})
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  this.set('part', '@18')
+  this.set('comment', {
+    content: 'foo bar @18',
+    referenced: [
+      { id: 18 }
+    ]
+  })
 
-  this.render(hbs`{{comment-content-part}}`);
+  this.set('enter', (comment) => {
+    assert.equal(comment.id, 18)
+  })
 
-  assert.equal(this.$().text().trim(), '');
+  this.render(hbs`{{comment-content-part part
+    comment=comment
+    on-mouse-enter=enter
+  }}`)
 
-  // Template block usage:
-  this.render(hbs`
-    {{#comment-content-part}}
-      template block text
-    {{/comment-content-part}}
-  `);
+  this.$('span').mouseenter()
 
-  assert.equal(this.$().text().trim(), 'template block text');
-});
+  assert.equal(this.$().text().trim(), '@18')
+})

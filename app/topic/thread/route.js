@@ -17,7 +17,7 @@ export default Route.extend({
    * @method model
    * @param {Object} params The given parameters to search the store
    * @param {String} params.id The id of the thread
-   * @return {Thread|undefined} The thread for the given id
+   * @return {Thread} The thread for the given id
    * @public
    */
   async model({ id }) {
@@ -37,7 +37,7 @@ export default Route.extend({
    * if no model is given
    *
    * @method afterModel
-   * @param {Thread|undefined} model The model of this route
+   * @param {Thread} model The model of this route
    * @return {void}
    * @public
    */
@@ -50,6 +50,27 @@ export default Route.extend({
   },
 
   /**
+   * Parse the comment content and filter
+   * referenced comments out of it
+   *
+   * @method _getReferencedFromContent
+   * @param {String} content The content to parse
+   * @return {Comment[]} The referenced comments
+   * @private
+   */
+  _getReferencedFromContent(content) {
+    let match = content.match(/(@\d+)/g)
+
+    if (!match) {
+      return []
+    }
+
+    let ids = match.map(i => i.replace('@', ''))
+
+    return this.get('currentModel.comments').filter(c => ids.includes(c.id))
+  },
+
+  /**
    * The actions for the topic thread route
    *
    * @property {Object} actions
@@ -59,15 +80,18 @@ export default Route.extend({
     /**
      * Action to add a new comment
      *
-     * @method addComment
+     * @method actions.addComment
      * @param {String} content The comment content to add
      * @return {void}
      * @public
      */
     async addComment(content) {
       try {
+        let referenced = this._getReferencedFromContent(content)
+
         let comment = this.store.createRecord('comment', {
           thread: this.get('currentModel'),
+          referenced,
           content
         })
 

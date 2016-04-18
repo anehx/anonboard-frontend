@@ -1,8 +1,7 @@
 import Component from 'ember-component'
 
 import computed, {
-  equal,
-  observes
+  equal
 } from 'ember-computed-decorators'
 
 /**
@@ -14,28 +13,50 @@ import computed, {
  * @todo
  * @public
  */
-export default Component.extend({
+const CommentListItemComponent = Component.extend({
+  /**
+   * The comment
+   *
+   * @property {Comment} comment
+   * @default null
+   * @public
+   */
   comment: null,
 
-  classNameBindings: [ 'isSelected:selected' ],
+  /**
+   * Class name bindings
+   *
+   * @property {String[]} classNameBindings
+   * @public
+   */
+  classNameBindings: [ 'highlighted' ],
 
-  @computed('comment.id', 'selectedComment.id')
-  isSelected(cur, sel) {
-    return parseInt(cur) === parseInt(sel)
+  /**
+   * Whether the item is currently highlighted
+   * or not
+   *
+   * @property {Boolean} highlighted
+   * @public
+   */
+  @computed('comment.id', 'current.id')
+  highlighted(own, current) {
+    return parseInt(own, 10) === parseInt(current, 10)
   },
 
+  /**
+   * The parts of the comment content
+   *
+   * @property {String[]} parts
+   * @public
+   */
   @computed('comment.content')
   parts(content) {
     return content.split(/(@\d+)/g)
-  },
-
-  actions: {
-    selectComment(comment) {
-      this.sendAction('on-select-comment', comment)
-    },
-
-    deselectComment(comment) {
-      this.sendAction('on-deselect-comment', comment)
-    }
   }
 })
+
+CommentListItemComponent.reopenClass({
+  positionalParams: [ 'comment' ]
+})
+
+export default CommentListItemComponent

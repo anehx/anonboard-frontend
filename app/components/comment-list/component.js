@@ -10,7 +10,24 @@ import Component from 'ember-component'
  * @public
  */
 export default Component.extend({
-  selectedComment: null,
+  /**
+   * The thread of the comments
+   *
+   * @property {Thread} thread
+   * @default null
+   * @public
+   */
+  thread: null,
+
+  /**
+   * The currently highlighted comment
+   *
+   * @property {Comment} highligthed
+   * @default null
+   * @public
+   */
+  highlighted: null,
+
   /**
    * Comment list actions
    *
@@ -27,16 +44,6 @@ export default Component.extend({
      */
     addComment(comment) {
       this.sendAction('on-add-comment', comment)
-    },
-
-    selectComment(comment) {
-      this.set('selectedComment', comment)
-      console.log('select')
-    },
-
-    deselectComment(comment) {
-      this.set('selectedComment', null)
-      console.log('deselect')
     }
   }
 })

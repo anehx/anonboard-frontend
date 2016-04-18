@@ -3,6 +3,7 @@
 "use strict"
 
 let EmberApp = require('ember-cli/lib/broccoli/ember-app')
+let Funnel   = require('broccoli-funnel')
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -18,25 +19,22 @@ module.exports = function(defaults) {
       browsers: [ 'last 2 versions' ],
       cascade: false
     },
-    googleFonts: [
-      'Open+Sans:300',
-      'Raleway:300'
-    ],
-    'ember-font-awesome': {
-      useScss: true
-    },
     'ember-cli-qunit': {
       useLintTree: false
     }
   })
 
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css')
-  app.import('bower_components/bootstrap/dist/css/bootstrap.css', { destDir: 'assets' })
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot', { destDir: '/fonts' });
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg', { destDir: '/fonts' });
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf', { destDir: '/fonts' });
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', { destDir: '/fonts' });
-  app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', { destDir: '/fonts'});
+  let opensans = new Funnel('bower_components/open-sans-fontface/fonts', {
+    destDir: '/assets/fonts',
+    include: [ '**/*' ]
+  })
 
-  return app.toTree()
+  app.import('bower_components/At.js/dist/js/jquery.atwho.js')
+  app.import('bower_components/At.js/dist/css/jquery.atwho.css')
+
+  app.import('bower_components/Caret.js/dist/jquery.caret.js')
+
+  app.import('bower_components/open-sans-fontface/open-sans.css')
+
+  return app.toTree(opensans)
 }

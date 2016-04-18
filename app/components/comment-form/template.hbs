@@ -1,33 +1,11 @@
+<div class="mui-col-md-6 mui--pull-right">
   <div class="mui-textfield">
-    {{input value=comment rows=3 maxlength=maxLength required=true}}
-    <label>Comment ({{charsLeft}} char{{if (not-eq charsLeft 1) 's'}} left)</label>
+    <div class="mui-textfield">
+      <label>Comment ({{charsLeft}} char{{if (not-eq charsLeft 1) 's'}} left)</label>
+      {{typeahead-textarea value=comment data=data key='@' maxlength=maxLength rows=3}}
+    </div>
   </div>
-  {{!--
   <button type="submit" class="mui-btn mui-btn--primary mui--pull-right" {{action 'add'}}>
     Add comment
   </button>
-  --}}
-
-<div class="mui-textfield">
-  <label>Comment ({{charsLeft}} char{{if (not-eq charsLeft 1) 's'}} left)</label>
-  {{slack-search-input
-    class       = 'mui-textfield'
-    configHash  = configHash
-    maxlength   = maxLength
-    valueChange = (action (mut comment))
-  }}
 </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>

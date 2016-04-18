@@ -12,7 +12,6 @@ export default Mixin.create({
    * Query params used for a paged and sorted list
    *
    * @property {String[]} queryParams
-   * @default [ 'page', 'limit', 'sort' ]
    * @public
    */
   queryParams: [ 'page', 'limit', 'sort' ],

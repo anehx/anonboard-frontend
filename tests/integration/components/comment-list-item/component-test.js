@@ -6,7 +6,13 @@ moduleForComponent('comment-list-item', 'Integration | Component | comment list 
 })
 
 test('it renders', function(assert) {
-  this.render(hbs`{{comment-list-item}}`)
+  this.set('comment', {
+    id: 1,
+    content: 'test',
+    referenced: []
+  })
+
+  this.render(hbs`{{comment-list-item comment}}`)
 
   assert.notEqual(this.$().text().trim(), '')
 })

@@ -14,7 +14,7 @@ export default Route.extend({
    * @method model
    * @param {Object} params The given parameters to search the store
    * @param {String} params.identifier The identifier of the topic
-   * @return {Topic|undefined} The topic to the given identifier
+   * @return {Topic} The topic to the given identifier
    * @public
    */
   async model({ identifier }) {
@@ -28,7 +28,7 @@ export default Route.extend({
    * if no model is given
    *
    * @method afterModel
-   * @param {Topic|undefined} model The model of this route
+   * @param {Topic} model The model of this route
    * @return {void}
    * @public
    */

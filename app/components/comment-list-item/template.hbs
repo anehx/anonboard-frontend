@@ -7,8 +7,8 @@
   {{#each parts as |part|}}
     {{comment-content-part part
       comment=comment
-      on-mouse-enter=(action 'selectComment')
-      on-mouse-leave=(action 'deselectComment')
+      on-mouse-enter=highlightComment
+      on-mouse-leave=unhighlightComment
     }}
   {{/each}}
 </div>

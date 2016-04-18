@@ -1,10 +1,9 @@
 {{#each thread.comments as |comment|}}
   {{#liquid-if (not comment.isNew)}}
-    {{comment-list-item
-      comment=comment
-      selectedComment=selectedComment
-      on-select-comment=(action 'selectComment')
-      on-deselect-comment=(action 'deselectComment')
+    {{comment-list-item comment
+      current            = highlighted
+      highlightComment   = (action (mut highlighted))
+      unhighlightComment = (action (mut highlighted) null)
     }}
   {{/liquid-if}}
 {{/each}}

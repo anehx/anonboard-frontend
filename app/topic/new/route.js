@@ -22,7 +22,20 @@ export default Route.extend({
     return this.store.createRecord('thread', { topic: this.modelFor('topic') })
   },
 
+  /**
+   * Topic thread route actions
+   *
+   * @property {Object} actions
+   * @public
+   */
   actions: {
+    /**
+     * Save a new thread
+     *
+     * @method actions.save
+     * @return {void}
+     * @public
+     */
     async save() {
       let model = this.get('currentModel')
 
