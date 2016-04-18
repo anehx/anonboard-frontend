@@ -1,5 +1,7 @@
 html
   height: 100%
+  word-break: break-word
+  hyphens: auto
 
 .ember-application
   display: flex
@@ -22,11 +24,9 @@ html
   &.liquid-animating, &.liquid-animating .liquid-child
     overflow: hidden
 
-h1, h2, h3, h4, h5
-  word-break: break-all
-  hyphens: auto
-
 .mui-container
+  width: 100%
+
   @media #{$sm}
     width: $mui-container-sm
 

@@ -1,9 +1,7 @@
-<div class="mui-col-md-6 mui--pull-right">
+<div class="mui-col-sm-12 mui-col-xs-12 mui-col-md-6 mui--pull-right">
   <div class="mui-textfield">
-    <div class="mui-textfield">
-      <label>Comment ({{charsLeft}} char{{if (not-eq charsLeft 1) 's'}} left)</label>
-      {{typeahead-textarea value=comment data=data key='@' maxlength=maxLength rows=3}}
-    </div>
+    <label>Comment ({{charsLeft}} char{{if (not-eq charsLeft 1) 's'}} left)</label>
+    {{typeahead-textarea value=comment data=data key='@' maxlength=maxLength rows=3}}
   </div>
   <button type="submit" class="mui-btn mui-btn--primary mui--pull-right" {{action 'add'}}>
     Add comment

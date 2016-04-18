@@ -1,6 +1,8 @@
 <div class="comment-list-item-header">
   #{{comment.id}}
-  by {{comment.user.identifier}}
+  <span class="mui--hidden-md mui--hidden-sm mui--hidden-xs">
+    by {{comment.user.identifier}}
+  </span>
   created at {{moment-format comment.created 'DD.MM.YYYY HH:mm'}}
 </div>
 <div class="comment-list-item-body">
