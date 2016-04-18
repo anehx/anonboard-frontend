@@ -46,6 +46,10 @@ export default Service.extend({
    */
   @computed('_allEntries', 'search')
   entries(entries, search) {
+    if (!search) {
+      return entries
+    }
+
     let re = new RegExp(search, 'i')
 
     return entries.filter(e => {
