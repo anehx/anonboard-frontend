@@ -1,13 +1,27 @@
 <div class="mui-row">
   <div class="mui-col-md-6 mui-col-sm-12 mui-col-xs-12">
     <h1>New Thread</h1>
-    <div class="mui-textfield">
+    <div class="mui-textfield {{if model.errors.title 'has-error'}}">
       <label>Title</label>
-      {{input name='title' type='text' value=model.title tabindex=1}}
+      {{input name='title' type='text' value=model.title tabindex=1 autofocus=true}}
+      {{#liquid-if model.errors.title}}
+        <div class="errors">
+          {{#each model.errors.title as |error|}}
+            <p>{{error.message}}</p>
+          {{/each}}
+        </div>
+      {{/liquid-if}}
     </div>
-    <div class="mui-textfield">
+    <div class="mui-textfield {{if model.errors.content 'has-error'}}">
       <label>Content</label>
       {{textarea name='content' value=model.content rows=10 tabindex=2}}
+      {{#liquid-if model.errors.title}}
+        <div class="errors">
+          {{#each model.errors.content as |error|}}
+            <p>{{error.message}}</p>
+          {{/each}}
+        </div>
+      {{/liquid-if}}
     </div>
     <button class="save-thread mui-btn mui-btn--primary pull-right" {{action 'save'}}>Save</button>
   </div>
