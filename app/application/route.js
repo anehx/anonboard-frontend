@@ -34,32 +34,15 @@ export default Route.extend({
 
   /**
    * Before model hook, fetches navigation entries
-   * and configures notifications
    *
    * @method beforeModel
    * @return {void}
    * @public
    */
   beforeModel() {
-    this._configureNotifications()
-
     this.get('navigation').set(
       '_allEntries',
       this.store.findAll('topic')
     )
-  },
-
-  /**
-   * Configure the notifications
-   *   - Set auto clear as default
-   *   - Clear notifications after 4 seconds
-   *
-   * @method _configureNotifications
-   * @return {void}
-   * @private
-   */
-  _configureNotifications() {
-    this.notifications.setDefaultAutoClear(true)
-    this.notifications.setDefaultClearNotification(4000)
   }
 })

@@ -1,5 +1,5 @@
-import Route           from 'ember-route'
-import { formatError } from 'anonboard/utils/error'
+import Route   from 'ember-route'
+import service from 'ember-service/inject'
 
 /**
  * Route to display a single thread with
@@ -12,6 +12,14 @@ import { formatError } from 'anonboard/utils/error'
  */
 export default Route.extend({
   /**
+   * Notify service
+   *
+   * @property {EmberNotify.NotifyService} notify
+   * @public
+   */
+  notify: service('notify'),
+
+  /**
    * The model hook to fetch the thread
    *
    * @method model
@@ -22,12 +30,6 @@ export default Route.extend({
    */
   async model({ id }) {
     let [ thread ] = await this.store.queryRecord('thread', { filter: { id }, include: 'topic,comments' })
-
-    if (!thread) {
-      this.notifications.error(`404: Thread with ID '${id}' not found.`)
-
-      this.transitionTo('topic', this.modelFor('topic'))
-    }
 
     return thread
   },
@@ -43,7 +45,7 @@ export default Route.extend({
    */
   afterModel(model) {
     if (!model) {
-      this.notifications.error('404: Thread not found.')
+      this.get('notify').error('Thread not found!')
 
       this.transitionTo('topic', this.modelFor('topic'))
     }
@@ -97,10 +99,10 @@ export default Route.extend({
 
         await comment.save()
 
-        this.notifications.success('Comment was successfully added.')
+        this.get('notify').success('Comment was successfully added.')
       }
       catch (e) {
-        this.notifications.error(formatError(e))
+        this.get('notify').error('Ooops! Something went wrong...')
       }
     }
   }

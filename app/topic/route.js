@@ -1,4 +1,5 @@
-import Route from 'ember-route'
+import Route   from 'ember-route'
+import service from 'ember-service/inject'
 
 /**
  * The topic route
@@ -8,6 +9,14 @@ import Route from 'ember-route'
  * @public
  */
 export default Route.extend({
+  /**
+   * Notify service
+   *
+   * @property {EmberNotify.NotifyService} notify
+   * @public
+   */
+  notify: service('notify'),
+
   /**
    * Model hook to fetch the topic and the threads of the topic
    *
@@ -34,7 +43,7 @@ export default Route.extend({
    */
   afterModel(model) {
     if (!model) {
-      this.notifications.error('404: Topic not found.')
+      this.get('notify').error('Topic not found!')
 
       this.transitionTo('index')
     }

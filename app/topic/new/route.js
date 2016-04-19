@@ -1,5 +1,5 @@
-import Route           from 'ember-route'
-import { formatError } from 'anonboard/utils/error'
+import Route   from 'ember-route'
+import service from 'ember-service/inject'
 
 /**
  * Route to create new threads
@@ -10,6 +10,14 @@ import { formatError } from 'anonboard/utils/error'
  * @public
  */
 export default Route.extend({
+  /**
+   * Notify service
+   *
+   * @property {EmberNotify.NotifyService} notify
+   * @public
+   */
+  notify: service('notify'),
+
   /**
    * Model hook, create a new thread for
    * the topic we are in
@@ -42,7 +50,7 @@ export default Route.extend({
       try {
         await model.save()
 
-        this.notifications.success('Thread was created successfully.')
+        this.get('notify').success('Thread was created successfully.')
 
         this.transitionTo(
           'topic.thread',
@@ -51,7 +59,7 @@ export default Route.extend({
         )
       }
       catch (e) {
-        this.notifications.error(formatError(e))
+        this.get('notify').error('Ooops! Something went wrong...')
       }
     }
   }
