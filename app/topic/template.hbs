@@ -1,6 +1,16 @@
 {{#top-header title=model.name sub=model.description}}
-  {{#link-to 'topic.index' model tagName='button' class='mui-btn mui-btn--accent pull-left'}}All threads{{/link-to}}
-  {{#link-to 'topic.new' tagName='button' class='mui-btn mui-btn--accent pull-right'}}New thread{{/link-to}}
+  {{#link-to 'topic.index' model
+    tagName='button'
+    class='all-threads mui-btn mui-btn--accent pull-left'
+  }}
+    All threads
+  {{/link-to}}
+  {{#link-to 'topic.new'
+    tagName='button'
+    class='new-thread mui-btn mui-btn--accent pull-right'
+  }}
+    New thread
+  {{/link-to}}
 {{/top-header}}
 
 <div class="mui-container">

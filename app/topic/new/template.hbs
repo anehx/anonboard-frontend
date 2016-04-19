@@ -3,13 +3,13 @@
     <h1>New Thread</h1>
     <div class="mui-textfield">
       <label>Title</label>
-      {{input type='text' value=model.title tabindex=1}}
+      {{input name='title' type='text' value=model.title tabindex=1}}
     </div>
     <div class="mui-textfield">
       <label>Content</label>
-      {{textarea value=model.content rows=10 tabindex=2}}
+      {{textarea name='content' value=model.content rows=10 tabindex=2}}
     </div>
-    <button class="mui-btn mui-btn--primary pull-right" {{action 'save'}}>Save</button>
+    <button class="save-thread mui-btn mui-btn--primary pull-right" {{action 'save'}}>Save</button>
   </div>
   <div class="mui-col-md-6 mui-col-sm-12 mui-col-xs-12">
     {{thread-preview thread=model}}
