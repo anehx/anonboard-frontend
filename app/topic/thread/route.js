@@ -29,9 +29,7 @@ export default Route.extend({
    * @public
    */
   async model({ id }) {
-    let [ thread ] = await this.store.queryRecord('thread', { filter: { id }, include: 'topic,comments' })
-
-    return thread
+    return this.store.findRecord('thread', id, { include: 'user,topic,comments,comments.user' })
   },
 
   /**
