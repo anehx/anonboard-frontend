@@ -1,1 +1,5 @@
-{{thread-list threads=model pagination=true limit=limit page=page}}
+{{#thread-list model as |thread|}}
+  {{thread-list-item thread}}
+{{/thread-list}}
+
+{{list-pagination model.meta.pagination limit=limit page=page}}

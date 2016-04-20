@@ -36,7 +36,7 @@
   margin: 0
 
   li
-    > a
+    > a, span
       text-decoration: none
       display: flex
       align-items: center
@@ -45,8 +45,10 @@
       padding: 0 10px
       border-radius: 2px
       color: mui-color('grey', '900')
+      cursor: pointer
 
-    &.active > a
+    &.active > a,
+    &.active > span
       background-color: $mui-primary-color
       color: mui-color('white')
 

@@ -8,4 +8,10 @@ import Component from 'ember-component'
  * @extends Ember.Component
  * @public
  */
-export default Component.extend({})
+const ThreadListComponent = Component.extend({})
+
+ThreadListComponent.reopenClass({
+  positionalParams: [ 'threads' ]
+})
+
+export default ThreadListComponent

@@ -1,5 +1,7 @@
 {{top-header title='Home' sub='The most recent threads of all topics'}}
 
 <div class="mui-container">
-  {{thread-list threads=model showTopicLabel=true disablePagination=true}}
+  {{#thread-list model as |thread|}}
+    {{thread-list-item thread showTopicLabel=true}}
+  {{/thread-list}}
 </div>

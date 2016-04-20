@@ -1,0 +1,19 @@
+<div>
+  {{pagination-pager
+    current=page
+    count=pagination.pages
+    paginationPrevious='<i class="fa fa-angle-left">'
+    paginationNext='<i class="fa fa-angle-right">'
+  }}
+</div>
+
+<div class="per-page">
+  Display per page:
+  <ul class="pagination">
+    {{#each limits as |i|}}
+      <li class="pagination-item {{if (eq limit i) 'active'}}">
+        <span onclick={{action (mut limit) i}}>{{i}}</span>
+      </li>
+    {{/each}}
+  </ul>
+</div>

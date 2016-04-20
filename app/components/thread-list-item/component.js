@@ -9,7 +9,7 @@ import service   from 'ember-service/inject'
  * @extends Ember.Component
  * @public
  */
-export default Component.extend({
+const ThreadListItemComponent = Component.extend({
   /**
    * Routing service to transition to
    * another route on click
@@ -47,3 +47,9 @@ export default Component.extend({
     )
   }
 })
+
+ThreadListItemComponent.reopenClass({
+  positionalParams: [ 'thread' ]
+})
+
+export default ThreadListItemComponent
