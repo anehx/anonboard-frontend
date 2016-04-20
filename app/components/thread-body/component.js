@@ -7,4 +7,10 @@ import Component from 'ember-component'
  * @extends Ember.Component
  * @public
  */
-export default Component.extend({})
+const ThreadBodyComponent = Component.extend({})
+
+ThreadBodyComponent.reopenClass({
+  positionalParams: [ 'thread' ]
+})
+
+export default ThreadBodyComponent

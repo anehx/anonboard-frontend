@@ -9,15 +9,15 @@ import Component from 'ember-component'
  * @todo
  * @public
  */
-export default Component.extend({
+const CommentListComponent = Component.extend({
   /**
-   * The thread of the comments
+   * The comments
    *
-   * @property {Thread} thread
-   * @default null
+   * @property {Comment[]} comments
+   * @default []
    * @public
    */
-  thread: null,
+  comments: [],
 
   /**
    * The currently highlighted comment
@@ -26,24 +26,11 @@ export default Component.extend({
    * @default null
    * @public
    */
-  highlighted: null,
-
-  /**
-   * Comment list actions
-   *
-   * @property {Object} actions
-   * @public
-   */
-  actions: {
-    /**
-     * Add comment action
-     *
-     * @method actions.addComment
-     * @param {Comment} comment The comment to be added
-     * @return {void}
-     */
-    addComment(comment) {
-      this.sendAction('on-add-comment', comment)
-    }
-  }
+  highlighted: null
 })
+
+CommentListComponent.reopenClass({
+  positionalParams: [ 'comments' ]
+})
+
+export default CommentListComponent

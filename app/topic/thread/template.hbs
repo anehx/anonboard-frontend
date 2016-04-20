@@ -1,3 +1,11 @@
-{{thread-body thread=model}}
+{{thread-body model}}
 
-{{comment-list thread=model on-add-comment=(route-action 'addComment')}}
+{{#comment-list model.comments as |comment|}}
+  {{comment-list-item comment
+    current            = highlighted
+    highlightComment   = (action (mut highlighted))
+    unhighlightComment = (action (mut highlighted) null)
+  }}
+{{/comment-list}}
+
+{{comment-form comments=model.comments on-submit=(route-action 'addComment')}}

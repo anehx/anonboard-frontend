@@ -1,6 +1,9 @@
 import TextArea from 'ember-components/text-area'
-import computed from 'ember-computed-decorators'
 import $        from 'jquery'
+
+import computed, {
+  observes
+} from 'ember-computed-decorators'
 
 /**
  * Textarea with At.js typeahead support
@@ -54,8 +57,8 @@ export default TextArea.extend({
   },
 
   /**
-   * Call At.js initialize after
-   * the element was inserted
+   * Initialize At.js after inserting
+   * the component
    *
    * @method didInsertElement
    * @return {void}
@@ -64,11 +67,60 @@ export default TextArea.extend({
   didInsertElement() {
     this._super(...arguments)
 
+    this._initializeAtwho()
+  },
+
+  /**
+   * Destroy At.js before destroying
+   * the component
+   *
+   * @method willDestroyElement
+   * @return {void}
+   * @public
+   */
+  willDestroyElement() {
+    this._super(...arguments)
+
+    this._destroyAtwho()
+  },
+
+  /**
+   * Initialize At.js
+   *
+   * @method _initializeAtwho
+   * @return {void}
+   * @private
+   */
+  _initializeAtwho() {
     $(this.get('element')).atwho({
       at:         this.get('key'),
       data:       this.get('data'),
       displayTpl: this.get('displayTpl'),
       insertTpl:  this.get('insertTpl')
     })
+  },
+
+  /**
+   * Destroy At.js
+   *
+   * @method _destroyAtwho
+   * @return {void}
+   * @private
+   */
+  _destroyAtwho() {
+    $(this.get('element')).atwho('destroy')
+  },
+
+  /**
+   * Redraw At.js on data changes
+   *
+   * @method _redrawAtwho
+   * @return {void}
+   * @private
+   */
+  @observes('data')
+  _redrawAtwho() {
+    this._destroyAtwho()
+    this._initializeAtwho()
   }
 })

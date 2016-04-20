@@ -1,11 +1,5 @@
-{{#each thread.comments as |comment|}}
+{{#each comments as |comment|}}
   {{#liquid-if (not comment.isNew)}}
-    {{comment-list-item comment
-      current            = highlighted
-      highlightComment   = (action (mut highlighted))
-      unhighlightComment = (action (mut highlighted) null)
-    }}
+    {{yield comment}}
   {{/liquid-if}}
 {{/each}}
-
-{{comment-form comments=thread.comments thread=thread on-submit=(action 'addComment')}}
