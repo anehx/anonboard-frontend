@@ -1,15 +1,12 @@
 /*jshint node:true*/
+
 module.exports = {
-  "framework": "qunit",
-  "test_page": "tests/index.html?hidepassed",
-  "disable_watching": true,
-  "launch_in_ci": [
-    "PhantomJS",
-    "Firefox"
+  'framework': 'qunit',
+  'test_page': 'tests/index.html?hidepassed',
+  'disable_watching': true,
+  'launch_in_ci': [
+    'PhantomJS',
+    'Firefox'
   ],
-  "launch_in_dev": [
-    "PhantomJS",
-    "Firefox",
-    "Chromium"
-  ]
-};
+  'launch_in_dev': []
+}
