@@ -13,7 +13,10 @@ module.exports = function(defaults) {
     },
     sassOptions: {
       extension: 'sass',
-      includePaths: [ 'bower_components/mui/src/sass' ]
+      includePaths: [
+        'bower_components/mui/src/sass',
+        'bower_components/foundation/scss'
+      ]
     },
     autoprefixer: {
       browsers: [ 'last 2 versions' ],
