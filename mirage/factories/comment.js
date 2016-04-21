@@ -7,5 +7,7 @@ export default Factory.extend({
 
   created() {
     return new Date()
-  }
+  },
+
+  referenced: []
 })

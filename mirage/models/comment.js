@@ -4,6 +4,7 @@ import {
 } from 'ember-cli-mirage'
 
 export default Model.extend({
-  user:   belongsTo('user'),
-  thread: belongsTo('thread')
+  user:       belongsTo('user'),
+  thread:     belongsTo('thread'),
+  referenced: belongsTo('comment')
 })
