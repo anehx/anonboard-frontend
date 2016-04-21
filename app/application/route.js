@@ -1,5 +1,6 @@
 import Route   from 'ember-route'
 import service from 'ember-service/inject'
+import $       from 'jquery'
 
 /**
  * The default application route
@@ -34,12 +35,15 @@ export default Route.extend({
 
   /**
    * Before model hook, fetches navigation entries
+   * and removes loading mask from body
    *
    * @method beforeModel
    * @return {void}
    * @public
    */
   beforeModel() {
+    $('body').removeClass('loading-mask')
+
     this.get('navigation').set(
       '_allEntries',
       this.store.findAll('topic')

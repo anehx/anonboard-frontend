@@ -1,9 +1,10 @@
 import Component from 'ember-component'
+import computed  from 'ember-computed-decorators'
 
 /**
  * User alias component
  *
- * Show 'Anonymous' and on hover a popover containing
+ * Show 'Anonymous' and on click a popover containing
  * the users identifier
  *
  * @class UserAliasComponent
@@ -19,6 +20,27 @@ const UserAliasComponent = Component.extend({
    * @public
    */
   tagName: 'span',
+
+  /**
+   * Bind title to property
+   *
+   * @property {String[]} attributeBindings
+   * @public
+   */
+  attributeBindings: [ 'title' ],
+
+  /**
+   * The title of the component
+   *
+   * @property {String} title
+   * @public
+   */
+  @computed('popoverVisible')
+  title(visible) {
+    let verb = visible ? 'hide' : 'show'
+
+    return `Click to ${verb} users identifier`
+  },
 
   /**
    * The user to alias
@@ -39,15 +61,15 @@ const UserAliasComponent = Component.extend({
   popoverVisible: false,
 
   /**
-   * Show popover on mouse enter
+   * Toggle popover on click
    *
-   * @event mouseEnter
+   * @event click
    * @param {jQuery.Event} e The event
    * @return {void}
    * @public
    */
-  mouseEnter(e) {
-    this.set('popoverVisible', true)
+  click(e) {
+    this.toggleProperty('popoverVisible')
   },
 
   /**
