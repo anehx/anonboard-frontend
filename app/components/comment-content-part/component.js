@@ -59,7 +59,7 @@ const CommentContentPartComponent = Component.extend({
    * @property {Comment} reference
    * @public
    */
-  @computed('part', 'comment.referenced.[]')
+  @computed('part', 'comment.thread.comments.[]')
   reference(part, refs) {
     return refs.find(r => {
       return part.replace('@', '') === r.id

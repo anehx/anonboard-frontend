@@ -96,7 +96,8 @@ export default TextArea.extend({
       at:         this.get('key'),
       data:       this.get('data'),
       displayTpl: this.get('displayTpl'),
-      insertTpl:  this.get('insertTpl')
+      insertTpl:  this.get('insertTpl'),
+      limit:      this.get('data.length')
     })
   },
 

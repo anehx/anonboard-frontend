@@ -1,8 +1,8 @@
-{{thread-body model}}
+{{thread-body model.thread}}
 
 <div class="mui-divider"></div>
 
-{{#comment-list model.comments as |comment|}}
+{{#comment-list model.thread.comments as |comment|}}
   {{comment-list-item comment
     owner              = model.user
     current            = highlighted
@@ -11,4 +11,4 @@
   }}
 {{/comment-list}}
 
-{{comment-form comments=model.comments on-submit=(route-action 'addComment')}}
+{{comment-form model.comment comments=model.thread.comments on-submit=(route-action 'save')}}

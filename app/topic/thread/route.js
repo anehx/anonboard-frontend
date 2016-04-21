@@ -1,5 +1,6 @@
 import Route   from 'ember-route'
 import service from 'ember-service/inject'
+import RSVP    from 'rsvp'
 
 /**
  * Route to display a single thread with
@@ -20,16 +21,24 @@ export default Route.extend({
   notify: service('notify'),
 
   /**
-   * The model hook to fetch the thread
+   * The model hook to fetch the thread and
+   * create a new comment
    *
    * @method model
    * @param {Object} params The given parameters to search the store
    * @param {String} params.id The id of the thread
-   * @return {Thread} The thread for the given id
+   * @return {Object} The thread for the given id and a new comment
    * @public
    */
   async model({ id }) {
-    return this.store.findRecord('thread', id, { include: 'user,topic,comments,comments.user' })
+    let thread = await this.store.findRecord('thread', id, {
+      include: 'user,topic,comments,comments.user,comments.referenced'
+    })
+
+    return RSVP.hash({
+      comment: this.store.createRecord('comment', { thread }),
+      thread
+    })
   },
 
   /**
@@ -50,27 +59,6 @@ export default Route.extend({
   },
 
   /**
-   * Parse the comment content and filter
-   * referenced comments out of it
-   *
-   * @method _getReferencedFromContent
-   * @param {String} content The content to parse
-   * @return {Comment[]} The referenced comments
-   * @private
-   */
-  _getReferencedFromContent(content) {
-    let match = content.match(/(@\d+)/g)
-
-    if (!match) {
-      return []
-    }
-
-    let ids = match.map(i => i.replace('@', ''))
-
-    return this.get('currentModel.comments').filter(c => ids.includes(c.id))
-  },
-
-  /**
    * The actions for the topic thread route
    *
    * @property {Object} actions
@@ -78,24 +66,19 @@ export default Route.extend({
    */
   actions: {
     /**
-     * Action to add a new comment
+     * Action to save a new comment
      *
-     * @method actions.addComment
-     * @param {String} content The comment content to add
+     * @method actions.save
      * @return {void}
      * @public
      */
-    async addComment(content) {
+    async save() {
       try {
-        let referenced = this._getReferencedFromContent(content)
+        await this.get('currentModel.comment').save()
 
-        let comment = this.store.createRecord('comment', {
-          thread: this.get('currentModel'),
-          referenced,
-          content
-        })
-
-        await comment.save()
+        this.set('currentModel.comment', this.store.createRecord('comment', {
+          thread: this.get('currentModel.thread')
+        }))
 
         this.get('notify').success('Comment was successfully added.')
       }

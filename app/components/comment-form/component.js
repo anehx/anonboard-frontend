@@ -11,7 +11,7 @@ const MAX_COMMENT_LENGTH = 140
  * @extends Ember.Component
  * @public
  */
-export default Component.extend({
+const CommentFormComponent = Component.extend({
   /**
    * Class names
    *
@@ -19,6 +19,15 @@ export default Component.extend({
    * @public
    */
   classNames: [ 'mui-row' ],
+
+  /**
+   * The comment to create
+   *
+   * @property {Comment} comment
+   * @default null
+   * @public
+   */
+  comment: null,
 
   /**
    * The comments which we can mention
@@ -38,21 +47,12 @@ export default Component.extend({
   maxLength: MAX_COMMENT_LENGTH,
 
   /**
-   * Content of the comment
-   *
-   * @property {String} comment
-   * @default ''
-   * @public
-   */
-  comment: '',
-
-  /**
    * Chars left to type in the input
    *
    * @property {Number} charsLeft
    * @public
    */
-  @computed('comment.length', 'maxLength')
+  @computed('comment.content.length', 'maxLength')
   charsLeft(len, max) {
     return max - len
   },
@@ -64,11 +64,34 @@ export default Component.extend({
    * @property {Object[]} data
    * @public
    */
-  @computed('comments')
-  data(comments) {
-    return comments.map(c => {
-      return { value: c.id, label: `Comment ${c.id}` }
-    })
+  @computed('comments', 'comment.content')
+  data(comments, content) {
+    return comments.reduce((data, c) => {
+      if (!this.get('_referenced').mapBy('id').includes(c.id) && !c.get('isNew')) {
+        data.push({ value: c.id, label: `Comment ${c.id}` })
+      }
+
+      return data
+    }, [])
+  },
+
+  /**
+   * The referenced comments
+   *
+   * @property {Comment[]} _referenced
+   * @private
+   */
+  @computed('comment.content')
+  _referenced(content) {
+    let match = content.match(/(@\d+)/g)
+
+    if (!match) {
+      return []
+    }
+
+    let ids = match.map(i => i.replace('@', ''))
+
+    return this.get('comments').filter(c => ids.includes(c.id))
   },
 
   /**
@@ -87,8 +110,12 @@ export default Component.extend({
      */
     add() {
       this.sendAction('on-submit', this.get('comment'))
-
-      this.set('comment', '')
     }
   }
 })
+
+CommentFormComponent.reopenClass({
+  positionalParams: [ 'comment' ]
+})
+
+export default CommentFormComponent

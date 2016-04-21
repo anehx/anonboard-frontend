@@ -36,7 +36,7 @@ export default Model.extend({
    * @property {String} content
    * @public
    */
-  content: attr('string'),
+  content: attr('string', { defaultValue: '' }),
 
   /**
    * The datetime when the comment was created
@@ -44,13 +44,5 @@ export default Model.extend({
    * @property {moment} created
    * @public
    */
-  created: attr('moment'),
-
-  /**
-   * The referenced comments
-   *
-   * @property {Comment[]} referenced
-   * @public
-   */
-  referenced: hasMany('comment')
+  created: attr('moment')
 })
