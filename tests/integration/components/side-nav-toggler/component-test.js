@@ -1,12 +1,28 @@
 import { moduleForComponent, test } from 'ember-qunit'
-import hbs from 'htmlbars-inline-precompile'
+import hbs                          from 'htmlbars-inline-precompile'
+import Service                      from 'ember-service'
 
-moduleForComponent('side-nav-toggler', 'Integration | Component | side nav toggler', {
-  integration: true
+const SideNavTogglerNavigationService = Service.extend({
+  visible: false
 })
 
-test('it renders', function(assert) {
+moduleForComponent('side-nav-toggler', 'Integration | Component | side nav toggler', {
+  integration: true,
+
+  beforeEach() {
+    this.register('service:navigation', SideNavTogglerNavigationService)
+    this.inject.service('navigation', { as: 'navigation' })
+  }
+})
+
+test('it changes navigation visible property on click', function(assert) {
   this.render(hbs`{{side-nav-toggler}}`)
 
-  assert.equal(this.$().text().trim(), '')
+  this.$('button').click()
+
+  assert.ok(this.$('button').hasClass('side-nav-toggler--crossed'))
+
+  this.$('button').click()
+
+  assert.notOk(this.$('button').hasClass('side-nav-toggler--crossed'))
 })

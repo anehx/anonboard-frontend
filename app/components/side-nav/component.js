@@ -50,15 +50,17 @@ export default Component.extend({
    * Is the side-nav visible?
    *
    * @property {Boolean} visible
+   * @default false
    * @public
    */
   @oneWay('navigation.visible')
-  visible: true,
+  visible: false,
 
   /**
    * The entries which are displayed in the navigation
    *
    * @property {Topic[]} entries
+   * @default []
    * @public
    */
   @oneWay('navigation.entries')
