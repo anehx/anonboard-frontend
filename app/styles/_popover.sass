@@ -1,0 +1,26 @@
+$color-popover: rgba(0,0,0,0.85)
+
+.popover
+  position: relative
+  background: $color-popover
+  color: white
+  font-size: 12px
+  padding: 10px 20px
+  border-radius: 5px
+
+.popover::after,
+.popover::before
+  top: 100%
+  left: 50%
+  border: solid transparent
+  content: ''
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+
+.popover::after
+  border-color: transparent
+  border-top-color: $color-popover
+  border-width: 10px
+  margin-left: -10px

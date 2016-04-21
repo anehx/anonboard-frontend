@@ -46,14 +46,13 @@ const ThreadListItemComponent = Component.extend({
    * @return {void}
    * @public
    */
-  click(e) {
+  async click(e) {
     e.preventDefault()
 
-    this.get('routing.router').transitionTo(
-      'topic.thread',
-      this.get('thread.topic.identifier'),
-      this.get('thread.id')
-    )
+    let identifier = await this.get('thread.topic.identifier')
+    let id         = await this.get('thread.id')
+
+    this.get('routing.router').transitionTo('topic.thread', identifier, id)
   }
 })
 

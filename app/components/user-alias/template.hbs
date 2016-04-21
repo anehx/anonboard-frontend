@@ -1,0 +1,14 @@
+Anonymous
+
+{{#if popoverVisible}}
+  {{#ember-tether
+    target=(concat '#' elementId)
+    targetAttachment='top center'
+    attachment='bottom center'
+    offset='10px 0'
+  }}
+    <div class="popover">
+      {{user.identifier}}
+    </div>
+  {{/ember-tether}}
+{{/if}}
