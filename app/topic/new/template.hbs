@@ -3,7 +3,7 @@
     <h1>New Thread</h1>
     <div class="mui-textfield {{if model.errors.title 'has-error'}}">
       <label>Title</label>
-      {{input name='title' type='text' value=model.title tabindex=1 autofocus=true}}
+      {{input name='title' type='text' value=model.title tabindex=1 autofocus=true maxlength=50}}
       {{#liquid-if model.errors.title}}
         <div class="errors">
           {{#each model.errors.title as |error|}}

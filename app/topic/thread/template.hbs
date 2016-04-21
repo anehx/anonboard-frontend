@@ -2,6 +2,7 @@
 
 {{#comment-list model.comments as |comment|}}
   {{comment-list-item comment
+    owner              = model.user
     current            = highlighted
     highlightComment   = (action (mut highlighted))
     unhighlightComment = (action (mut highlighted) null)

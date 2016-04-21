@@ -28,6 +28,15 @@ const ThreadListItemComponent = Component.extend({
   classNames: [ 'mui-panel' ],
 
   /**
+   * HTML tag name of the component
+   *
+   * @property {String} tagName
+   * @default 'article'
+   * @public
+   */
+  tagName: 'article',
+
+  /**
    * On click event handler
    *
    * Redirects to the detail view of the thread
