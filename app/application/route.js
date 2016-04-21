@@ -44,5 +44,24 @@ export default Route.extend({
       '_allEntries',
       this.store.findAll('topic')
     )
+  },
+
+  /**
+   * Default application route actions
+   *
+   * @property {Object} actions
+   * @public
+   */
+  actions: {
+    /**
+     * Clear navigation search after every transition
+     *
+     * @method actions.didTransition
+     * @return {void}
+     * @public
+     */
+    didTransition() {
+      this.get('navigation').clearSearch()
+    }
   }
 })

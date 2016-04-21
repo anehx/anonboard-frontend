@@ -1,5 +1,8 @@
-import Service  from 'ember-service'
-import computed from 'ember-computed-decorators'
+import Service from 'ember-service'
+
+import computed, {
+  observes
+} from 'ember-computed-decorators'
 
 /**
  * The navigation service
@@ -55,5 +58,33 @@ export default Service.extend({
     return entries.filter(e => {
       return e.get('name').search(re) >= 0
     })
+  },
+
+  /**
+   * Clear the search field
+   *
+   * @method clearSearch
+   * @return {void}
+   * @public
+   */
+  clearSearch() {
+    if (this.get('search')) {
+      this.set('search', '')
+    }
+  },
+
+  /**
+   * Clear the search after closing the
+   * navigation
+   *
+   * @method _afterClose
+   * @return {void}
+   * @private
+   */
+  @observes('visible')
+  _afterClose() {
+    if (!this.get('visible')) {
+      this.clearSearch()
+    }
   }
 })
