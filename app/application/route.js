@@ -35,19 +35,27 @@ export default Route.extend({
 
   /**
    * Before model hook, fetches navigation entries
-   * and removes loading mask from body
    *
    * @method beforeModel
    * @return {void}
    * @public
    */
   beforeModel() {
-    $('body').removeClass('loading-mask')
-
     this.get('navigation').set(
       '_allEntries',
       this.store.findAll('topic')
     )
+  },
+
+  /**
+   * After model hook, removes loading mask from body
+   *
+   * @method afterModel
+   * @return {void}
+   * @public
+   */
+  afterModel() {
+    $('body').removeClass('loading-mask')
   },
 
   /**
