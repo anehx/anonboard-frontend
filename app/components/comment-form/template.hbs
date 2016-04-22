@@ -2,9 +2,19 @@
   <form {{action 'add' on='submit'}}>
     <div class="mui-textfield">
       <label>Comment ({{charsLeft}} char{{if (not-eq charsLeft 1) 's'}} left)</label>
-      {{typeahead-textarea value=comment.content data=data key='@' maxlength=maxLength rows=3 required=true}}
+      <div class="validated-textfield mui-textfield">
+        {{typeahead-textarea value=comment.content data=data key='@' maxlength=maxLength rows=3 required=true}}
+        <span class="valid-state {{if (v-get comment 'content' 'isInvalid') 'invalid'}}">
+          {{fa-icon (if (v-get comment 'content' 'isValid') 'check' 'times')}}
+        </span>
+      </div>
     </div>
-    <button type="submit" class="mui-btn mui-btn--primary mui--pull-right">
+    <button
+    type="submit"
+    disabled={{v-get comment 'isInvalid'}}
+    class="pull-right save-comment mui-btn {{if (v-get comment 'isInvalid') 'mui-btn--danger' 'mui-btn--primary'}}"
+    {{action 'add'}}
+    >
       Add comment
     </button>
   </form>

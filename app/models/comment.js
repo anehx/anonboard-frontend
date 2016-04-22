@@ -2,9 +2,26 @@ import Model from 'ember-data/model'
 import attr  from 'ember-data/attr'
 
 import {
-  belongsTo,
-  hasMany
+  validator,
+  buildValidations
+} from 'ember-cp-validations'
+
+import {
+  hasMany,
+  belongsTo
 } from 'ember-data/relationships'
+
+export const PREVIEW_LENGTH = 25
+
+const CommentValidations = buildValidations({
+  content: {
+    debouce: true,
+    validators: [
+      validator('presence', true),
+      validator('length', { max: 140 })
+    ]
+  }
+})
 
 /**
  * The comment model
@@ -13,7 +30,7 @@ import {
  * @extends DS.Model
  * @public
  */
-export default Model.extend({
+export default Model.extend(CommentValidations, {
   /**
    * The user who created the thread
    *

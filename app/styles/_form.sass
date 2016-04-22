@@ -1,18 +1,14 @@
-$error-color: mui-color('red', 'A700')
+.mui-textfield.validated-textfield
+  position: relative
+  padding: 0
 
-.mui-textfield.has-error
-  textarea, input
-    border-color: $error-color
+  .valid-state
+    font-size: 18px
+    font-weight: 100
+    position: absolute
+    right: 0
+    top: 5px
+    color: mui-color('green', 'A700')
 
-    color: $error-color
-
-  label
-    color: $error-color
-
-  .errors
-    color: $error-color
-    font-size: 12px
-    margin-top: 5px
-
-    p
-      margin: 0
+    &.invalid
+      color: $mui-danger-color

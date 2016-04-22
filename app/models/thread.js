@@ -3,11 +3,33 @@ import attr     from 'ember-data/attr'
 import computed from 'ember-computed-decorators'
 
 import {
+  validator,
+  buildValidations
+} from 'ember-cp-validations'
+
+import {
   hasMany,
   belongsTo
 } from 'ember-data/relationships'
 
 export const PREVIEW_LENGTH = 25
+
+const ThreadValidations = buildValidations({
+  title: {
+    debounce: 500,
+    validators: [
+      validator('presence', true),
+      validator('length', { max: 50 })
+    ]
+  },
+
+  content: {
+    debouce: true,
+    validators: [
+      validator('presence', true)
+    ]
+  }
+})
 
 /**
  * The thread model
@@ -16,7 +38,7 @@ export const PREVIEW_LENGTH = 25
  * @extends DS.Model
  * @public
  */
-export default Model.extend({
+export default Model.extend(ThreadValidations, {
   /**
    * The user who created the thread
    *

@@ -1,29 +1,25 @@
 <div class="mui-row">
   <div class="mui-col-md-6 mui-col-sm-12 mui-col-xs-12">
     <h1>New Thread</h1>
-    <div class="mui-textfield {{if model.errors.title 'has-error'}}">
+    <div class="mui-textfield">
       <label>Title</label>
-      {{input name='title' type='text' value=model.title tabindex=1 autofocus=true maxlength=50}}
-      {{#liquid-if model.errors.title}}
-        <div class="errors">
-          {{#each model.errors.title as |error|}}
-            <p>{{error.message}}</p>
-          {{/each}}
-        </div>
-      {{/liquid-if}}
+      <div class="validated-textfield mui-textfield">
+        {{input name='title' type='text' value=model.title tabindex=1 autocomplete='off' autofocus=true maxlength=50}}
+        <span class="valid-state {{if (v-get model 'title' 'isInvalid') 'invalid'}}">
+          {{fa-icon (if (v-get model 'title' 'isValid') 'check' 'times')}}
+        </span>
+      </div>
     </div>
-    <div class="mui-textfield {{if model.errors.content 'has-error'}}">
+    <div class="mui-textfield">
       <label>Content</label>
-      {{textarea name='content' value=model.content rows=10 tabindex=2}}
-      {{#liquid-if model.errors.title}}
-        <div class="errors">
-          {{#each model.errors.content as |error|}}
-            <p>{{error.message}}</p>
-          {{/each}}
-        </div>
-      {{/liquid-if}}
+      <div class="validated-textfield mui-textfield">
+        {{textarea name='content' value=model.content rows=10 tabindex=2}}
+        <span class="valid-state {{if (v-get model 'content' 'isInvalid') 'invalid'}}">
+          {{fa-icon (if (v-get model 'content' 'isValid') 'check' 'times')}}
+        </span>
+      </div>
     </div>
-    <button class="save-thread mui-btn mui-btn--primary pull-right" {{action 'save'}}>Save</button>
+    <button disabled={{v-get model 'isInvalid'}} class="save-thread mui-btn pull-right {{if (v-get model 'isInvalid') 'mui-btn--danger' 'mui-btn--primary'}}" {{action 'save'}}>Save</button>
   </div>
   <div class="mui-col-md-6 mui-col-sm-12 mui-col-xs-12">
     {{thread-preview thread=model}}

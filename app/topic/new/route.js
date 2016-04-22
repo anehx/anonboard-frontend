@@ -1,5 +1,6 @@
 import Route   from 'ember-route'
 import service from 'ember-service/inject'
+import Thread  from 'anonboard/models/thread'
 
 /**
  * Route to create new threads
@@ -27,6 +28,7 @@ export default Route.extend({
    * @public
    */
   model() {
+    //return Thread.create(getOwner(this).ownerInjection(), { topic: this.modelFor('topic') })
     return this.store.createRecord('thread', { topic: this.modelFor('topic') })
   },
 
