@@ -6,10 +6,7 @@ moduleForComponent('thread-body', 'Integration | Component | thread body', {
 })
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value')
-  // Handle any actions with this.on('myAction', function(val) { ... })
-
   this.render(hbs`{{thread-body}}`)
 
-  assert.equal(this.$().text().trim(), '')
+  assert.notEqual(this.$().text().trim(), '')
 })

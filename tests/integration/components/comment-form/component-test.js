@@ -5,8 +5,16 @@ moduleForComponent('comment-form', 'Integration | Component | comment form', {
   integration: true
 })
 
-test('it renders', function(assert) {
-  this.render(hbs`{{comment-form}}`)
+test('it renders and submits', function(assert) {
+  this.set('comment', { content: '' })
 
-  assert.notEqual(this.$().text().trim(), '')
+  this.set('submit', (comment) => {
+    assert.deepEqual(comment, { content: 'foobar' })
+  })
+
+  this.render(hbs`{{comment-form comment on-submit=(action submit)}}`)
+
+  this.$('textarea').val('foobar').change()
+
+  this.$('button').click()
 })

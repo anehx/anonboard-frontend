@@ -55,7 +55,7 @@ export default Route.extend({
         this.transitionTo(
           'topic.thread',
           model.get('topic.identifier'),
-          model
+          model.id
         )
       }
       catch (e) {

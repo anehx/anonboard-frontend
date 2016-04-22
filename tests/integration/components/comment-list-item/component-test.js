@@ -9,7 +9,7 @@ test('it renders', function(assert) {
   this.set('comment', {
     id: 1,
     content: 'test',
-    referenced: []
+    thread: { comments: [] }
   })
 
   this.render(hbs`{{comment-list-item comment}}`)

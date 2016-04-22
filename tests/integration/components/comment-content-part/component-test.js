@@ -9,9 +9,7 @@ test('it renders', function(assert) {
   this.set('part', '@18')
   this.set('comment', {
     content: 'foo bar @18',
-    referenced: [
-      { id: 18 }
-    ]
+    thread: { comments: [ { id: 18 } ] }
   })
 
   this.set('enter', (comment) => {

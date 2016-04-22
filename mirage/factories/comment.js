@@ -6,8 +6,6 @@ export default Factory.extend({
   },
 
   created() {
-    return new Date()
-  },
-
-  referenced: []
+    return faker.date.past()
+  }
 })

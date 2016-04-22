@@ -1,12 +1,20 @@
 import { moduleForComponent, test } from 'ember-qunit'
-import hbs from 'htmlbars-inline-precompile'
+import hbs                          from 'htmlbars-inline-precompile'
+import $                            from 'jquery'
 
 moduleForComponent('typeahead-textarea', 'Integration | Component | typeahead textarea', {
   integration: true
 })
 
-test('it renders', function(assert) {
-  this.render(hbs`{{typeahead-textarea}}`)
+test('it displays suggestions', function(assert) {
+  this.set('data', [
+    { value: 'foo', label: 'Test Foo' },
+    { value: 'bar', label: 'Test bar' }
+  ])
 
-  assert.equal(this.$().text().trim(), '')
+  this.render(hbs`{{typeahead-textarea key='@' data=data}}`)
+
+  this.$('textarea').val('@f').change()
+
+  assert.ok($('.atwho-container .atwho-view'))
 })

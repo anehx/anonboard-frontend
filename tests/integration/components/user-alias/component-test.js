@@ -1,24 +1,33 @@
-import { moduleForComponent, test } from 'ember-qunit';
-import hbs from 'htmlbars-inline-precompile';
+import { moduleForComponent, test } from 'ember-qunit'
+import hbs                          from 'htmlbars-inline-precompile'
+import $                            from 'jquery'
 
 moduleForComponent('user-alias', 'Integration | Component | user alias', {
   integration: true
-});
+})
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  this.render(hbs`{{user-alias}}`)
 
-  this.render(hbs`{{user-alias}}`);
+  assert.equal(this.$().text().trim(), 'Anonymous')
+})
 
-  assert.equal(this.$().text().trim(), '');
+test('it toggles the popover on click', function(assert) {
+  this.render(hbs`{{user-alias}}`)
 
-  // Template block usage:
-  this.render(hbs`
-    {{#user-alias}}
-      template block text
-    {{/user-alias}}
-  `);
+  this.$('span').click()
 
-  assert.equal(this.$().text().trim(), 'template block text');
-});
+  assert.equal($('.ember-tether .popover').length, 1)
+
+  this.$('span').click()
+
+  assert.equal($('.ember-tether .popover').length, 0)
+})
+
+test('it closes the popover on mouse leave', function(assert) {
+  this.render(hbs`{{user-alias popoverVisible=true}}`)
+
+  this.$('span').mouseleave()
+
+  assert.equal($('.ember-tether .popover').length, 0)
+})
