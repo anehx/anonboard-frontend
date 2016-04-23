@@ -11,4 +11,8 @@
   }}
 {{/comment-list}}
 
-{{comment-form model.comment comments=model.thread.comments on-submit=(route-action 'save')}}
+{{comment-form model.comment
+  comments=model.thread.comments
+  loading=loading
+  on-submit=(route-action 'save')
+}}

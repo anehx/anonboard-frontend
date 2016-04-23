@@ -12,7 +12,13 @@
     <button
     type="submit"
     disabled={{v-get comment 'isInvalid'}}
-    class="pull-right save-comment mui-btn {{if (v-get comment 'isInvalid') 'mui-btn--danger' 'mui-btn--primary'}}"
+    class="
+      save-comment
+      pull-right
+      mui-btn
+      {{if (v-get comment 'isInvalid') 'mui-btn--danger' 'mui-btn--primary'}}
+      {{if loading 'loading'}}
+    "
     {{action 'add'}}
     >
       Add comment

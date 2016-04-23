@@ -19,7 +19,20 @@
         </span>
       </div>
     </div>
-    <button disabled={{v-get model 'isInvalid'}} class="save-thread mui-btn pull-right {{if (v-get model 'isInvalid') 'mui-btn--danger' 'mui-btn--primary'}}" {{action 'save'}}>Save</button>
+    <button
+    disabled={{v-get model 'isInvalid'}}
+    type="submit"
+    class="
+      save-thread
+      pull-right
+      mui-btn
+      {{if (v-get model 'isInvalid') 'mui-btn--danger' 'mui-btn--primary'}}
+      {{if loading 'loading'}}
+    "
+    {{action 'save'}}
+    >
+      Save
+    </button>
   </div>
   <div class="mui-col-md-6 mui-col-sm-12 mui-col-xs-12">
     {{thread-preview thread=model}}

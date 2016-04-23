@@ -47,6 +47,8 @@ export default Route.extend({
      * @public
      */
     async save() {
+      this.set('controller.loading', true)
+
       let model = this.get('currentModel')
 
       try {
@@ -62,6 +64,9 @@ export default Route.extend({
       }
       catch (e) {
         this.get('notify').error('Ooops! Something went wrong...')
+      }
+      finally {
+        this.set('controller.loading', false)
       }
     }
   }
