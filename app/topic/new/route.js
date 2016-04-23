@@ -49,9 +49,9 @@ export default Route.extend({
     async save() {
       this.set('controller.loading', true)
 
-      let model = this.get('currentModel')
-
       try {
+        let model = this.get('currentModel')
+
         await model.save()
 
         this.get('notify').success('Thread was created successfully.')
