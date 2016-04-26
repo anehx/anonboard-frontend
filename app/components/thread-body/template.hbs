@@ -5,13 +5,15 @@
   {{/if}}
 </h1>
 
-<div class="thread-headline">
-  By {{user-alias thread.user}}
-  <span class="thread-headline-date">
-    &bull;
-    {{moment-format thread.created 'MMMM Do, YYYY [at] HH:mm'}}
-  </span>
-</div>
+{{#if preview}}
+  <div class="thread-headline">
+    By {{user-alias thread.user}}
+    <span class="thread-headline-date">
+      &bull;
+      {{moment-format thread.created 'MMMM Do, YYYY [at] HH:mm'}}
+    </span>
+  </div>
+{{/if}}
 
 <div class="thread-content">
   {{~thread.content~}}
