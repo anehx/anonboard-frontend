@@ -5,7 +5,7 @@
   {{/if}}
 </h1>
 
-{{#if preview}}
+{{#unless preview}}
   <div class="thread-headline">
     By {{user-alias thread.user}}
     <span class="thread-headline-date">
@@ -13,7 +13,7 @@
       {{moment-format thread.created 'MMMM Do, YYYY [at] HH:mm'}}
     </span>
   </div>
-{{/if}}
+{{/unless}}
 
 <div class="thread-content">
   {{~thread.content~}}
