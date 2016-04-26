@@ -12,7 +12,8 @@ html
   > .ember-view:first-of-type
       flex-grow: 1
       position: relative
-      overflow: hidden
+      overflow-y: auto
+      overflow-x: hidden
 
 .liquid-container, .liquid-child
   display: flex
@@ -42,8 +43,7 @@ html
 
 .main-content
   max-height: 100%
-  overflow-x: hidden
-  overflow-y: auto
+  overflow: hidden
 
   @media #{$xl}
     margin-left: 0
