@@ -1,8 +1,10 @@
 {{#each threads as |thread|}}
   {{yield thread}}
 {{^}}
-  <h1>Ooops</h1>
-  <h2>
-    Sadly, we did not found any threads in this topic
-  </h2>
+  <div class="error">
+    <h1>Ooops</h1>
+    <h2>
+      Sadly, we did not found any threads in this topic
+    </h2>
+  </div>
 {{/each}}

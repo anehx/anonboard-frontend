@@ -2,4 +2,6 @@
   {{thread-list-item thread}}
 {{/thread-list}}
 
-{{list-pagination model.meta.pagination limit=limit page=page}}
+{{#if model.threads}}
+  {{list-pagination model.meta.pagination limit=limit page=page}}
+{{/if}}
