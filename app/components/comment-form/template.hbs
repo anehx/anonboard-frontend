@@ -3,7 +3,7 @@
     <div class="mui-textfield">
       <label>Comment ({{charsLeft}} char{{if (not-eq charsLeft 1) 's'}} left)</label>
       <div class="validated-textfield mui-textfield">
-        {{typeahead-textarea value=comment.content data=data key='@' maxlength=maxLength rows=3 required=true}}
+        {{typeahead-textarea name='comment' value=comment.content data=data key='@' maxlength=maxLength rows=3 required=true}}
         <span class="valid-state {{if (v-get comment 'content' 'isInvalid') 'invalid'}}">
           {{fa-icon (if (v-get comment 'content' 'isValid') 'check' 'times')}}
         </span>
