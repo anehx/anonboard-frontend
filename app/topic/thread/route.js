@@ -76,7 +76,11 @@ export default Route.extend({
       this.set('controller.loading', true)
 
       try {
-        await this.get('currentModel.comment').save()
+        await this.get('currentModel.comment').save({
+          adapterOptions: {
+            include: 'user'
+          }
+        })
 
         this.set('currentModel.comment', this.store.createRecord('comment', {
           thread: this.get('currentModel.thread')

@@ -52,7 +52,11 @@ export default Route.extend({
       try {
         let model = this.get('currentModel')
 
-        await model.save()
+        await model.save({
+          adapterOptions: {
+            include: 'user'
+          }
+        })
 
         this.get('notify').success('Thread was created successfully.')
 
