@@ -15,7 +15,7 @@ const ListPaginationComponent = Component.extend({
    * @property {Number[]} limits
    * @public
    */
-  limits: [ 10, 20, 50, 100 ]
+  limits: [ 20, 50, 100 ]
 })
 
 ListPaginationComponent.reopenClass({

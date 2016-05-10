@@ -27,18 +27,23 @@ export default Route.extend({
    * @method model
    * @param {Object} params The given parameters to search the store
    * @param {String} params.id The id of the thread
-   * @return {Object} The thread for the given id and a new comment
+   * @return {Promise} The thread for the given id and a new comment
    * @public
    */
   async model({ id }) {
-    let thread = await this.store.findRecord('thread', id, {
-      include: 'user,topic,comments,comments.user,comments.referenced'
-    })
+    try {
+      let thread = await this.store.findRecord('thread', id, {
+        include: 'user,topic,comments,comments.user,comments.referenced'
+      })
 
-    return RSVP.hash({
-      comment: this.store.createRecord('comment', { thread }),
-      thread
-    })
+      return RSVP.hash({
+        comment: this.store.createRecord('comment', { thread }),
+        thread
+      })
+    }
+    catch (err) {
+      return // Blargh.. This has to be this way. Sorry :)
+    }
   },
 
   /**

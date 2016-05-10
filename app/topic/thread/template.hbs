@@ -4,7 +4,7 @@
 
 {{#comment-list model.thread.comments as |comment|}}
   {{comment-list-item comment
-    owner              = model.user
+    owner              = model.thread.user
     current            = highlighted
     highlightComment   = (action (mut highlighted))
     unhighlightComment = (action (mut highlighted) null)

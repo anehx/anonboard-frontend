@@ -20,10 +20,10 @@ export default Mixin.create({
    * The default object limit
    *
    * @property {Number} limit
-   * @default 10
+   * @default 20
    * @public
    */
-  limit: 10,
+  limit: 20,
 
   /**
    * The default sorting order
