@@ -42,7 +42,7 @@ export default Route.extend({
       })
     }
     catch (err) {
-      return // Blargh.. This has to be this way. Sorry :)
+      return null // Blargh.. This has to be this way. Sorry :)
     }
   },
 

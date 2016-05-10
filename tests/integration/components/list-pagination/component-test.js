@@ -7,17 +7,8 @@ moduleForComponent('list-pagination', 'Integration | Component | list pagination
 
 const DEFAULT_PAGINATION = {
   count: 100,
-  page:  10,
   pages: 20
 }
-
-test('it truncates after 10 entries', function(assert) {
-  this.set('pagination', DEFAULT_PAGINATION)
-
-  this.render(hbs`{{list-pagination pagination}}`)
-
-  assert.equal(this.$('ul.pagination li').length, 10) // this has to be 10 to be sure it truncates
-})
 
 test('it changes page on click', function(assert) {
   this.set('pagination', DEFAULT_PAGINATION)
