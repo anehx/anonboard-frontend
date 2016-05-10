@@ -1,0 +1,42 @@
+YUI.add("yuidoc-meta", function(Y) {
+   Y.YUIDoc = { meta: {
+    "classes": [
+        "AnonboardApplication",
+        "ApplicationAdapter",
+        "ApplicationRoute",
+        "Comment",
+        "CommentContentPartComponent",
+        "CommentFormComponent",
+        "CommentListComponent",
+        "CommentListItemComponent",
+        "IndexRoute",
+        "ListPaginationComponent",
+        "MomentTransform",
+        "NavigationService",
+        "NotfoundRoute",
+        "PaginationControllerMixin",
+        "PaginationRouteMixin",
+        "Router",
+        "SideNavTogglerComponent",
+        "Thread",
+        "ThreadBodyComponent",
+        "ThreadListComponent",
+        "ThreadListItemComponent",
+        "ThreadPreviewComment",
+        "TopHeaderComponent",
+        "TopNavigationComponent",
+        "Topic",
+        "TopicIndexController",
+        "TopicIndexRoute",
+        "TopicRoute",
+        "TopicThreadNewRoute",
+        "TopicThreadRoute",
+        "TypeaheadTextareaComponent",
+        "User",
+        "UserAliasComponent"
+    ],
+    "modules": [],
+    "allModules": [],
+    "elements": []
+} };
+});

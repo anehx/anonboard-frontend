@@ -1,0 +1,2434 @@
+{
+    "project": {
+        "name": "anonboard",
+        "description": "The Ember.js frontend for AnonBoard",
+        "version": "0.0.0.ead6087c"
+    },
+    "files": {
+        "app/application/adapter.js": {
+            "name": "app/application/adapter.js",
+            "modules": {},
+            "classes": {
+                "ApplicationAdapter": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/application/route.js": {
+            "name": "app/application/route.js",
+            "modules": {},
+            "classes": {
+                "ApplicationRoute": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/comment-content-part/component.js": {
+            "name": "app/components/comment-content-part/component.js",
+            "modules": {},
+            "classes": {
+                "CommentContentPartComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/comment-form/component.js": {
+            "name": "app/components/comment-form/component.js",
+            "modules": {},
+            "classes": {
+                "CommentFormComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/comment-list/component.js": {
+            "name": "app/components/comment-list/component.js",
+            "modules": {},
+            "classes": {
+                "CommentListComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/comment-list-item/component.js": {
+            "name": "app/components/comment-list-item/component.js",
+            "modules": {},
+            "classes": {
+                "CommentListItemComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/list-pagination/component.js": {
+            "name": "app/components/list-pagination/component.js",
+            "modules": {},
+            "classes": {
+                "ListPaginationComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/side-nav/component.js": {
+            "name": "app/components/side-nav/component.js",
+            "modules": {},
+            "classes": {
+                "TopNavigationComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/side-nav-toggler/component.js": {
+            "name": "app/components/side-nav-toggler/component.js",
+            "modules": {},
+            "classes": {
+                "SideNavTogglerComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/thread-body/component.js": {
+            "name": "app/components/thread-body/component.js",
+            "modules": {},
+            "classes": {
+                "ThreadBodyComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/thread-list/component.js": {
+            "name": "app/components/thread-list/component.js",
+            "modules": {},
+            "classes": {
+                "ThreadListComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/thread-list-item/component.js": {
+            "name": "app/components/thread-list-item/component.js",
+            "modules": {},
+            "classes": {
+                "ThreadListItemComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/thread-preview/component.js": {
+            "name": "app/components/thread-preview/component.js",
+            "modules": {},
+            "classes": {
+                "ThreadPreviewComment": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/top-header/component.js": {
+            "name": "app/components/top-header/component.js",
+            "modules": {},
+            "classes": {
+                "TopHeaderComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/typeahead-textarea/component.js": {
+            "name": "app/components/typeahead-textarea/component.js",
+            "modules": {},
+            "classes": {
+                "TypeaheadTextareaComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/components/user-alias/component.js": {
+            "name": "app/components/user-alias/component.js",
+            "modules": {},
+            "classes": {
+                "UserAliasComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/index/route.js": {
+            "name": "app/index/route.js",
+            "modules": {},
+            "classes": {
+                "IndexRoute": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/mixins/pagination-controller.js": {
+            "name": "app/mixins/pagination-controller.js",
+            "modules": {},
+            "classes": {
+                "PaginationControllerMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/mixins/pagination-route.js": {
+            "name": "app/mixins/pagination-route.js",
+            "modules": {},
+            "classes": {
+                "PaginationRouteMixin": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/comment.js": {
+            "name": "app/models/comment.js",
+            "modules": {},
+            "classes": {
+                "Comment": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/thread.js": {
+            "name": "app/models/thread.js",
+            "modules": {},
+            "classes": {
+                "Thread": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/topic.js": {
+            "name": "app/models/topic.js",
+            "modules": {},
+            "classes": {
+                "Topic": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/models/user.js": {
+            "name": "app/models/user.js",
+            "modules": {},
+            "classes": {
+                "User": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/notfound/route.js": {
+            "name": "app/notfound/route.js",
+            "modules": {},
+            "classes": {
+                "NotfoundRoute": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/services/navigation.js": {
+            "name": "app/services/navigation.js",
+            "modules": {},
+            "classes": {
+                "NavigationService": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/topic/index/controller.js": {
+            "name": "app/topic/index/controller.js",
+            "modules": {},
+            "classes": {
+                "TopicIndexController": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/topic/index/route.js": {
+            "name": "app/topic/index/route.js",
+            "modules": {},
+            "classes": {
+                "TopicIndexRoute": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/topic/new/route.js": {
+            "name": "app/topic/new/route.js",
+            "modules": {},
+            "classes": {
+                "TopicThreadNewRoute": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/topic/thread/route.js": {
+            "name": "app/topic/thread/route.js",
+            "modules": {},
+            "classes": {
+                "TopicThreadRoute": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/topic/route.js": {
+            "name": "app/topic/route.js",
+            "modules": {},
+            "classes": {
+                "TopicRoute": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/transforms/moment.js": {
+            "name": "app/transforms/moment.js",
+            "modules": {},
+            "classes": {
+                "MomentTransform": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/app.js": {
+            "name": "app/app.js",
+            "modules": {},
+            "classes": {
+                "AnonboardApplication": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app/router.js": {
+            "name": "app/router.js",
+            "modules": {},
+            "classes": {
+                "Router": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "ApplicationAdapter": {
+            "name": "ApplicationAdapter",
+            "shortname": "ApplicationAdapter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/application/adapter.js",
+            "line": 4,
+            "description": "The default application adapter",
+            "extends": "DS.JSONAPIAdapter",
+            "access": "public",
+            "tagname": ""
+        },
+        "ApplicationRoute": {
+            "name": "ApplicationRoute",
+            "shortname": "ApplicationRoute",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/application/route.js",
+            "line": 5,
+            "description": "The default application route",
+            "extends": "Ember.Route",
+            "access": "public",
+            "tagname": ""
+        },
+        "CommentContentPartComponent": {
+            "name": "CommentContentPartComponent",
+            "shortname": "CommentContentPartComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/comment-content-part/component.js",
+            "line": 7,
+            "description": "A part of a comment content\n\nCan either represent a normal string\nor a mentioned comment (@someID)",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "CommentFormComponent": {
+            "name": "CommentFormComponent",
+            "shortname": "CommentFormComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/comment-form/component.js",
+            "line": 6,
+            "description": "Component to display a form\nfor creating a comment",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "CommentListComponent": {
+            "name": "CommentListComponent",
+            "shortname": "CommentListComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/comment-list/component.js",
+            "line": 3,
+            "description": "Component to display a list of comments\nand a form to add a new component",
+            "extends": "Ember.Component",
+            "todo": [
+                ""
+            ],
+            "access": "public",
+            "tagname": ""
+        },
+        "CommentListItemComponent": {
+            "name": "CommentListItemComponent",
+            "shortname": "CommentListItemComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/comment-list-item/component.js",
+            "line": 7,
+            "description": "Component to display a single comment\nin a list of comments",
+            "extends": "Ember.Component",
+            "todo": [
+                ""
+            ],
+            "access": "public",
+            "tagname": ""
+        },
+        "ListPaginationComponent": {
+            "name": "ListPaginationComponent",
+            "shortname": "ListPaginationComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/list-pagination/component.js",
+            "line": 3,
+            "description": "Component to display a pagination and a\nper page selector for a list of models",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "TopNavigationComponent": {
+            "name": "TopNavigationComponent",
+            "shortname": "TopNavigationComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/side-nav/component.js",
+            "line": 8,
+            "description": "The top navigation component",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "SideNavTogglerComponent": {
+            "name": "SideNavTogglerComponent",
+            "shortname": "SideNavTogglerComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/side-nav-toggler/component.js",
+            "line": 4,
+            "description": "Button to toggle the navigation",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "ThreadBodyComponent": {
+            "name": "ThreadBodyComponent",
+            "shortname": "ThreadBodyComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/thread-body/component.js",
+            "line": 3,
+            "description": "Component to represent a single thread",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "ThreadListComponent": {
+            "name": "ThreadListComponent",
+            "shortname": "ThreadListComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/thread-list/component.js",
+            "line": 3,
+            "description": "Component to display a (paginated)\nlist of threads",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "ThreadListItemComponent": {
+            "name": "ThreadListItemComponent",
+            "shortname": "ThreadListItemComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/thread-list-item/component.js",
+            "line": 4,
+            "description": "Component to display a single thread\nin a list of threads",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "ThreadPreviewComment": {
+            "name": "ThreadPreviewComment",
+            "shortname": "ThreadPreviewComment",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/thread-preview/component.js",
+            "line": 3,
+            "description": "Component to display a toggable\npreview of a thread",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "TopHeaderComponent": {
+            "name": "TopHeaderComponent",
+            "shortname": "TopHeaderComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/top-header/component.js",
+            "line": 3,
+            "description": "Component to display a full width\npage header with a title and a subtitle",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "TypeaheadTextareaComponent": {
+            "name": "TypeaheadTextareaComponent",
+            "shortname": "TypeaheadTextareaComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 8,
+            "description": "Textarea with At.js typeahead support",
+            "see": [
+                "https://github.com/ichord/At.js/wiki/Base-Document"
+            ],
+            "extends": "Ember.TextArea",
+            "access": "public",
+            "tagname": ""
+        },
+        "UserAliasComponent": {
+            "name": "UserAliasComponent",
+            "shortname": "UserAliasComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/components/user-alias/component.js",
+            "line": 4,
+            "description": "User alias component\n\nShow 'Anonymous' and on click a popover containing\nthe users identifier",
+            "extends": "Ember.Component",
+            "access": "public",
+            "tagname": ""
+        },
+        "IndexRoute": {
+            "name": "IndexRoute",
+            "shortname": "IndexRoute",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/index/route.js",
+            "line": 3,
+            "description": "The home route which displays\nthe last 10 overall threads",
+            "extends": "Ember.Route",
+            "access": "public",
+            "tagname": ""
+        },
+        "PaginationControllerMixin": {
+            "name": "PaginationControllerMixin",
+            "shortname": "PaginationControllerMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "TopicIndexController"
+            ],
+            "file": "app/mixins/pagination-controller.js",
+            "line": 3,
+            "description": "Pagination controller mixin",
+            "extends": "Ember.Mixin",
+            "access": "public",
+            "tagname": ""
+        },
+        "PaginationRouteMixin": {
+            "name": "PaginationRouteMixin",
+            "shortname": "PaginationRouteMixin",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "TopicIndexRoute"
+            ],
+            "file": "app/mixins/pagination-route.js",
+            "line": 3,
+            "description": "Pagination route mixin",
+            "extends": "Ember.Mixin",
+            "access": "public",
+            "tagname": ""
+        },
+        "Comment": {
+            "name": "Comment",
+            "shortname": "Comment",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/models/comment.js",
+            "line": 26,
+            "description": "The comment model",
+            "extends": "DS.Model",
+            "access": "public",
+            "tagname": ""
+        },
+        "Thread": {
+            "name": "Thread",
+            "shortname": "Thread",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/models/thread.js",
+            "line": 34,
+            "description": "The thread model",
+            "extends": "DS.Model",
+            "access": "public",
+            "tagname": ""
+        },
+        "Topic": {
+            "name": "Topic",
+            "shortname": "Topic",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/models/topic.js",
+            "line": 8,
+            "description": "The topic model",
+            "extends": "DS.Model",
+            "access": "public",
+            "tagname": ""
+        },
+        "User": {
+            "name": "User",
+            "shortname": "User",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/models/user.js",
+            "line": 4,
+            "description": "The user model",
+            "extends": "DS.Model",
+            "access": "public",
+            "tagname": ""
+        },
+        "NotfoundRoute": {
+            "name": "NotfoundRoute",
+            "shortname": "NotfoundRoute",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/notfound/route.js",
+            "line": 3,
+            "description": "Catch all route - display a 404 page",
+            "extends": "Ember.Route",
+            "access": "public",
+            "tagname": ""
+        },
+        "NavigationService": {
+            "name": "NavigationService",
+            "shortname": "NavigationService",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/services/navigation.js",
+            "line": 7,
+            "description": "The navigation service",
+            "extends": "Ember.Service",
+            "access": "public",
+            "tagname": ""
+        },
+        "TopicIndexController": {
+            "name": "TopicIndexController",
+            "shortname": "TopicIndexController",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/topic/index/controller.js",
+            "line": 4,
+            "description": "Topic index controller",
+            "extends": "Ember.Controller",
+            "uses": [
+                "PaginationControllerMixin"
+            ],
+            "access": "public",
+            "tagname": ""
+        },
+        "TopicIndexRoute": {
+            "name": "TopicIndexRoute",
+            "shortname": "TopicIndexRoute",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/topic/index/route.js",
+            "line": 4,
+            "description": "Topic index route",
+            "extends": "Ember.Route",
+            "uses": [
+                "PaginationRouteMixin"
+            ],
+            "access": "public",
+            "tagname": ""
+        },
+        "TopicThreadNewRoute": {
+            "name": "TopicThreadNewRoute",
+            "shortname": "TopicThreadNewRoute",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/topic/new/route.js",
+            "line": 5,
+            "description": "Route to create new threads\nin a certain topic",
+            "extends": "{Ember.Route}",
+            "access": "public",
+            "tagname": ""
+        },
+        "TopicThreadRoute": {
+            "name": "TopicThreadRoute",
+            "shortname": "TopicThreadRoute",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/topic/thread/route.js",
+            "line": 5,
+            "description": "Route to display a single thread with\nit's comment and functionality to create\na new comment",
+            "extends": "Ember.Route",
+            "access": "public",
+            "tagname": ""
+        },
+        "TopicRoute": {
+            "name": "TopicRoute",
+            "shortname": "TopicRoute",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/topic/route.js",
+            "line": 4,
+            "description": "The topic route",
+            "extends": "Ember.Route",
+            "access": "public",
+            "tagname": ""
+        },
+        "MomentTransform": {
+            "name": "MomentTransform",
+            "shortname": "MomentTransform",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/transforms/moment.js",
+            "line": 4,
+            "description": "Transform to convert datetime strings to\nmoment objects and back",
+            "extends": "DS.Transform",
+            "access": "public",
+            "tagname": ""
+        },
+        "AnonboardApplication": {
+            "name": "AnonboardApplication",
+            "shortname": "AnonboardApplication",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/app.js",
+            "line": 12,
+            "description": "Anonboard frontend app",
+            "extends": "Ember.Application",
+            "access": "public",
+            "tagname": ""
+        },
+        "Router": {
+            "name": "Router",
+            "shortname": "Router",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app/router.js",
+            "line": 4,
+            "description": "The default router",
+            "extends": "Ember.Router",
+            "access": "public",
+            "tagname": ""
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "app/application/adapter.js",
+            "line": 12,
+            "description": "The namespace for the API",
+            "itemtype": "property",
+            "name": "namespace",
+            "type": "String",
+            "default": "'api/v1'",
+            "access": "public",
+            "tagname": "",
+            "class": "ApplicationAdapter"
+        },
+        {
+            "file": "app/application/adapter.js",
+            "line": 21,
+            "description": "Treat HTTP 400 as a validation error\ncode response, since django-rest-framework\nreturns HTTP 400 on validation errors",
+            "itemtype": "method",
+            "name": "handleResponse",
+            "params": [
+                {
+                    "name": "status",
+                    "description": "The HTTP status code",
+                    "type": "Number"
+                },
+                {
+                    "name": "headers",
+                    "description": "The response headers",
+                    "type": "Object"
+                },
+                {
+                    "name": "payload",
+                    "description": "The payload of the response",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Response",
+                "type": "Object|DS.InvalidError"
+            },
+            "todo": [
+                "Import InvalidError directly if possible"
+            ],
+            "access": "public",
+            "tagname": "",
+            "class": "ApplicationAdapter"
+        },
+        {
+            "file": "app/application/route.js",
+            "line": 13,
+            "description": "Navigation service",
+            "itemtype": "property",
+            "name": "navigation",
+            "type": "NavigationService",
+            "access": "public",
+            "tagname": "",
+            "class": "ApplicationRoute"
+        },
+        {
+            "file": "app/application/route.js",
+            "line": 21,
+            "description": "Setup controller hook",
+            "itemtype": "method",
+            "name": "setupController",
+            "params": [
+                {
+                    "name": "controller",
+                    "description": "The controller for the route",
+                    "type": "ApplicationController"
+                },
+                {
+                    "name": "model",
+                    "description": "The model for the route",
+                    "type": "*"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "ApplicationRoute"
+        },
+        {
+            "file": "app/application/route.js",
+            "line": 36,
+            "description": "Before model hook, fetches navigation entries",
+            "itemtype": "method",
+            "name": "beforeModel",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "ApplicationRoute"
+        },
+        {
+            "file": "app/application/route.js",
+            "line": 50,
+            "description": "After model hook, removes loading mask from body",
+            "itemtype": "method",
+            "name": "afterModel",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "ApplicationRoute"
+        },
+        {
+            "file": "app/application/route.js",
+            "line": 61,
+            "description": "Default application route actions",
+            "itemtype": "property",
+            "name": "actions",
+            "type": "Object",
+            "access": "public",
+            "tagname": "",
+            "class": "ApplicationRoute"
+        },
+        {
+            "file": "app/application/route.js",
+            "line": 68,
+            "description": "Clear navigation search after every transition",
+            "itemtype": "method",
+            "name": "actions.didTransition",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "ApplicationRoute"
+        },
+        {
+            "file": "app/components/comment-content-part/component.js",
+            "line": 18,
+            "description": "HTML tag name of the component\n\nSpan is preferred because it must be\ninline with other parts",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "default": "'span'",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentContentPartComponent"
+        },
+        {
+            "file": "app/components/comment-content-part/component.js",
+            "line": 30,
+            "description": "The comment",
+            "itemtype": "property",
+            "name": "comment",
+            "type": "Comment",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentContentPartComponent"
+        },
+        {
+            "file": "app/components/comment-content-part/component.js",
+            "line": 39,
+            "description": "The part of the comment",
+            "itemtype": "property",
+            "name": "part",
+            "type": "String",
+            "default": "''",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentContentPartComponent"
+        },
+        {
+            "file": "app/components/comment-content-part/component.js",
+            "line": 48,
+            "description": "Class name bindings",
+            "itemtype": "property",
+            "name": "classNameBindings",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentContentPartComponent"
+        },
+        {
+            "file": "app/components/comment-content-part/component.js",
+            "line": 56,
+            "description": "The reference of this content part",
+            "itemtype": "property",
+            "name": "reference",
+            "type": "Comment",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentContentPartComponent"
+        },
+        {
+            "file": "app/components/comment-content-part/component.js",
+            "line": 69,
+            "description": "Whether it has the right schema to\nbe a reference (@someID) or not",
+            "itemtype": "property",
+            "name": "hasSchema",
+            "type": "Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentContentPartComponent"
+        },
+        {
+            "file": "app/components/comment-content-part/component.js",
+            "line": 81,
+            "description": "Whether the component is a valid\nreference or not",
+            "itemtype": "property",
+            "name": "isReference",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentContentPartComponent"
+        },
+        {
+            "file": "app/components/comment-content-part/component.js",
+            "line": 92,
+            "description": "Mouse enter action\n\nSend action if the component\nis a reference to highlight the\nreferenced comment",
+            "itemtype": "event",
+            "name": "mouseEnter",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The mouse enter event",
+                    "type": "jQuery.Event"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "CommentContentPartComponent"
+        },
+        {
+            "file": "app/components/comment-content-part/component.js",
+            "line": 112,
+            "description": "Mouse leave action\n\nSend action if the component\nis a reference to disable the\nhighlighting of the referenced comment",
+            "itemtype": "event",
+            "name": "mouseLeave",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The mouse leave event",
+                    "type": "jQuery.Event"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "CommentContentPartComponent"
+        },
+        {
+            "file": "app/components/comment-form/component.js",
+            "line": 15,
+            "description": "Class names",
+            "itemtype": "property",
+            "name": "classNames",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentFormComponent"
+        },
+        {
+            "file": "app/components/comment-form/component.js",
+            "line": 23,
+            "description": "The comment to create",
+            "itemtype": "property",
+            "name": "comment",
+            "type": "Comment",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentFormComponent"
+        },
+        {
+            "file": "app/components/comment-form/component.js",
+            "line": 32,
+            "description": "The comments which we can mention",
+            "itemtype": "property",
+            "name": "comments",
+            "type": "Comment[]",
+            "default": "[]",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentFormComponent"
+        },
+        {
+            "file": "app/components/comment-form/component.js",
+            "line": 41,
+            "description": "Max length of a comment",
+            "itemtype": "property",
+            "name": "maxLength",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentFormComponent"
+        },
+        {
+            "file": "app/components/comment-form/component.js",
+            "line": 49,
+            "description": "Chars left to type in the input",
+            "itemtype": "property",
+            "name": "charsLeft",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentFormComponent"
+        },
+        {
+            "file": "app/components/comment-form/component.js",
+            "line": 60,
+            "description": "The data to show in the typeahead\npopup",
+            "itemtype": "property",
+            "name": "data",
+            "type": "Object[]",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentFormComponent"
+        },
+        {
+            "file": "app/components/comment-form/component.js",
+            "line": 78,
+            "description": "The referenced comments",
+            "itemtype": "property",
+            "name": "_referenced",
+            "type": "Comment[]",
+            "access": "private",
+            "tagname": "",
+            "class": "CommentFormComponent"
+        },
+        {
+            "file": "app/components/comment-form/component.js",
+            "line": 97,
+            "description": "Actions of the comment form",
+            "itemtype": "property",
+            "name": "actions",
+            "type": "Object",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentFormComponent"
+        },
+        {
+            "file": "app/components/comment-form/component.js",
+            "line": 104,
+            "description": "Action to add the comment",
+            "itemtype": "method",
+            "name": "actions.add",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "CommentFormComponent"
+        },
+        {
+            "file": "app/components/comment-list/component.js",
+            "line": 13,
+            "description": "The comments",
+            "itemtype": "property",
+            "name": "comments",
+            "type": "Comment[]",
+            "default": "[]",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentListComponent"
+        },
+        {
+            "file": "app/components/comment-list/component.js",
+            "line": 22,
+            "description": "The currently highlighted comment",
+            "itemtype": "property",
+            "name": "highligthed",
+            "type": "Comment",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentListComponent"
+        },
+        {
+            "file": "app/components/comment-list-item/component.js",
+            "line": 17,
+            "description": "The comment",
+            "itemtype": "property",
+            "name": "comment",
+            "type": "Comment",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentListItemComponent"
+        },
+        {
+            "file": "app/components/comment-list-item/component.js",
+            "line": 26,
+            "description": "Class name bindings",
+            "itemtype": "property",
+            "name": "classNameBindings",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentListItemComponent"
+        },
+        {
+            "file": "app/components/comment-list-item/component.js",
+            "line": 34,
+            "description": "Whether the item is currently highlighted\nor not",
+            "itemtype": "property",
+            "name": "highlighted",
+            "type": "Boolean",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentListItemComponent"
+        },
+        {
+            "file": "app/components/comment-list-item/component.js",
+            "line": 46,
+            "description": "The parts of the comment content",
+            "itemtype": "property",
+            "name": "parts",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "CommentListItemComponent"
+        },
+        {
+            "file": "app/components/list-pagination/component.js",
+            "line": 12,
+            "description": "The limits to be selectable",
+            "itemtype": "property",
+            "name": "limits",
+            "type": "Number[]",
+            "access": "public",
+            "tagname": "",
+            "class": "ListPaginationComponent"
+        },
+        {
+            "file": "app/components/side-nav/component.js",
+            "line": 16,
+            "description": "Tag name of the component",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "default": "'nav'",
+            "access": "public",
+            "tagname": "",
+            "class": "TopNavigationComponent"
+        },
+        {
+            "file": "app/components/side-nav/component.js",
+            "line": 25,
+            "description": "Class name bindings (variable:css-class)",
+            "itemtype": "property",
+            "name": "classNameBindings",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "TopNavigationComponent"
+        },
+        {
+            "file": "app/components/side-nav/component.js",
+            "line": 33,
+            "description": "Class names",
+            "itemtype": "property",
+            "name": "classNames",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "TopNavigationComponent"
+        },
+        {
+            "file": "app/components/side-nav/component.js",
+            "line": 41,
+            "description": "Navigation service",
+            "itemtype": "property",
+            "name": "navigation",
+            "type": "NavigationService",
+            "access": "public",
+            "tagname": "",
+            "class": "TopNavigationComponent"
+        },
+        {
+            "file": "app/components/side-nav/component.js",
+            "line": 49,
+            "description": "Is the side-nav visible?",
+            "itemtype": "property",
+            "name": "visible",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "TopNavigationComponent"
+        },
+        {
+            "file": "app/components/side-nav/component.js",
+            "line": 59,
+            "description": "The entries which are displayed in the navigation",
+            "itemtype": "property",
+            "name": "entries",
+            "type": "Topic[]",
+            "default": "[]",
+            "access": "public",
+            "tagname": "",
+            "class": "TopNavigationComponent"
+        },
+        {
+            "file": "app/components/side-nav-toggler/component.js",
+            "line": 12,
+            "description": "HTML tag name of the component",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "default": "'button'",
+            "access": "public",
+            "tagname": "",
+            "class": "SideNavTogglerComponent"
+        },
+        {
+            "file": "app/components/side-nav-toggler/component.js",
+            "line": 21,
+            "description": "Navigation service",
+            "itemtype": "property",
+            "name": "navigation",
+            "type": "NavigationService",
+            "access": "public",
+            "tagname": "",
+            "class": "SideNavTogglerComponent"
+        },
+        {
+            "file": "app/components/side-nav-toggler/component.js",
+            "line": 29,
+            "description": "Class name bindings",
+            "itemtype": "property",
+            "name": "classNameBindings",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "SideNavTogglerComponent"
+        },
+        {
+            "file": "app/components/side-nav-toggler/component.js",
+            "line": 37,
+            "description": "On click event handler\n\nToggles navigation",
+            "itemtype": "event",
+            "name": "click",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The jquery event",
+                    "type": "jQuery.Event"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "SideNavTogglerComponent"
+        },
+        {
+            "file": "app/components/thread-list-item/component.js",
+            "line": 13,
+            "description": "Routing service to transition to\nanother route on click",
+            "itemtype": "property",
+            "name": "routing",
+            "type": "Ember.RoutingService",
+            "access": "public",
+            "tagname": "",
+            "class": "ThreadListItemComponent"
+        },
+        {
+            "file": "app/components/thread-list-item/component.js",
+            "line": 22,
+            "description": "Class names of the component",
+            "itemtype": "property",
+            "name": "classNames",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "ThreadListItemComponent"
+        },
+        {
+            "file": "app/components/thread-list-item/component.js",
+            "line": 30,
+            "description": "HTML tag name of the component",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "default": "'article'",
+            "access": "public",
+            "tagname": "",
+            "class": "ThreadListItemComponent"
+        },
+        {
+            "file": "app/components/thread-list-item/component.js",
+            "line": 39,
+            "description": "On click event handler\n\nRedirects to the detail view of the thread",
+            "itemtype": "event",
+            "name": "click",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The jquery event",
+                    "type": "jQuery.Event"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "ThreadListItemComponent"
+        },
+        {
+            "file": "app/components/thread-preview/component.js",
+            "line": 12,
+            "description": "Is the preview body visible?",
+            "itemtype": "property",
+            "name": "visible",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "ThreadPreviewComment"
+        },
+        {
+            "file": "app/components/thread-preview/component.js",
+            "line": 21,
+            "description": "Thread preview actions",
+            "itemtype": "property",
+            "name": "actions",
+            "type": "Object",
+            "access": "public",
+            "tagname": "",
+            "class": "ThreadPreviewComment"
+        },
+        {
+            "file": "app/components/thread-preview/component.js",
+            "line": 28,
+            "description": "Toggle the visible flag",
+            "itemtype": "method",
+            "name": "actions.toggleVisible",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "ThreadPreviewComment"
+        },
+        {
+            "file": "app/components/top-header/component.js",
+            "line": 12,
+            "description": "HTML tag name of the component",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "default": "'header'",
+            "access": "public",
+            "tagname": "",
+            "class": "TopHeaderComponent"
+        },
+        {
+            "file": "app/components/top-header/component.js",
+            "line": 21,
+            "description": "Class names of the component",
+            "itemtype": "property",
+            "name": "classNames",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "TopHeaderComponent"
+        },
+        {
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 17,
+            "description": "The key to trigger the\ntypeahead on",
+            "itemtype": "property",
+            "name": "key",
+            "type": "String",
+            "default": "'@'",
+            "access": "public",
+            "tagname": "",
+            "class": "TypeaheadTextareaComponent"
+        },
+        {
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 27,
+            "description": "The data to display in the\ntypeahead popup",
+            "itemtype": "property",
+            "name": "data",
+            "type": "Object[]",
+            "default": "[]",
+            "access": "public",
+            "tagname": "",
+            "class": "TypeaheadTextareaComponent"
+        },
+        {
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 37,
+            "description": "The template to use in the\ntypeahead popup",
+            "itemtype": "property",
+            "name": "displayTpl",
+            "type": "String",
+            "default": "'<li>${label}</li>'",
+            "access": "public",
+            "tagname": "",
+            "class": "TypeaheadTextareaComponent"
+        },
+        {
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 47,
+            "description": "The template to insert into\nthe actual textarea",
+            "itemtype": "property",
+            "name": "insertTpl",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "TypeaheadTextareaComponent"
+        },
+        {
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 59,
+            "description": "Initialize At.js after inserting\nthe component",
+            "itemtype": "method",
+            "name": "didInsertElement",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TypeaheadTextareaComponent"
+        },
+        {
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 73,
+            "description": "Destroy At.js before destroying\nthe component",
+            "itemtype": "method",
+            "name": "willDestroyElement",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TypeaheadTextareaComponent"
+        },
+        {
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 87,
+            "description": "Initialize At.js",
+            "itemtype": "method",
+            "name": "_initializeAtwho",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "TypeaheadTextareaComponent"
+        },
+        {
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 104,
+            "description": "Destroy At.js",
+            "itemtype": "method",
+            "name": "_destroyAtwho",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "TypeaheadTextareaComponent"
+        },
+        {
+            "file": "app/components/typeahead-textarea/component.js",
+            "line": 115,
+            "description": "Redraw At.js on data changes",
+            "itemtype": "method",
+            "name": "_redrawAtwho",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "TypeaheadTextareaComponent"
+        },
+        {
+            "file": "app/components/user-alias/component.js",
+            "line": 15,
+            "description": "HTML tag name of the component",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "String",
+            "default": "'span'",
+            "access": "public",
+            "tagname": "",
+            "class": "UserAliasComponent"
+        },
+        {
+            "file": "app/components/user-alias/component.js",
+            "line": 24,
+            "description": "Bind title to property",
+            "itemtype": "property",
+            "name": "attributeBindings",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "UserAliasComponent"
+        },
+        {
+            "file": "app/components/user-alias/component.js",
+            "line": 32,
+            "description": "The title of the component",
+            "itemtype": "property",
+            "name": "title",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "UserAliasComponent"
+        },
+        {
+            "file": "app/components/user-alias/component.js",
+            "line": 45,
+            "description": "The user to alias",
+            "itemtype": "property",
+            "name": "user",
+            "type": "User",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "UserAliasComponent"
+        },
+        {
+            "file": "app/components/user-alias/component.js",
+            "line": 54,
+            "description": "Is the popover visible?",
+            "itemtype": "property",
+            "name": "popoverVisible",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "UserAliasComponent"
+        },
+        {
+            "file": "app/components/user-alias/component.js",
+            "line": 63,
+            "description": "Toggle popover on click",
+            "itemtype": "event",
+            "name": "click",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The event",
+                    "type": "jQuery.Event"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "UserAliasComponent"
+        },
+        {
+            "file": "app/components/user-alias/component.js",
+            "line": 75,
+            "description": "Hide popover on mouse enter",
+            "itemtype": "event",
+            "name": "mouseLeave",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The event",
+                    "type": "jQuery.Event"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "UserAliasComponent"
+        },
+        {
+            "file": "app/index/route.js",
+            "line": 12,
+            "description": "Model hook, fetch the last 10\noverall threads",
+            "itemtype": "method",
+            "name": "model",
+            "return": {
+                "description": "The last 10 threads",
+                "type": "Thread[]"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "IndexRoute"
+        },
+        {
+            "file": "app/mixins/pagination-controller.js",
+            "line": 11,
+            "description": "Query params used for a paged and sorted list",
+            "itemtype": "property",
+            "name": "queryParams",
+            "type": "String[]",
+            "access": "public",
+            "tagname": "",
+            "class": "PaginationControllerMixin"
+        },
+        {
+            "file": "app/mixins/pagination-controller.js",
+            "line": 19,
+            "description": "The default object limit",
+            "itemtype": "property",
+            "name": "limit",
+            "type": "Number",
+            "default": "20",
+            "access": "public",
+            "tagname": "",
+            "class": "PaginationControllerMixin"
+        },
+        {
+            "file": "app/mixins/pagination-controller.js",
+            "line": 28,
+            "description": "The default sorting order",
+            "itemtype": "property",
+            "name": "sort",
+            "type": "String",
+            "default": "''",
+            "access": "public",
+            "tagname": "",
+            "class": "PaginationControllerMixin"
+        },
+        {
+            "file": "app/mixins/pagination-controller.js",
+            "line": 37,
+            "description": "The default page",
+            "itemtype": "property",
+            "name": "page",
+            "type": "Number",
+            "default": "1",
+            "access": "public",
+            "tagname": "",
+            "class": "PaginationControllerMixin"
+        },
+        {
+            "file": "app/mixins/pagination-route.js",
+            "line": 11,
+            "description": "The name of the model to fetch",
+            "itemtype": "property",
+            "name": "modelName",
+            "type": "String",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "PaginationRouteMixin"
+        },
+        {
+            "file": "app/mixins/pagination-route.js",
+            "line": 20,
+            "description": "Query params used for a paged and sorted list",
+            "itemtype": "property",
+            "name": "queryParams",
+            "type": "Object",
+            "access": "public",
+            "tagname": "",
+            "class": "PaginationRouteMixin"
+        },
+        {
+            "file": "app/mixins/pagination-route.js",
+            "line": 32,
+            "description": "Model hook to fetch paged / sorted data",
+            "itemtype": "method",
+            "name": "model",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "Query params of this route",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "limit",
+                            "description": "How many records to display",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "page",
+                            "description": "Which page to display",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "sort",
+                            "description": "The sort fields and order",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "The resolved data",
+                "type": "Promise"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "PaginationRouteMixin"
+        },
+        {
+            "file": "app/models/comment.js",
+            "line": 34,
+            "description": "The user who created the thread",
+            "itemtype": "property",
+            "name": "user",
+            "type": "User",
+            "access": "public",
+            "tagname": "",
+            "class": "Comment"
+        },
+        {
+            "file": "app/models/comment.js",
+            "line": 42,
+            "description": "The thread of the comment",
+            "itemtype": "property",
+            "name": "user",
+            "type": "Thread",
+            "access": "public",
+            "tagname": "",
+            "class": "Comment"
+        },
+        {
+            "file": "app/models/comment.js",
+            "line": 50,
+            "description": "The content of the comment",
+            "itemtype": "property",
+            "name": "content",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "Comment"
+        },
+        {
+            "file": "app/models/comment.js",
+            "line": 58,
+            "description": "The datetime when the comment was created",
+            "itemtype": "property",
+            "name": "created",
+            "type": "Moment",
+            "access": "public",
+            "tagname": "",
+            "class": "Comment"
+        },
+        {
+            "file": "app/models/thread.js",
+            "line": 42,
+            "description": "The user who created the thread",
+            "itemtype": "property",
+            "name": "user",
+            "type": "User",
+            "access": "public",
+            "tagname": "",
+            "class": "Thread"
+        },
+        {
+            "file": "app/models/thread.js",
+            "line": 50,
+            "description": "The topic of the thread",
+            "itemtype": "property",
+            "name": "topic",
+            "type": "Topic",
+            "access": "public",
+            "tagname": "",
+            "class": "Thread"
+        },
+        {
+            "file": "app/models/thread.js",
+            "line": 58,
+            "description": "The title of the comment",
+            "itemtype": "property",
+            "name": "title",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "Thread"
+        },
+        {
+            "file": "app/models/thread.js",
+            "line": 66,
+            "description": "The content of the thread",
+            "itemtype": "property",
+            "name": "content",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "Thread"
+        },
+        {
+            "file": "app/models/thread.js",
+            "line": 74,
+            "description": "The preview of the content (first 25 words)",
+            "itemtype": "property",
+            "name": "preview",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "Thread"
+        },
+        {
+            "file": "app/models/thread.js",
+            "line": 85,
+            "description": "The date and time when the thread was created",
+            "itemtype": "property",
+            "name": "created",
+            "type": "Moment",
+            "access": "public",
+            "tagname": "",
+            "class": "Thread"
+        },
+        {
+            "file": "app/models/thread.js",
+            "line": 93,
+            "description": "The comments to the thread",
+            "itemtype": "property",
+            "name": "comments",
+            "type": "Comment[]",
+            "access": "public",
+            "tagname": "",
+            "class": "Thread"
+        },
+        {
+            "file": "app/models/topic.js",
+            "line": 16,
+            "description": "The name of the topic",
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "Topic"
+        },
+        {
+            "file": "app/models/topic.js",
+            "line": 24,
+            "description": "The identifier of the topic\n(this is used in the url)",
+            "itemtype": "property",
+            "name": "identifier",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "Topic"
+        },
+        {
+            "file": "app/models/topic.js",
+            "line": 33,
+            "description": "The description of the topic",
+            "itemtype": "property",
+            "name": "description",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "Topic"
+        },
+        {
+            "file": "app/models/topic.js",
+            "line": 41,
+            "description": "The amount of threads published\nin the topic the last 24 hours",
+            "itemtype": "property",
+            "name": "threadsLastDay",
+            "type": "Number",
+            "access": "public",
+            "tagname": "",
+            "class": "Topic"
+        },
+        {
+            "file": "app/models/topic.js",
+            "line": 50,
+            "description": "The threads in the topic",
+            "itemtype": "property",
+            "name": "threads",
+            "type": "Thread[]",
+            "access": "public",
+            "tagname": "",
+            "class": "Topic"
+        },
+        {
+            "file": "app/models/user.js",
+            "line": 12,
+            "description": "The identifier of the user\n\nThis is a generated sha256 hash\nof the users IP and UserAgent",
+            "itemtype": "property",
+            "name": "identifier",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "User"
+        },
+        {
+            "file": "app/notfound/route.js",
+            "line": 11,
+            "description": "Render the template into a custom\noutlet for errors",
+            "itemtype": "method",
+            "name": "renderTemplate",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "NotfoundRoute"
+        },
+        {
+            "file": "app/services/navigation.js",
+            "line": 15,
+            "description": "Is the navigation visible?",
+            "itemtype": "property",
+            "name": "visible",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "NavigationService"
+        },
+        {
+            "file": "app/services/navigation.js",
+            "line": 24,
+            "description": "The search param to filter the\nentries",
+            "itemtype": "property",
+            "name": "search",
+            "type": "String",
+            "default": "''",
+            "access": "public",
+            "tagname": "",
+            "class": "NavigationService"
+        },
+        {
+            "file": "app/services/navigation.js",
+            "line": 34,
+            "description": "All available entries",
+            "itemtype": "property",
+            "name": "entries",
+            "type": "Topic[]",
+            "default": "[]",
+            "access": "private",
+            "tagname": "",
+            "class": "NavigationService"
+        },
+        {
+            "file": "app/services/navigation.js",
+            "line": 43,
+            "description": "The entries filtered by the search\nfields value",
+            "itemtype": "property",
+            "name": "entries",
+            "type": "Topic[]",
+            "access": "public",
+            "tagname": "",
+            "class": "NavigationService"
+        },
+        {
+            "file": "app/services/navigation.js",
+            "line": 63,
+            "description": "Clear the search field",
+            "itemtype": "method",
+            "name": "clearSearch",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "NavigationService"
+        },
+        {
+            "file": "app/services/navigation.js",
+            "line": 76,
+            "description": "Clear the search after closing the\nnavigation",
+            "itemtype": "method",
+            "name": "_afterClose",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "NavigationService"
+        },
+        {
+            "file": "app/topic/index/controller.js",
+            "line": 13,
+            "description": "The default sorting order",
+            "itemtype": "property",
+            "name": "sort",
+            "type": "String",
+            "default": "'-created'",
+            "access": "public",
+            "tagname": "",
+            "class": "TopicIndexController"
+        },
+        {
+            "file": "app/topic/index/route.js",
+            "line": 13,
+            "description": "The name of the model to fetch",
+            "itemtype": "property",
+            "name": "modelName",
+            "type": "String",
+            "default": "'thread'",
+            "access": "public",
+            "tagname": "",
+            "class": "TopicIndexRoute"
+        },
+        {
+            "file": "app/topic/index/route.js",
+            "line": 22,
+            "description": "Model hook to fetch threads for a topic",
+            "itemtype": "method",
+            "name": "model",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "The query params",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "limit",
+                            "description": "How many vehicle-checks should be queried",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "page",
+                            "description": "The page to fetch",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "sort",
+                            "description": "Sorting direction",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "A list of threads",
+                "type": "Thread[]"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TopicIndexRoute"
+        },
+        {
+            "file": "app/topic/new/route.js",
+            "line": 14,
+            "description": "Notify service",
+            "itemtype": "property",
+            "name": "notify",
+            "type": "EmberNotify.NotifyService",
+            "access": "public",
+            "tagname": "",
+            "class": "TopicThreadNewRoute"
+        },
+        {
+            "file": "app/topic/new/route.js",
+            "line": 22,
+            "description": "Model hook, create a new thread for\nthe topic we are in",
+            "itemtype": "method",
+            "name": "model",
+            "return": {
+                "description": "The new thread",
+                "type": "Thread"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TopicThreadNewRoute"
+        },
+        {
+            "file": "app/topic/new/route.js",
+            "line": 35,
+            "description": "Topic thread route actions",
+            "itemtype": "property",
+            "name": "actions",
+            "type": "Object",
+            "access": "public",
+            "tagname": "",
+            "class": "TopicThreadNewRoute"
+        },
+        {
+            "file": "app/topic/new/route.js",
+            "line": 42,
+            "description": "Save a new thread",
+            "itemtype": "method",
+            "name": "actions.save",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TopicThreadNewRoute"
+        },
+        {
+            "file": "app/topic/thread/route.js",
+            "line": 15,
+            "description": "Notify service",
+            "itemtype": "property",
+            "name": "notify",
+            "type": "EmberNotify.NotifyService",
+            "access": "public",
+            "tagname": "",
+            "class": "TopicThreadRoute"
+        },
+        {
+            "file": "app/topic/thread/route.js",
+            "line": 23,
+            "description": "The model hook to fetch the thread and\ncreate a new comment",
+            "itemtype": "method",
+            "name": "model",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "The given parameters to search the store",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "id",
+                            "description": "The id of the thread",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "The thread for the given id and a new comment",
+                "type": "Promise"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TopicThreadRoute"
+        },
+        {
+            "file": "app/topic/thread/route.js",
+            "line": 49,
+            "description": "Transition back to topic and fire a notification\nif no model is given",
+            "itemtype": "method",
+            "name": "afterModel",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "The model of this route",
+                    "type": "Thread"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TopicThreadRoute"
+        },
+        {
+            "file": "app/topic/thread/route.js",
+            "line": 66,
+            "description": "The actions for the topic thread route",
+            "itemtype": "property",
+            "name": "actions",
+            "type": "Object",
+            "access": "public",
+            "tagname": "",
+            "class": "TopicThreadRoute"
+        },
+        {
+            "file": "app/topic/thread/route.js",
+            "line": 73,
+            "description": "Action to save a new comment",
+            "itemtype": "method",
+            "name": "actions.save",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TopicThreadRoute"
+        },
+        {
+            "file": "app/topic/route.js",
+            "line": 12,
+            "description": "Notify service",
+            "itemtype": "property",
+            "name": "notify",
+            "type": "EmberNotify.NotifyService",
+            "access": "public",
+            "tagname": "",
+            "class": "TopicRoute"
+        },
+        {
+            "file": "app/topic/route.js",
+            "line": 20,
+            "description": "Model hook to fetch the topic and the threads of the topic",
+            "itemtype": "method",
+            "name": "model",
+            "params": [
+                {
+                    "name": "params",
+                    "description": "The given parameters to search the store",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "identifier",
+                            "description": "The identifier of the topic",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "The topic to the given identifier",
+                "type": "Topic"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TopicRoute"
+        },
+        {
+            "file": "app/topic/route.js",
+            "line": 35,
+            "description": "Transition back to index and fire a notification\nif no model is given",
+            "itemtype": "method",
+            "name": "afterModel",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "The model of this route",
+                    "type": "Topic"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "TopicRoute"
+        },
+        {
+            "file": "app/transforms/moment.js",
+            "line": 13,
+            "description": "Deserialize datetime strings to moment objects",
+            "itemtype": "method",
+            "name": "deserialize",
+            "params": [
+                {
+                    "name": "serialized",
+                    "description": "The string to convert",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The deserialized date",
+                "type": "Moment"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "MomentTransform"
+        },
+        {
+            "file": "app/transforms/moment.js",
+            "line": 25,
+            "description": "Serialize moment objects to datetime strings",
+            "itemtype": "method",
+            "name": "serialize",
+            "params": [
+                {
+                    "name": "deserialized",
+                    "description": "The moment object to convert",
+                    "type": "Moment"
+                }
+            ],
+            "return": {
+                "description": "The serialized date",
+                "type": "String"
+            },
+            "access": "public",
+            "tagname": "",
+            "class": "MomentTransform"
+        },
+        {
+            "file": "app/router.js",
+            "line": 13,
+            "description": "Location type to route with",
+            "itemtype": "property",
+            "name": "location",
+            "type": "String",
+            "access": "public",
+            "tagname": "",
+            "class": "Router"
+        }
+    ],
+    "warnings": []
+}

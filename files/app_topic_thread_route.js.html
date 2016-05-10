@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>app/topic/thread/route.js - anonboard</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/lucid.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+            anonboard
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>0.0.0.ead6087c</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/AnonboardApplication", "classes/ApplicationAdapter", "classes/ApplicationRoute", "classes/Comment", "classes/CommentContentPartComponent", "classes/CommentFormComponent", "classes/CommentListComponent", "classes/CommentListItemComponent", "classes/IndexRoute", "classes/ListPaginationComponent", "classes/MomentTransform", "classes/NavigationService", "classes/NotfoundRoute", "classes/PaginationControllerMixin", "classes/PaginationRouteMixin", "classes/Router", "classes/SideNavTogglerComponent", "classes/Thread", "classes/ThreadBodyComponent", "classes/ThreadListComponent", "classes/ThreadListItemComponent", "classes/ThreadPreviewComment", "classes/TopHeaderComponent", "classes/Topic", "classes/TopicIndexController", "classes/TopicIndexRoute", "classes/TopicRoute", "classes/TopicThreadNewRoute", "classes/TopicThreadRoute", "classes/TopNavigationComponent", "classes/TypeaheadTextareaComponent", "classes/User", "classes/UserAliasComponent"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/AnonboardApplication.html">AnonboardApplication</a></li>
+                <li><a href="../classes/ApplicationAdapter.html">ApplicationAdapter</a></li>
+                <li><a href="../classes/ApplicationRoute.html">ApplicationRoute</a></li>
+                <li><a href="../classes/Comment.html">Comment</a></li>
+                <li><a href="../classes/CommentContentPartComponent.html">CommentContentPartComponent</a></li>
+                <li><a href="../classes/CommentFormComponent.html">CommentFormComponent</a></li>
+                <li><a href="../classes/CommentListComponent.html">CommentListComponent</a></li>
+                <li><a href="../classes/CommentListItemComponent.html">CommentListItemComponent</a></li>
+                <li><a href="../classes/IndexRoute.html">IndexRoute</a></li>
+                <li><a href="../classes/ListPaginationComponent.html">ListPaginationComponent</a></li>
+                <li><a href="../classes/MomentTransform.html">MomentTransform</a></li>
+                <li><a href="../classes/NavigationService.html">NavigationService</a></li>
+                <li><a href="../classes/NotfoundRoute.html">NotfoundRoute</a></li>
+                <li><a href="../classes/PaginationControllerMixin.html">PaginationControllerMixin</a></li>
+                <li><a href="../classes/PaginationRouteMixin.html">PaginationRouteMixin</a></li>
+                <li><a href="../classes/Router.html">Router</a></li>
+                <li><a href="../classes/SideNavTogglerComponent.html">SideNavTogglerComponent</a></li>
+                <li><a href="../classes/Thread.html">Thread</a></li>
+                <li><a href="../classes/ThreadBodyComponent.html">ThreadBodyComponent</a></li>
+                <li><a href="../classes/ThreadListComponent.html">ThreadListComponent</a></li>
+                <li><a href="../classes/ThreadListItemComponent.html">ThreadListItemComponent</a></li>
+                <li><a href="../classes/ThreadPreviewComment.html">ThreadPreviewComment</a></li>
+                <li><a href="../classes/TopHeaderComponent.html">TopHeaderComponent</a></li>
+                <li><a href="../classes/Topic.html">Topic</a></li>
+                <li><a href="../classes/TopicIndexController.html">TopicIndexController</a></li>
+                <li><a href="../classes/TopicIndexRoute.html">TopicIndexRoute</a></li>
+                <li><a href="../classes/TopicRoute.html">TopicRoute</a></li>
+                <li><a href="../classes/TopicThreadNewRoute.html">TopicThreadNewRoute</a></li>
+                <li><a href="../classes/TopicThreadRoute.html">TopicThreadRoute</a></li>
+                <li><a href="../classes/TopNavigationComponent.html">TopNavigationComponent</a></li>
+                <li><a href="../classes/TypeaheadTextareaComponent.html">TypeaheadTextareaComponent</a></li>
+                <li><a href="../classes/User.html">User</a></li>
+                <li><a href="../classes/UserAliasComponent.html">UserAliasComponent</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+        </div>
+        <div class="span9">
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>app/topic/thread/route.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+import Route   from &#x27;ember-route&#x27;
+import service from &#x27;ember-service/inject&#x27;
+import RSVP    from &#x27;rsvp&#x27;
+
+/**
+ * Route to display a single thread with
+ * it&#x27;s comment and functionality to create
+ * a new comment
+ *
+ * @class TopicThreadRoute
+ * @extends Ember.Route
+ * @public
+ */
+export default Route.extend({
+  /**
+   * Notify service
+   *
+   * @property {EmberNotify.NotifyService} notify
+   * @public
+   */
+  notify: service(&#x27;notify&#x27;),
+
+  /**
+   * The model hook to fetch the thread and
+   * create a new comment
+   *
+   * @method model
+   * @param {Object} params The given parameters to search the store
+   * @param {String} params.id The id of the thread
+   * @return {Promise} The thread for the given id and a new comment
+   * @public
+   */
+  async model({ id }) {
+    try {
+      let thread = await this.store.findRecord(&#x27;thread&#x27;, id, {
+        include: &#x27;user,topic,comments,comments.user,comments.referenced&#x27;
+      })
+
+      return RSVP.hash({
+        comment: this.store.createRecord(&#x27;comment&#x27;, { thread }),
+        thread
+      })
+    }
+    catch (err) {
+      return null // Blargh.. This has to be this way. Sorry :)
+    }
+  },
+
+  /**
+   * Transition back to topic and fire a notification
+   * if no model is given
+   *
+   * @method afterModel
+   * @param {Thread} model The model of this route
+   * @return {void}
+   * @public
+   */
+  afterModel(model) {
+    if (!model) {
+      this.get(&#x27;notify&#x27;).error(&#x27;Thread not found!&#x27;)
+
+      this.transitionTo(&#x27;topic&#x27;, this.modelFor(&#x27;topic&#x27;))
+    }
+  },
+
+  /**
+   * The actions for the topic thread route
+   *
+   * @property {Object} actions
+   * @public
+   */
+  actions: {
+    /**
+     * Action to save a new comment
+     *
+     * @method actions.save
+     * @return {void}
+     * @public
+     */
+    async save() {
+      this.set(&#x27;controller.loading&#x27;, true)
+
+      try {
+        await this.get(&#x27;currentModel.comment&#x27;).save({
+          adapterOptions: {
+            include: &#x27;user&#x27;
+          }
+        })
+
+        this.set(&#x27;currentModel.comment&#x27;, this.store.createRecord(&#x27;comment&#x27;, {
+          thread: this.get(&#x27;currentModel.thread&#x27;)
+        }))
+
+        this.get(&#x27;notify&#x27;).success(&#x27;Comment was successfully added.&#x27;)
+      }
+      catch (e) {
+        this.get(&#x27;notify&#x27;).error(&#x27;Ooops! Something went wrong...&#x27;)
+      }
+      finally {
+        this.set(&#x27;controller.loading&#x27;, false)
+      }
+    }
+  }
+})
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

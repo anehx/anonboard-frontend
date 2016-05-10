@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>app/components/typeahead-textarea/component.js - anonboard</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/lucid.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+            anonboard
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>0.0.0.ead6087c</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/AnonboardApplication", "classes/ApplicationAdapter", "classes/ApplicationRoute", "classes/Comment", "classes/CommentContentPartComponent", "classes/CommentFormComponent", "classes/CommentListComponent", "classes/CommentListItemComponent", "classes/IndexRoute", "classes/ListPaginationComponent", "classes/MomentTransform", "classes/NavigationService", "classes/NotfoundRoute", "classes/PaginationControllerMixin", "classes/PaginationRouteMixin", "classes/Router", "classes/SideNavTogglerComponent", "classes/Thread", "classes/ThreadBodyComponent", "classes/ThreadListComponent", "classes/ThreadListItemComponent", "classes/ThreadPreviewComment", "classes/TopHeaderComponent", "classes/Topic", "classes/TopicIndexController", "classes/TopicIndexRoute", "classes/TopicRoute", "classes/TopicThreadNewRoute", "classes/TopicThreadRoute", "classes/TopNavigationComponent", "classes/TypeaheadTextareaComponent", "classes/User", "classes/UserAliasComponent"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/AnonboardApplication.html">AnonboardApplication</a></li>
+                <li><a href="../classes/ApplicationAdapter.html">ApplicationAdapter</a></li>
+                <li><a href="../classes/ApplicationRoute.html">ApplicationRoute</a></li>
+                <li><a href="../classes/Comment.html">Comment</a></li>
+                <li><a href="../classes/CommentContentPartComponent.html">CommentContentPartComponent</a></li>
+                <li><a href="../classes/CommentFormComponent.html">CommentFormComponent</a></li>
+                <li><a href="../classes/CommentListComponent.html">CommentListComponent</a></li>
+                <li><a href="../classes/CommentListItemComponent.html">CommentListItemComponent</a></li>
+                <li><a href="../classes/IndexRoute.html">IndexRoute</a></li>
+                <li><a href="../classes/ListPaginationComponent.html">ListPaginationComponent</a></li>
+                <li><a href="../classes/MomentTransform.html">MomentTransform</a></li>
+                <li><a href="../classes/NavigationService.html">NavigationService</a></li>
+                <li><a href="../classes/NotfoundRoute.html">NotfoundRoute</a></li>
+                <li><a href="../classes/PaginationControllerMixin.html">PaginationControllerMixin</a></li>
+                <li><a href="../classes/PaginationRouteMixin.html">PaginationRouteMixin</a></li>
+                <li><a href="../classes/Router.html">Router</a></li>
+                <li><a href="../classes/SideNavTogglerComponent.html">SideNavTogglerComponent</a></li>
+                <li><a href="../classes/Thread.html">Thread</a></li>
+                <li><a href="../classes/ThreadBodyComponent.html">ThreadBodyComponent</a></li>
+                <li><a href="../classes/ThreadListComponent.html">ThreadListComponent</a></li>
+                <li><a href="../classes/ThreadListItemComponent.html">ThreadListItemComponent</a></li>
+                <li><a href="../classes/ThreadPreviewComment.html">ThreadPreviewComment</a></li>
+                <li><a href="../classes/TopHeaderComponent.html">TopHeaderComponent</a></li>
+                <li><a href="../classes/Topic.html">Topic</a></li>
+                <li><a href="../classes/TopicIndexController.html">TopicIndexController</a></li>
+                <li><a href="../classes/TopicIndexRoute.html">TopicIndexRoute</a></li>
+                <li><a href="../classes/TopicRoute.html">TopicRoute</a></li>
+                <li><a href="../classes/TopicThreadNewRoute.html">TopicThreadNewRoute</a></li>
+                <li><a href="../classes/TopicThreadRoute.html">TopicThreadRoute</a></li>
+                <li><a href="../classes/TopNavigationComponent.html">TopNavigationComponent</a></li>
+                <li><a href="../classes/TypeaheadTextareaComponent.html">TypeaheadTextareaComponent</a></li>
+                <li><a href="../classes/User.html">User</a></li>
+                <li><a href="../classes/UserAliasComponent.html">UserAliasComponent</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+        </div>
+        <div class="span9">
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>app/components/typeahead-textarea/component.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+import TextArea from &#x27;ember-components/text-area&#x27;
+import $        from &#x27;jquery&#x27;
+
+import computed, {
+  observes
+} from &#x27;ember-computed-decorators&#x27;
+
+/**
+ * Textarea with At.js typeahead support
+ *
+ * @class TypeaheadTextareaComponent
+ * @see https://github.com/ichord/At.js/wiki/Base-Document
+ * @extends Ember.TextArea
+ * @public
+ */
+export default TextArea.extend({
+  /**
+   * The key to trigger the
+   * typeahead on
+   *
+   * @property {String} key
+   * @default &#x27;@&#x27;
+   * @public
+   */
+  key: &#x27;@&#x27;,
+
+  /**
+   * The data to display in the
+   * typeahead popup
+   *
+   * @property {Object[]} data
+   * @default []
+   * @public
+   */
+  data: [],
+
+  /**
+   * The template to use in the
+   * typeahead popup
+   *
+   * @property {String} displayTpl
+   * @default &#x27;&lt;li&gt;${label}&lt;/li&gt;&#x27;
+   * @public
+   */
+  displayTpl: &#x27;&lt;li&gt;${label}&lt;/li&gt;&#x27;,
+
+  /**
+   * The template to insert into
+   * the actual textarea
+   *
+   * @property {String} insertTpl
+   * @public
+   */
+  @computed(&#x27;key&#x27;)
+  insertTpl(key) {
+    return &#x60;${key}\$\{value\}&#x60;
+  },
+
+  /**
+   * Initialize At.js after inserting
+   * the component
+   *
+   * @method didInsertElement
+   * @return {void}
+   * @public
+   */
+  didInsertElement() {
+    this._super(...arguments)
+
+    this._initializeAtwho()
+  },
+
+  /**
+   * Destroy At.js before destroying
+   * the component
+   *
+   * @method willDestroyElement
+   * @return {void}
+   * @public
+   */
+  willDestroyElement() {
+    this._super(...arguments)
+
+    this._destroyAtwho()
+  },
+
+  /**
+   * Initialize At.js
+   *
+   * @method _initializeAtwho
+   * @return {void}
+   * @private
+   */
+  _initializeAtwho() {
+    $(this.get(&#x27;element&#x27;)).atwho({
+      at:         this.get(&#x27;key&#x27;),
+      data:       this.get(&#x27;data&#x27;),
+      displayTpl: this.get(&#x27;displayTpl&#x27;),
+      insertTpl:  this.get(&#x27;insertTpl&#x27;),
+      limit:      this.get(&#x27;data.length&#x27;)
+    })
+  },
+
+  /**
+   * Destroy At.js
+   *
+   * @method _destroyAtwho
+   * @return {void}
+   * @private
+   */
+  _destroyAtwho() {
+    $(this.get(&#x27;element&#x27;)).atwho(&#x27;destroy&#x27;)
+  },
+
+  /**
+   * Redraw At.js on data changes
+   *
+   * @method _redrawAtwho
+   * @return {void}
+   * @private
+   */
+  @observes(&#x27;data&#x27;)
+  _redrawAtwho() {
+    this._destroyAtwho()
+    this._initializeAtwho()
+  }
+})
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

@@ -1,0 +1,5668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ApplicationAdapter - anonboard</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/lucid.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+            anonboard
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>0.0.0.ead6087c</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/AnonboardApplication", "classes/ApplicationAdapter", "classes/ApplicationRoute", "classes/Comment", "classes/CommentContentPartComponent", "classes/CommentFormComponent", "classes/CommentListComponent", "classes/CommentListItemComponent", "classes/IndexRoute", "classes/ListPaginationComponent", "classes/MomentTransform", "classes/NavigationService", "classes/NotfoundRoute", "classes/PaginationControllerMixin", "classes/PaginationRouteMixin", "classes/Router", "classes/SideNavTogglerComponent", "classes/Thread", "classes/ThreadBodyComponent", "classes/ThreadListComponent", "classes/ThreadListItemComponent", "classes/ThreadPreviewComment", "classes/TopHeaderComponent", "classes/Topic", "classes/TopicIndexController", "classes/TopicIndexRoute", "classes/TopicRoute", "classes/TopicThreadNewRoute", "classes/TopicThreadRoute", "classes/TopNavigationComponent", "classes/TypeaheadTextareaComponent", "classes/User", "classes/UserAliasComponent"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/AnonboardApplication.html">AnonboardApplication</a></li>
+                <li><a href="../classes/ApplicationAdapter.html">ApplicationAdapter</a></li>
+                <li><a href="../classes/ApplicationRoute.html">ApplicationRoute</a></li>
+                <li><a href="../classes/Comment.html">Comment</a></li>
+                <li><a href="../classes/CommentContentPartComponent.html">CommentContentPartComponent</a></li>
+                <li><a href="../classes/CommentFormComponent.html">CommentFormComponent</a></li>
+                <li><a href="../classes/CommentListComponent.html">CommentListComponent</a></li>
+                <li><a href="../classes/CommentListItemComponent.html">CommentListItemComponent</a></li>
+                <li><a href="../classes/IndexRoute.html">IndexRoute</a></li>
+                <li><a href="../classes/ListPaginationComponent.html">ListPaginationComponent</a></li>
+                <li><a href="../classes/MomentTransform.html">MomentTransform</a></li>
+                <li><a href="../classes/NavigationService.html">NavigationService</a></li>
+                <li><a href="../classes/NotfoundRoute.html">NotfoundRoute</a></li>
+                <li><a href="../classes/PaginationControllerMixin.html">PaginationControllerMixin</a></li>
+                <li><a href="../classes/PaginationRouteMixin.html">PaginationRouteMixin</a></li>
+                <li><a href="../classes/Router.html">Router</a></li>
+                <li><a href="../classes/SideNavTogglerComponent.html">SideNavTogglerComponent</a></li>
+                <li><a href="../classes/Thread.html">Thread</a></li>
+                <li><a href="../classes/ThreadBodyComponent.html">ThreadBodyComponent</a></li>
+                <li><a href="../classes/ThreadListComponent.html">ThreadListComponent</a></li>
+                <li><a href="../classes/ThreadListItemComponent.html">ThreadListItemComponent</a></li>
+                <li><a href="../classes/ThreadPreviewComment.html">ThreadPreviewComment</a></li>
+                <li><a href="../classes/TopHeaderComponent.html">TopHeaderComponent</a></li>
+                <li><a href="../classes/Topic.html">Topic</a></li>
+                <li><a href="../classes/TopicIndexController.html">TopicIndexController</a></li>
+                <li><a href="../classes/TopicIndexRoute.html">TopicIndexRoute</a></li>
+                <li><a href="../classes/TopicRoute.html">TopicRoute</a></li>
+                <li><a href="../classes/TopicThreadNewRoute.html">TopicThreadNewRoute</a></li>
+                <li><a href="../classes/TopicThreadRoute.html">TopicThreadRoute</a></li>
+                <li><a href="../classes/TopNavigationComponent.html">TopNavigationComponent</a></li>
+                <li><a href="../classes/TypeaheadTextareaComponent.html">TypeaheadTextareaComponent</a></li>
+                <li><a href="../classes/User.html">User</a></li>
+                <li><a href="../classes/UserAliasComponent.html">UserAliasComponent</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+        </div>
+        <div class="span9">
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>ApplicationAdapter</h1>
+</div>
+
+
+	<div class="well well-small">
+        <div class="extends">
+            Extends <a href="http://emberjs.com/api/data/classes/DS.JSONAPIAdapter.html" class="crosslink external" target="_blank">DS.JSONAPIAdapter</a>
+        </div>
+    </div>
+
+
+
+
+<div class="yuidoc-class-description">
+<p>The default application adapter</p>
+
+</div>
+
+<!-- table of contents -->
+
+<div id="class-toc" class="page-section">
+	<h2>Table of Contents</h2>
+    <ul>
+		<li>
+			<strong>Methods</strong>
+			<ul>
+				<li><a href="#method-_ajaxRequest"><span class="im">_ajaxRequest</span>(<span class="ia">options</span>)</a></li>
+				<li><a href="#method-_buildURL"><span class="im">_buildURL</span>(<span class="ia">modelName</span><span class="ia">id</span>)</a></li>
+				<li><a href="#method-_lazyInjections"><span class="im">_lazyInjections</span>()</a></li>
+				<li><a href="#method-_onLookup"><span class="im">_onLookup</span>()</a></li>
+				<li><a href="#method-_scheduledDestroy"><span class="im">_scheduledDestroy</span>()</a></li>
+				<li><a href="#method-addObserver"><span class="im">addObserver</span>(<span class="ia">key</span><span class="ia">target</span><span class="ia">method</span>)</a></li>
+				<li><a href="#method-ajax"><span class="im">ajax</span>(<span class="ia">url</span><span class="ia">type</span><span class="ia">options</span>)</a></li>
+				<li><a href="#method-ajaxOptions"><span class="im">ajaxOptions</span>(<span class="ia">url</span><span class="ia">type</span><span class="ia">options</span>)</a></li>
+				<li><a href="#method-assertPolymorphicType"><span class="im">assertPolymorphicType</span>(<span class="ia">record</span><span class="ia">relationshipMeta</span><span class="ia">addedRecord</span>)</a></li>
+				<li><a href="#method-beginPropertyChanges"><span class="im">beginPropertyChanges</span>()</a></li>
+				<li><a href="#method-buildURL"><span class="im">buildURL</span>(<span class="ia">modelName</span><span class="ia">id</span><span class="ia">snapshot</span><span class="ia">requestType</span><span class="ia">query</span>)</a></li>
+				<li><a href="#method-cacheFor"><span class="im">cacheFor</span>(<span class="ia">keyName</span>)</a></li>
+				<li><a href="#method-createRecord"><span class="im">createRecord</span>(<span class="ia">store</span><span class="ia">type</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-decrementProperty"><span class="im">decrementProperty</span>(<span class="ia">keyName</span><span class="ia">decrement</span>)</a></li>
+				<li><a href="#method-deleteRecord"><span class="im">deleteRecord</span>(<span class="ia">store</span><span class="ia">type</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-destroy"><span class="im">destroy</span>()</a></li>
+				<li><a href="#method-endPropertyChanges"><span class="im">endPropertyChanges</span>()</a></li>
+				<li><a href="#method-findAll"><span class="im">findAll</span>(<span class="ia">store</span><span class="ia">type</span><span class="ia">sinceToken</span><span class="ia">snapshotRecordArray</span>)</a></li>
+				<li><a href="#method-findBelongsTo"><span class="im">findBelongsTo</span>(<span class="ia">store</span><span class="ia">snapshot</span><span class="ia">url</span>)</a></li>
+				<li><a href="#method-findHasMany"><span class="im">findHasMany</span>(<span class="ia">store</span><span class="ia">snapshot</span><span class="ia">url</span>)</a></li>
+				<li><a href="#method-findMany"><span class="im">findMany</span>(<span class="ia">store</span><span class="ia">type</span><span class="ia">ids</span><span class="ia">snapshots</span>)</a></li>
+				<li><a href="#method-findRecord"><span class="im">findRecord</span>(<span class="ia">store</span><span class="ia">type</span><span class="ia">id</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-generatedDetailedMessage"><span class="im">generatedDetailedMessage</span>(<span class="ia">status</span><span class="ia">headers</span><span class="ia">payload</span>)</a></li>
+				<li><a href="#method-generateIdForRecord"><span class="im">generateIdForRecord</span>(<span class="ia">store</span><span class="ia">type</span><span class="ia">inputProperties</span>)</a></li>
+				<li><a href="#method-get"><span class="im">get</span>(<span class="ia">keyName</span>)</a></li>
+				<li><a href="#method-getProperties"><span class="im">getProperties</span>(<span class="ia">list</span>)</a></li>
+				<li><a href="#method-getWithDefault"><span class="im">getWithDefault</span>(<span class="ia">keyName</span><span class="ia">defaultValue</span>)</a></li>
+				<li><a href="#method-groupRecordsForFindMany"><span class="im">groupRecordsForFindMany</span>(<span class="ia">store</span><span class="ia">snapshots</span>)</a></li>
+				<li><a href="#method-handleResponse"><span class="im">handleResponse</span>(<span class="ia">status</span><span class="ia">headers</span><span class="ia">payload</span>)</a></li>
+				<li><a href="#method-hasObserverFor"><span class="im">hasObserverFor</span>(<span class="ia">key</span>)</a></li>
+				<li><a href="#method-incrementProperty"><span class="im">incrementProperty</span>(<span class="ia">keyName</span><span class="ia">increment</span>)</a></li>
+				<li><a href="#method-init"><span class="im">init</span>()</a></li>
+				<li><a href="#method-isInvalid"><span class="im">isInvalid</span>(<span class="ia">status</span><span class="ia">headers</span><span class="ia">payload</span>)</a></li>
+				<li><a href="#method-isSuccess"><span class="im">isSuccess</span>(<span class="ia">status</span><span class="ia">headers</span><span class="ia">payload</span>)</a></li>
+				<li><a href="#method-modelHasAttributeOrRelationshipNamedType"><span class="im">modelHasAttributeOrRelationshipNamedType</span>(<span class="ia">modelClass</span>)</a></li>
+				<li><a href="#method-normalizeErrorResponse"><span class="im">normalizeErrorResponse</span>(<span class="ia">status</span><span class="ia">headers</span><span class="ia">payload</span>)</a></li>
+				<li><a href="#method-notifyPropertyChange"><span class="im">notifyPropertyChange</span>(<span class="ia">keyName</span>)</a></li>
+				<li><a href="#method-parseErrorResponse"><span class="im">parseErrorResponse</span>(<span class="ia">responseText</span>)</a></li>
+				<li><a href="#method-pathForType"><span class="im">pathForType</span>(<span class="ia">modelName</span>)</a></li>
+				<li><a href="#method-propertyDidChange"><span class="im">propertyDidChange</span>(<span class="ia">keyName</span>)</a></li>
+				<li><a href="#method-propertyWillChange"><span class="im">propertyWillChange</span>(<span class="ia">keyName</span>)</a></li>
+				<li><a href="#method-query"><span class="im">query</span>(<span class="ia">store</span><span class="ia">type</span><span class="ia">query</span>)</a></li>
+				<li><a href="#method-queryRecord"><span class="im">queryRecord</span>(<span class="ia">store</span><span class="ia">type</span><span class="ia">query</span>)</a></li>
+				<li><a href="#method-removeObserver"><span class="im">removeObserver</span>(<span class="ia">key</span><span class="ia">target</span><span class="ia">method</span>)</a></li>
+				<li><a href="#method-reopen"><span class="im">reopen</span>()</a></li>
+				<li><a href="#method-reopenClass"><span class="im">reopenClass</span>()</a></li>
+				<li><a href="#method-serialize"><span class="im">serialize</span>(<span class="ia">snapshot</span><span class="ia">options</span>)</a></li>
+				<li><a href="#method-set"><span class="im">set</span>(<span class="ia">keyName</span><span class="ia">value</span>)</a></li>
+				<li><a href="#method-setProperties"><span class="im">setProperties</span>(<span class="ia">hash</span>)</a></li>
+				<li><a href="#method-shouldBackgroundReloadAll"><span class="im">shouldBackgroundReloadAll</span>(<span class="ia">store</span><span class="ia">snapshotRecordArray</span>)</a></li>
+				<li><a href="#method-shouldBackgroundReloadRecord"><span class="im">shouldBackgroundReloadRecord</span>(<span class="ia">store</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-shouldReloadAll"><span class="im">shouldReloadAll</span>(<span class="ia">store</span><span class="ia">snapshotRecordArray</span>)</a></li>
+				<li><a href="#method-shouldReloadRecord"><span class="im">shouldReloadRecord</span>(<span class="ia">store</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-sortQueryParams"><span class="im">sortQueryParams</span>(<span class="ia">obj</span>)</a></li>
+				<li><a href="#method-toggleProperty"><span class="im">toggleProperty</span>(<span class="ia">keyName</span>)</a></li>
+				<li><a href="#method-toString"><span class="im">toString</span>()</a></li>
+				<li><a href="#method-updateRecord"><span class="im">updateRecord</span>(<span class="ia">store</span><span class="ia">type</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-urlForCreateRecord"><span class="im">urlForCreateRecord</span>(<span class="ia">modelName</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-urlForDeleteRecord"><span class="im">urlForDeleteRecord</span>(<span class="ia">id</span><span class="ia">modelName</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-urlForFindAll"><span class="im">urlForFindAll</span>(<span class="ia">modelName</span>)</a></li>
+				<li><a href="#method-urlForFindBelongTo"><span class="im">urlForFindBelongTo</span>(<span class="ia">id</span><span class="ia">modelName</span>)</a></li>
+				<li><a href="#method-urlForFindHasMany"><span class="im">urlForFindHasMany</span>(<span class="ia">id</span><span class="ia">modelName</span>)</a></li>
+				<li><a href="#method-urlForFindMany"><span class="im">urlForFindMany</span>(<span class="ia">ids</span><span class="ia">modelName</span><span class="ia">snapshots</span>)</a></li>
+				<li><a href="#method-urlForFindRecord"><span class="im">urlForFindRecord</span>(<span class="ia">id</span><span class="ia">modelName</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-urlForQuery"><span class="im">urlForQuery</span>(<span class="ia">query</span><span class="ia">modelName</span>)</a></li>
+				<li><a href="#method-urlForQueryRecord"><span class="im">urlForQueryRecord</span>(<span class="ia">query</span><span class="ia">modelName</span>)</a></li>
+				<li><a href="#method-urlForUpdateRecord"><span class="im">urlForUpdateRecord</span>(<span class="ia">id</span><span class="ia">modelName</span><span class="ia">snapshot</span>)</a></li>
+				<li><a href="#method-urlPrefix"><span class="im">urlPrefix</span>(<span class="ia">path</span><span class="ia">parentURL</span>)</a></li>
+				<li><a href="#method-willDestroy"><span class="im">willDestroy</span>()</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<strong>Properties</strong>
+			<ul>
+				<li><a href="#prop-coalesceFindRequests"><span class="ip">coalesceFindRequests</span></a></li>
+				<li><a href="#prop-concatenatedProperties"><span class="ip">concatenatedProperties</span></a></li>
+				<li><a href="#prop-defaultSerializer"><span class="ip">defaultSerializer</span></a></li>
+				<li><a href="#prop-headers"><span class="ip">headers</span></a></li>
+				<li><a href="#prop-host"><span class="ip">host</span></a></li>
+				<li><a href="#prop-isDestroyed"><span class="ip">isDestroyed</span></a></li>
+				<li><a href="#prop-isDestroying"><span class="ip">isDestroying</span></a></li>
+				<li><a href="#prop-mergedProperties"><span class="ip">mergedProperties</span></a></li>
+				<li><a href="#prop-namespace"><span class="ip">namespace</span></a></li>
+			</ul>
+		</li>
+
+
+	</ul>
+</div>
+
+<!-- details -->
+
+
+    <div id="methods" class="page-section">
+        <h2 class="off-left">Methods</h2>
+        <div class="item-list">
+<div id="method-_ajaxRequest" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>_ajaxRequest</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>options</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method__ajaxRequest">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l888"><code>addon&#x2F;adapters&#x2F;rest.js:888</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">options</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description">jQuery ajax options to be used for the ajax request</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-_buildURL" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>_buildURL</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+				<li class="arg">
+						<code>id</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method__buildURL">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l81"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:81</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">id</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-_lazyInjections" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>_lazyInjections</code></span>
+
+		<span class="paren">()</span>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.CoreObject.html#method__lazyInjections">Ember.CoreObject</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l912"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:912</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Returns a hash of property names and container names that injected
+properties will lookup on the container lazily.</div>
+
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>:
+					Hash of all lazy injected property keys to container names
+			</div>
+		</div>
+
+</div>
+<div id="method-_onLookup" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>_onLookup</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.CoreObject.html#method__onLookup">Ember.CoreObject</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l903"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:903</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Provides lookup-time type validation for injected properties.</div>
+
+
+
+</div>
+<div id="method-_scheduledDestroy" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>_scheduledDestroy</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.CoreObject.html#method__scheduledDestroy">Ember.CoreObject</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l465"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:465</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Invoked by the run loop to actually destroy the object. This is
+scheduled for execution by the <code>destroy</code> method.</div>
+
+
+
+</div>
+<div id="method-addObserver" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>addObserver</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>key</code>
+				</li>
+				<li class="arg">
+						<code>target</code>
+				</li>
+				<li class="arg">
+						<code>method</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_addObserver">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l333"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:333</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Adds an observer on a property.
+
+This is the core method used to register an observer for a property.
+
+Once you call this method, any time the key's value is set, your observer
+will be notified. Note that the observers are triggered any time the
+value is set, regardless of whether it has actually changed. Your
+observer should be prepared to handle that.
+
+You can also pass an optional context parameter to this method. The
+context will be passed to your observer method whenever it is triggered.
+Note that if you add the same target/method pair on a key multiple times
+with different context parameters, your observer will only be called once
+with the last context you passed.
+
+### Observer Methods
+
+Observer methods you pass should generally have the following signature if
+you do not pass a <code>context</code> parameter:
+
+<code>&#x60;</code>javascript
+fooDidChange: function(sender, key, value, rev) { };
+<code>&#x60;</code>
+
+The sender is the object that changed. The key is the property that
+changes. The value property is currently reserved and unused. The rev
+is the last property revision of the object when it changed, which you can
+use to detect if the key value has really changed or not.
+
+If you pass a <code>context</code> parameter, the context will be passed before the
+revision like so:
+
+<code>&#x60;</code>javascript
+fooDidChange: function(sender, key, value, context, rev) { };
+<code>&#x60;</code>
+
+Usually you will not need the value, context or revision parameters at
+the end. In this case, it is common to write observer methods that take
+only a sender and key value as parameters or, if you aren't interested in
+any of these values, to write an observer that has no parameters at all.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">key</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The key to observer</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">target</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description">The target object to invoke</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">method</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a>  |  <a href="http://emberjs.com/api/classes/Function.html" class="crosslink external" target="_blank">Function</a></span>
+
+
+					<div class="param-description">The method to invoke.</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-ajax" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>ajax</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>url</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>options</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_ajax">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l812"><code>addon&#x2F;adapters&#x2F;rest.js:812</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Takes a URL, an HTTP method and a hash of data, and makes an
+HTTP request.
+
+When the server responds with a payload, Ember Data will call into <code>extractSingle</code>
+or <code>extractArray</code> (depending on whether the original query was for one record or
+many records).
+
+By default, <code>ajax</code> method has the following behavior:
+
+* It sets the response <code>dataType</code> to <code>&quot;json&quot;</code>
+* If the HTTP method is not <code>&quot;GET&quot;</code>, it sets the <code>Content-Type</code> to be
+  <code>application&#x2F;json; charset=utf-8</code>
+* If the HTTP method is not <code>&quot;GET&quot;</code>, it stringifies the data passed in. The
+  data is the serialized record in the case of a save.
+* Registers success and failure handlers.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">url</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The request type GET, POST, PUT, DELETE etc.</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">options</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-ajaxOptions" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>ajaxOptions</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>url</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>options</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_ajaxOptions">
+				DS.RESTAdapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_json-api.js.html#l17"><code>addon&#x2F;adapters&#x2F;json-api.js:17</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">url</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The request type GET, POST, PUT, DELETE etc.</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">options</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-assertPolymorphicType" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>assertPolymorphicType</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>record</code>
+				</li>
+				<li class="arg">
+						<code>relationshipMeta</code>
+				</li>
+				<li class="arg">
+						<code>addedRecord</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.JSONAPIAdapter.html#method_assertPolymorphicType">DS.JSONAPIAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_utils.js.html#l6"><code>addon&#x2F;-private&#x2F;utils.js:6</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Assert that <code>addedRecord</code> has a valid type so it can be added to the
+relationship of the <code>record</code>.
+
+The assert basically checks if the <code>addedRecord</code> can be added to the
+relationship (specified via <code>relationshipMeta</code>) of the <code>record</code>.
+
+This utility should only be used internally, as both record parameters must
+be an InternalModel and the <code>relationshipMeta</code> needs to be the meta
+information about the relationship, retrieved via
+<code>record.relationshipFor(key)</code>.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">record</code>
+						<span class="type">InternalModel</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">relationshipMeta</code>
+						<span class="type">RelationshipMeta</span>
+
+
+					<div class="param-description">retrieved via
+       <code>record.relationshipFor(key)</code></div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">addedRecord</code>
+						<span class="type">InternalModel</span>
+
+
+					<div class="param-description">record which
+       should be added/set for the relationship</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-beginPropertyChanges" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>beginPropertyChanges</code></span>
+
+		<span class="paren">()</span>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_beginPropertyChanges">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l231"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:231</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Begins a grouping of property changes.
+
+You can use this method to group property changes so that notifications
+will not be sent until the changes are finished. If you plan to make a
+large number of changes to an object at one time, you should call this
+method at the beginning of the changes to begin deferring change
+notifications. When you are done making changes, call
+<code>endPropertyChanges()</code> to deliver the deferred change notifications and end
+deferring.</div>
+
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+			</div>
+		</div>
+
+</div>
+<div id="method-buildURL" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>buildURL</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+				<li class="arg">
+						<code>id</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+				<li class="arg">
+						<code>requestType</code>
+				</li>
+				<li class="arg">
+						<code>query</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_buildURL">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l33"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:33</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Builds a URL for a given type and optional ID.
+
+By default, it pluralizes the type's name (for example, 'post'
+becomes 'posts' and 'person' becomes 'people'). To override the
+pluralization see [pathForType](#method_pathForType).
+
+If an ID is specified, it adds the ID to the path generated
+for the type, separated by a <code>&#x2F;</code>.
+
+When called by RESTAdapter.findMany() the <code>id</code> and <code>snapshot</code> parameters
+will be arrays of ids and snapshots.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">id</code>
+						<span class="type">(String  |  Array  |  Object)</span>
+
+
+					<div class="param-description">single id or array of ids or query</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type">(DS.Snapshot  |  Array)</span>
+
+
+					<div class="param-description">single snapshot or array of snapshots</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">requestType</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">query</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description">object of query parameters to send for query requests.</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-cacheFor" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>cacheFor</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_cacheFor">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l490"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:490</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Returns the cached value of a computed property, if it exists.
+This allows you to inspect the value of a computed property
+without accidentally invoking it if it is intended to be
+generated lazily.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>:
+					The cached value of the computed property, if any
+			</div>
+		</div>
+
+</div>
+<div id="method-createRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>createRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_createRecord">
+				DS.Adapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l588"><code>addon&#x2F;adapters&#x2F;rest.js:588</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Called by the store when a newly created record is
+saved via the <code>save</code> method on a model record instance.
+
+The <code>createRecord</code> method serializes the record and makes an Ajax (HTTP POST) request
+to a URL computed by <code>buildURL</code>.
+
+See <code>serialize</code> for information on how to customize the serialized form
+of a record.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Model.html" class="crosslink external" target="_blank">DS.Model</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-decrementProperty" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>decrementProperty</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+				<li class="arg">
+						<code>decrement</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Number</span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_decrementProperty">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l453"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:453</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Set the value of a property to the current value minus some amount.
+
+<code>&#x60;</code>javascript
+player.decrementProperty('lives');
+orc.decrementProperty('health', 5);
+<code>&#x60;</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The name of the property to decrement</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">decrement</code>
+						<span class="type">Number</span>
+
+
+					<div class="param-description">The amount to decrement by. Defaults to 1</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Number</span>:
+					The new property value
+			</div>
+		</div>
+
+</div>
+<div id="method-deleteRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>deleteRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_deleteRecord">
+				DS.Adapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l642"><code>addon&#x2F;adapters&#x2F;rest.js:642</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Called by the store when a record is deleted.
+
+The <code>deleteRecord</code> method  makes an Ajax (HTTP DELETE) request to a URL computed by <code>buildURL</code>.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Model.html" class="crosslink external" target="_blank">DS.Model</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-destroy" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>destroy</code></span>
+
+		<span class="paren">()</span>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/Ember.Object.html" class="crosslink external" target="_blank">Ember.Object</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.CoreObject.html#method_destroy">Ember.CoreObject</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l434"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:434</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Destroys an object by setting the <code>isDestroyed</code> flag and removing its
+metadata, which effectively destroys observers and bindings.
+
+If you try to set a property on a destroyed object, an exception will be
+raised.
+
+Note that destruction is scheduled for the end of the run loop and does not
+happen immediately.  It will set an isDestroying flag immediately.</div>
+
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/Ember.Object.html" class="crosslink external" target="_blank">Ember.Object</a></span>:
+					receiver
+			</div>
+		</div>
+
+</div>
+<div id="method-endPropertyChanges" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>endPropertyChanges</code></span>
+
+		<span class="paren">()</span>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_endPropertyChanges">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l251"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:251</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Ends a grouping of property changes.
+
+You can use this method to group property changes so that notifications
+will not be sent until the changes are finished. If you plan to make a
+large number of changes to an object at one time, you should call
+<code>beginPropertyChanges()</code> at the beginning of the changes to defer change
+notifications. When you are done making changes, call this method to
+deliver the deferred change notifications and end deferring.</div>
+
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+			</div>
+		</div>
+
+</div>
+<div id="method-findAll" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>findAll</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>sinceToken</code>
+				</li>
+				<li class="arg">
+						<code>snapshotRecordArray</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_findAll">
+				DS.Adapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l384"><code>addon&#x2F;adapters&#x2F;rest.js:384</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Called by the store in order to fetch a JSON array for all
+of the records for a given type.
+
+The <code>findAll</code> method makes an Ajax (HTTP GET) request to a URL computed by <code>buildURL</code>, and returns a
+promise for the resulting payload.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Model.html" class="crosslink external" target="_blank">DS.Model</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">sinceToken</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshotRecordArray</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.SnapshotRecordArray.html" class="crosslink external" target="_blank">DS.SnapshotRecordArray</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-findBelongsTo" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>findBelongsTo</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+				<li class="arg">
+						<code>url</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_findBelongsTo">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l545"><code>addon&#x2F;adapters&#x2F;rest.js:545</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Called by the store in order to fetch a JSON array for
+the unloaded records in a belongs-to relationship that were originally
+specified as a URL (inside of <code>links</code>).
+
+For example, if your original payload looks like this:
+
+<code>&#x60;</code>js
+{
+  "person": {
+    "id": 1,
+    "name": "Tom Dale",
+    "links": { "group": "/people/1/group" }
+  }
+}
+<code>&#x60;</code>
+
+This method will be called with the parent record and <code>&#x2F;people&#x2F;1&#x2F;group</code>.
+
+The <code>findBelongsTo</code> method will make an Ajax (HTTP GET) request to the originally specified URL.
+
+The format of your <code>links</code> value will influence the final request URL via the <code>urlPrefix</code> method:
+
+* Links beginning with <code>&#x2F;&#x2F;</code>, <code>http:&#x2F;&#x2F;</code>, <code>https:&#x2F;&#x2F;</code>, will be used as is, with no further manipulation.
+
+* Links beginning with a single <code>&#x2F;</code> will have the current adapter's <code>host</code> value prepended to it.
+
+* Links with no beginning <code>&#x2F;</code> will have a parentURL prepended to it, via the current adapter's <code>buildURL</code>.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">url</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-findHasMany" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>findHasMany</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+				<li class="arg">
+						<code>url</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_findHasMany">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l501"><code>addon&#x2F;adapters&#x2F;rest.js:501</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Called by the store in order to fetch a JSON array for
+the unloaded records in a has-many relationship that were originally
+specified as a URL (inside of <code>links</code>).
+
+For example, if your original payload looks like this:
+
+<code>&#x60;</code>js
+{
+  "post": {
+    "id": 1,
+    "title": "Rails is omakase",
+    "links": { "comments": "/posts/1/comments" }
+  }
+}
+<code>&#x60;</code>
+
+This method will be called with the parent record and <code>&#x2F;posts&#x2F;1&#x2F;comments</code>.
+
+The <code>findHasMany</code> method will make an Ajax (HTTP GET) request to the originally specified URL.
+
+The format of your <code>links</code> value will influence the final request URL via the <code>urlPrefix</code> method:
+
+* Links beginning with <code>&#x2F;&#x2F;</code>, <code>http:&#x2F;&#x2F;</code>, <code>https:&#x2F;&#x2F;</code>, will be used as is, with no further manipulation.
+
+* Links beginning with a single <code>&#x2F;</code> will have the current adapter's <code>host</code> value prepended to it.
+
+* Links with no beginning <code>&#x2F;</code> will have a parentURL prepended to it, via the current adapter's <code>buildURL</code>.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">url</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-findMany" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>findMany</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>ids</code>
+				</li>
+				<li class="arg">
+						<code>snapshots</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_findMany">
+				DS.Adapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_json-api.js.html#l92"><code>addon&#x2F;adapters&#x2F;json-api.js:92</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Model.html" class="crosslink external" target="_blank">DS.Model</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">ids</code>
+						<span class="type">Array</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshots</code>
+						<span class="type">Array</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-findRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>findRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>id</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_findRecord">
+				DS.Adapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l361"><code>addon&#x2F;adapters&#x2F;rest.js:361</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Called by the store in order to fetch the JSON for a given
+type and ID.
+
+The <code>findRecord</code> method makes an Ajax request to a URL computed by
+<code>buildURL</code>, and returns a promise for the resulting payload.
+
+This method performs an HTTP <code>GET</code> request with the id provided as part of the query string.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Model.html" class="crosslink external" target="_blank">DS.Model</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">id</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-generatedDetailedMessage" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>generatedDetailedMessage</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>status</code>
+				</li>
+				<li class="arg">
+						<code>headers</code>
+				</li>
+				<li class="arg">
+						<code>payload</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_generatedDetailedMessage">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l965"><code>addon&#x2F;adapters&#x2F;rest.js:965</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Generates a detailed ("friendly") error message, with plenty
+of information for debugging (good luck!)</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">status</code>
+						<span class="type">Number</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">headers</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">payload</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>:
+					request information
+			</div>
+		</div>
+
+</div>
+<div id="method-generateIdForRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>generateIdForRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>inputProperties</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">(String  |  Number)</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_generateIdForRecord">DS.Adapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapter.js.html#l230"><code>addon&#x2F;adapter.js:230</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">If the globally unique IDs for your records should be generated on the client,
+implement the <code>generateIdForRecord()</code> method. This method will be invoked
+each time you create a new record, and the value returned from it will be
+assigned to the record's <code>primaryKey</code>.
+
+Most traditional REST-like HTTP APIs will not use this method. Instead, the ID
+of the record will be set by the server, and your adapter will update the store
+with the new ID when it calls <code>didCreateRecord()</code>. Only implement this method if
+you intend to generate record IDs on the client-side.
+
+The <code>generateIdForRecord()</code> method will be invoked with the requesting store as
+the first parameter and the newly created record as the second parameter:
+
+<code>&#x60;</code>javascript
+generateIdForRecord: function(store, inputProperties) {
+  var uuid = App.generateUUIDWithStatisticallyLowOddsOfCollision();
+  return uuid;
+}
+<code>&#x60;</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Model.html" class="crosslink external" target="_blank">DS.Model</a></span>
+
+
+					<div class="param-description">the DS.Model class of the record</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">inputProperties</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description">a hash of properties to set on the
+  newly created record.</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">(String  |  Number)</span>:
+					id
+			</div>
+		</div>
+
+</div>
+<div id="method-get" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>get</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_get">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l100"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:100</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Retrieves the value of a property from the object.
+
+This method is usually similar to using <code>object[keyName]</code> or <code>object.keyName</code>,
+however it supports both computed properties and the unknownProperty
+handler.
+
+Because <code>get</code> unifies the syntax for accessing all these kinds
+of properties, it can make many refactorings easier, such as replacing a
+simple property with a computed property, or vice versa.
+
+### Computed Properties
+
+Computed properties are methods defined with the <code>property</code> modifier
+declared at the end, such as:
+
+<code>&#x60;</code>javascript
+fullName: function() {
+  return this.get('firstName') + ' ' + this.get('lastName');
+}.property('firstName', 'lastName')
+<code>&#x60;</code>
+
+When you call <code>get</code> on a computed property, the function will be
+called and the return value will be returned instead of the function
+itself.
+
+### Unknown Properties
+
+Likewise, if you try to call <code>get</code> on a property whose value is
+<code>undefined</code>, the <code>unknownProperty()</code> method will be called on the object.
+If this method returns any value other than <code>undefined</code>, it will be returned
+instead. This allows you to implement "virtual" properties that are
+not defined upfront.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The property to retrieve</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>:
+					The property value or undefined.
+			</div>
+		</div>
+
+</div>
+<div id="method-getProperties" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>getProperties</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>list</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_getProperties">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l143"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:143</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">To get the values of multiple properties at once, call <code>getProperties</code>
+with a list of strings or an array:
+
+<code>&#x60;</code>javascript
+record.getProperties('firstName', 'lastName', 'zipCode');
+// { firstName: 'John', lastName: 'Doe', zipCode: '10011' }
+<code>&#x60;</code>
+
+is equivalent to:
+
+<code>&#x60;</code>javascript
+record.getProperties(['firstName', 'lastName', 'zipCode']);
+// { firstName: 'John', lastName: 'Doe', zipCode: '10011' }
+<code>&#x60;</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">list</code>
+						<span class="type">String...  |  Array</span>
+
+
+					<div class="param-description">of keys to get</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-getWithDefault" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>getWithDefault</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+				<li class="arg">
+						<code>defaultValue</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_getWithDefault">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l415"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:415</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Retrieves the value of a property, or a default value in the case that the
+property returns <code>undefined</code>.
+
+<code>&#x60;</code>javascript
+person.getWithDefault('lastName', 'Doe');
+<code>&#x60;</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The name of the property to retrieve</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">defaultValue</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description">The value to return if the property value is undefined</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>:
+					The property value or the defaultValue.
+			</div>
+		</div>
+
+</div>
+<div id="method-groupRecordsForFindMany" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>groupRecordsForFindMany</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>snapshots</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Array</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_groupRecordsForFindMany">
+				DS.Adapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l679"><code>addon&#x2F;adapters&#x2F;rest.js:679</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Organize records into groups, each of which is to be passed to separate
+calls to <code>findMany</code>.
+
+This implementation groups together records that have the same base URL but
+differing ids. For example <code>&#x2F;comments&#x2F;1</code> and <code>&#x2F;comments&#x2F;2</code> will be grouped together
+because we know findMany can coalesce them together as <code>&#x2F;comments?ids[]=1&amp;ids[]=2</code>
+
+It also supports urls where ids are passed as a query param, such as <code>&#x2F;comments?id=1</code>
+but not those where there is more than 1 query param such as <code>&#x2F;comments?id=2&amp;name=David</code>
+Currently only the query param of <code>id</code> is supported. If you need to support others, please
+override this or the <code>_stripIDFromURL</code> method.
+
+It does not group records that have differing base urls, such as for example: <code>&#x2F;posts&#x2F;1&#x2F;comments&#x2F;2</code>
+and <code>&#x2F;posts&#x2F;2&#x2F;comments&#x2F;3</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshots</code>
+						<span class="type">Array</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Array</span>:
+					an array of arrays of records, each of which is to be
+                  loaded separately by <code>findMany</code>.
+			</div>
+		</div>
+
+</div>
+<div id="method-handleResponse" class="method item public">
+	<div class="method-signature">
+	<span class="name"><code>handleResponse</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>status</code>
+				</li>
+				<li class="arg">
+						<code>headers</code>
+				</li>
+				<li class="arg">
+						<code>payload</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object  |  <a href="http://emberjs.com/api/data/classes/DS.InvalidError.html" class="crosslink external" target="_blank">DS.InvalidError</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_handleResponse">
+				DS.RESTAdapter
+			</a>
+			but overwritten in
+		<a href="../files/app_application_adapter.js.html#l21"><code>app&#x2F;application&#x2F;adapter.js:21</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Treat HTTP 400 as a validation error
+code response, since django-rest-framework
+returns HTTP 400 on validation errors</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">status</code>
+						<span class="type">Number</span>
+
+
+					<div class="param-description"><p>The HTTP status code</p>
+</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">headers</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description"><p>The response headers</p>
+</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">payload</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description"><p>The payload of the response</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object  |  <a href="http://emberjs.com/api/data/classes/DS.InvalidError.html" class="crosslink external" target="_blank">DS.InvalidError</a></span>:
+					<p>Response</p>
+
+			</div>
+		</div>
+
+</div>
+<div id="method-hasObserverFor" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>hasObserverFor</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>key</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Boolean</span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_hasObserverFor">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l400"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:400</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Returns <code>true</code> if the object currently has observers registered for a
+particular key. You can use this method to potentially defer performing
+an expensive action until someone begins observing a particular property
+on the object.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">key</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">Key to check</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Boolean</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-incrementProperty" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>incrementProperty</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+				<li class="arg">
+						<code>increment</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Number</span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_incrementProperty">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l433"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:433</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Set the value of a property to the current value plus some amount.
+
+<code>&#x60;</code>javascript
+person.incrementProperty('age');
+team.incrementProperty('score', 2);
+<code>&#x60;</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The name of the property to increment</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">increment</code>
+						<span class="type">Number</span>
+
+
+					<div class="param-description">The amount to increment by. Defaults to 1</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Number</span>:
+					The new property value
+			</div>
+		</div>
+
+</div>
+<div id="method-init" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>init</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.CoreObject.html#method_init">Ember.CoreObject</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l234"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:234</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">An overridable method called when objects are instantiated. By default,
+does nothing unless it is overridden during class definition.
+
+Example:
+
+<code>&#x60;</code>javascript
+App.Person = Ember.Object.extend({
+  init: function() {
+    alert('Name is ' + this.get('name'));
+  }
+});
+
+var steve = App.Person.create({
+  name: "Steve"
+});
+
+// alerts 'Name is Steve'.
+<code>&#x60;</code>
+
+NOTE: If you do override <code>init</code> for a framework class like <code>Ember.View</code>,
+be sure to call <code>this._super(...arguments)</code> in your
+<code>init</code> declaration! If you don't, Ember may not have an opportunity to
+do important setup work, and you'll see strange behavior in your
+application.</div>
+
+
+
+</div>
+<div id="method-isInvalid" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>isInvalid</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>status</code>
+				</li>
+				<li class="arg">
+						<code>headers</code>
+				</li>
+				<li class="arg">
+						<code>payload</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Boolean</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_isInvalid">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l798"><code>addon&#x2F;adapters&#x2F;rest.js:798</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Default <code>handleResponse</code> implementation uses this hook to decide if the
+response is a an invalid error.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">status</code>
+						<span class="type">Number</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">headers</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">payload</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Boolean</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-isSuccess" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>isSuccess</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>status</code>
+				</li>
+				<li class="arg">
+						<code>headers</code>
+				</li>
+				<li class="arg">
+						<code>payload</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Boolean</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_isSuccess">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l784"><code>addon&#x2F;adapters&#x2F;rest.js:784</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Default <code>handleResponse</code> implementation uses this hook to decide if the
+response is a success.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">status</code>
+						<span class="type">Number</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">headers</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">payload</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Boolean</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-modelHasAttributeOrRelationshipNamedType" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>modelHasAttributeOrRelationshipNamedType</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>modelClass</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.JSONAPIAdapter.html#method_modelHasAttributeOrRelationshipNamedType">DS.JSONAPIAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_utils.js.html#l48"><code>addon&#x2F;-private&#x2F;utils.js:48</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Check if the passed model has a <code>type</code> attribute or a relationship named <code>type</code>.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">modelClass</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-normalizeErrorResponse" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>normalizeErrorResponse</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>status</code>
+				</li>
+				<li class="arg">
+						<code>headers</code>
+				</li>
+				<li class="arg">
+						<code>payload</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_normalizeErrorResponse">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l943"><code>addon&#x2F;adapters&#x2F;rest.js:943</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">status</code>
+						<span class="type">Number</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">headers</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">payload</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>:
+					errors payload
+			</div>
+		</div>
+
+</div>
+<div id="method-notifyPropertyChange" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>notifyPropertyChange</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_notifyPropertyChange">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l318"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:318</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Convenience method to call <code>propertyWillChange</code> and <code>propertyDidChange</code> in
+succession.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The property key to be notified about.</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+			</div>
+		</div>
+
+</div>
+<div id="method-parseErrorResponse" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>parseErrorResponse</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>responseText</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_parseErrorResponse">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l927"><code>addon&#x2F;adapters&#x2F;rest.js:927</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">responseText</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-pathForType" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>pathForType</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_pathForType">
+				DS.BuildURLMixin
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_json-api.js.html#l105"><code>addon&#x2F;adapters&#x2F;json-api.js:105</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					path
+			</div>
+		</div>
+
+</div>
+<div id="method-propertyDidChange" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>propertyDidChange</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_propertyDidChange">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l294"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:294</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Notify the observer system that a property has just changed.
+
+Sometimes you need to change a value directly or indirectly without
+actually calling <code>get()</code> or <code>set()</code> on it. In this case, you can use this
+method and <code>propertyWillChange()</code> instead. Calling these two methods
+together will notify all observers that the property has potentially
+changed value.
+
+Note that you must always call <code>propertyWillChange</code> and <code>propertyDidChange</code>
+as a pair. If you do not, it may get the property change groups out of
+order and cause notifications to be delivered more often than you would
+like.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The property key that has just changed.</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+			</div>
+		</div>
+
+</div>
+<div id="method-propertyWillChange" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>propertyWillChange</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_propertyWillChange">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l270"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:270</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Notify the observer system that a property is about to change.
+
+Sometimes you need to change a value directly or indirectly without
+actually calling <code>get()</code> or <code>set()</code> on it. In this case, you can use this
+method and <code>propertyDidChange()</code> instead. Calling these two methods
+together will notify all observers that the property has potentially
+changed value.
+
+Note that you must always call <code>propertyWillChange</code> and <code>propertyDidChange</code>
+as a pair. If you do not, it may get the property change groups out of
+order and cause notifications to be delivered more often than you would
+like.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The property key that is about to change.</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/Ember.Observable.html" class="crosslink external" target="_blank">Ember.Observable</a></span>
+			</div>
+		</div>
+
+</div>
+<div id="method-query" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>query</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>query</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_query">
+				DS.Adapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l409"><code>addon&#x2F;adapters&#x2F;rest.js:409</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Called by the store in order to fetch a JSON array for
+the records that match a particular query.
+
+The <code>query</code> method makes an Ajax (HTTP GET) request to a URL
+computed by <code>buildURL</code>, and returns a promise for the resulting
+payload.
+
+The <code>query</code> argument is a simple JavaScript object that will be passed directly
+to the server as parameters.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Model.html" class="crosslink external" target="_blank">DS.Model</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">query</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-queryRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>queryRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>query</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_queryRecord">
+				DS.Adapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l436"><code>addon&#x2F;adapters&#x2F;rest.js:436</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Called by the store in order to fetch a JSON object for
+the record that matches a particular query.
+
+The <code>queryRecord</code> method makes an Ajax (HTTP GET) request to a URL
+computed by <code>buildURL</code>, and returns a promise for the resulting
+payload.
+
+The <code>query</code> argument is a simple JavaScript object that will be passed directly
+to the server as parameters.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Model.html" class="crosslink external" target="_blank">DS.Model</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">query</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-removeObserver" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>removeObserver</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>key</code>
+				</li>
+				<li class="arg">
+						<code>target</code>
+				</li>
+				<li class="arg">
+						<code>method</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_removeObserver">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l385"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:385</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Remove an observer you have previously registered on this object. Pass
+the same key, target, and method you passed to <code>addObserver()</code> and your
+target will no longer receive notifications.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">key</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The key to observer</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">target</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description">The target object to invoke</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">method</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a>  |  <a href="http://emberjs.com/api/classes/Function.html" class="crosslink external" target="_blank">Function</a></span>
+
+
+					<div class="param-description">The method to invoke.</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-reopen" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>reopen</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.CoreObject.html#method_reopen">Ember.CoreObject</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l703"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:703</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Augments a constructor's prototype with additional
+properties and functions:
+
+<code>&#x60;</code>javascript
+MyObject = Ember.Object.extend({
+  name: 'an object'
+});
+
+o = MyObject.create();
+o.get('name'); // 'an object'
+
+MyObject.reopen({
+  say: function(msg){
+    console.log(msg);
+  }
+})
+
+o2 = MyObject.create();
+o2.say("hello"); // logs "hello"
+
+o.say("goodbye"); // logs "goodbye"
+<code>&#x60;</code>
+
+To add functions and properties to the constructor itself,
+see <code>reopenClass</code></div>
+
+
+
+</div>
+<div id="method-reopenClass" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>reopenClass</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.CoreObject.html#method_reopenClass">Ember.CoreObject</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l739"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:739</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Augments a constructor's own properties and functions:
+
+<code>&#x60;</code>javascript
+MyObject = Ember.Object.extend({
+  name: 'an object'
+});
+
+MyObject.reopenClass({
+  canBuild: false
+});
+
+MyObject.canBuild; // false
+o = MyObject.create();
+<code>&#x60;</code>
+
+In other words, this creates static properties and functions for the class.
+These are only available on the class and not on any instance of that class.
+
+<code>&#x60;</code>javascript
+App.Person = Ember.Object.extend({
+  name : "",
+  sayHello : function() {
+    alert("Hello. My name is " + this.get('name'));
+  }
+});
+
+App.Person.reopenClass({
+  species : "Homo sapiens",
+  createPerson: function(newPersonsName){
+    return App.Person.create({
+      name:newPersonsName
+    });
+  }
+});
+
+var tom = App.Person.create({
+  name : "Tom Dale"
+});
+var yehuda = App.Person.createPerson("Yehuda Katz");
+
+tom.sayHello(); // "Hello. My name is Tom Dale"
+yehuda.sayHello(); // "Hello. My name is Yehuda Katz"
+alert(App.Person.species); // "Homo sapiens"
+<code>&#x60;</code>
+
+Note that <code>species</code> and <code>createPerson</code> are *not* valid on the <code>tom</code> and <code>yehuda</code>
+variables. They are only valid on <code>App.Person</code>.
+
+To add functions and properties to instances of
+a constructor by extending the constructor's prototype
+see <code>reopen</code></div>
+
+
+
+</div>
+<div id="method-serialize" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>serialize</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+				<li class="arg">
+						<code>options</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_serialize">DS.Adapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapter.js.html#l260"><code>addon&#x2F;adapter.js:260</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Proxies to the serializer's <code>serialize</code> method.
+
+Example
+
+<code>&#x60;</code>app/adapters/application.js
+import DS from 'ember-data';
+
+export default DS.Adapter.extend({
+  createRecord: function(store, type, snapshot) {
+    var data = this.serialize(snapshot, { includeId: true });
+    var url = type;
+
+    // ...
+  }
+});
+<code>&#x60;</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">options</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>:
+					serialized snapshot
+			</div>
+		</div>
+
+</div>
+<div id="method-set" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>set</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+				<li class="arg">
+						<code>value</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_set">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l168"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:168</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Sets the provided key or path to the value.
+
+This method is generally very similar to calling <code>object[key] = value</code> or
+<code>object.key = value</code>, except that it provides support for computed
+properties, the <code>setUnknownProperty()</code> method and property observers.
+
+### Computed Properties
+
+If you try to set a value on a key that has a computed property handler
+defined (see the <code>get()</code> method for an example), then <code>set()</code> will call
+that method, passing both the value and key instead of simply changing
+the value itself. This is useful for those times when you need to
+implement a property that is composed of one or more member
+properties.
+
+### Unknown Properties
+
+If you try to set a value on a key that is undefined in the target
+object, then the <code>setUnknownProperty()</code> handler will be called instead. This
+gives you an opportunity to implement complex "virtual" properties that
+are not predefined on the object. If <code>setUnknownProperty()</code> returns
+undefined, then <code>set()</code> will simply set the value on the object.
+
+### Property Observers
+
+In addition to changing the property, <code>set()</code> will also register a property
+change with the object. Unless you have placed this call inside of a
+<code>beginPropertyChanges()</code> and <code>endPropertyChanges(),</code> any "local" observers
+(i.e. observer methods declared on the same object), will be called
+immediately. Any "remote" observers (i.e. observer methods declared on
+another object) will be placed in a queue and called at a later time in a
+coalesced manner.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The property to set</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">value</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description">The value to set or <code>null</code>.</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>:
+					The passed value
+			</div>
+		</div>
+
+</div>
+<div id="method-setProperties" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>setProperties</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>hash</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_setProperties">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l213"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:213</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Sets a list of properties at once. These properties are set inside
+a single <code>beginPropertyChanges</code> and <code>endPropertyChanges</code> batch, so
+observers will be buffered.
+
+<code>&#x60;</code>javascript
+record.setProperties({ firstName: 'Charles', lastName: 'Jolley' });
+<code>&#x60;</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">hash</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description">the hash of keys and values to set</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>:
+					The passed in hash
+			</div>
+		</div>
+
+</div>
+<div id="method-shouldBackgroundReloadAll" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>shouldBackgroundReloadAll</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>snapshotRecordArray</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Boolean</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_shouldBackgroundReloadAll">DS.Adapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapter.js.html#l519"><code>addon&#x2F;adapter.js:519</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">This method is used by the store to determine if the store should
+reload a record array after the <code>store.findAll</code> method resolves
+with a cached record array.
+
+This method is *only* checked by the store when the store is
+returning a cached record array.
+
+If this method returns true the store will re-fetch all records
+from the adapter.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshotRecordArray</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.SnapshotRecordArray.html" class="crosslink external" target="_blank">DS.SnapshotRecordArray</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Boolean</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-shouldBackgroundReloadRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>shouldBackgroundReloadRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Boolean</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_shouldBackgroundReloadRecord">DS.Adapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapter.js.html#l499"><code>addon&#x2F;adapter.js:499</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">This method is used by the store to determine if the store should
+reload a record after the <code>store.findRecord</code> method resolves a
+cached record.
+
+This method is *only* checked by the store when the store is
+returning a cached record.
+
+If this method returns true the store will re-fetch a record from
+the adapter.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Boolean</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-shouldReloadAll" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>shouldReloadAll</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>snapshotRecordArray</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Boolean</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_shouldReloadAll">DS.Adapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapter.js.html#l481"><code>addon&#x2F;adapter.js:481</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">This method is used by the store to determine if the store should
+reload all records from the adapter when records are requested by
+<code>store.findAll</code>.
+
+If this method returns true, the store will re-fetch all records from
+the adapter. If this method returns false, the store will resolve
+immediately using the cached record.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshotRecordArray</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.SnapshotRecordArray.html" class="crosslink external" target="_blank">DS.SnapshotRecordArray</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Boolean</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-shouldReloadRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>shouldReloadRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Boolean</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_shouldReloadRecord">DS.Adapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapter.js.html#l463"><code>addon&#x2F;adapter.js:463</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">This method is used by the store to determine if the store should
+reload a record from the adapter when a record is requested by
+<code>store.findRecord</code>.
+
+If this method returns true, the store will re-fetch a record from
+the adapter. If this method returns false, the store will resolve
+immediately using the cached record.</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Boolean</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-sortQueryParams" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>sortQueryParams</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>obj</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#method_sortQueryParams">DS.RESTAdapter</a>:
+		<a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l199"><code>addon&#x2F;adapters&#x2F;rest.js:199</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">By default, the RESTAdapter will send the query params sorted alphabetically to the
+server.
+
+For example:
+
+<code>&#x60;</code>js
+  store.query('posts', { sort: 'price', category: 'pets' });
+<code>&#x60;</code>
+
+will generate a requests like this <code>&#x2F;posts?category=pets&amp;sort=price</code>, even if the
+parameters were specified in a different order.
+
+That way the generated URL will be deterministic and that simplifies caching mechanisms
+in the backend.
+
+Setting <code>sortQueryParams</code> to a falsey value will respect the original order.
+
+In case you want to sort the query parameters with a different criteria, set
+<code>sortQueryParams</code> to your custom sort function.
+
+<code>&#x60;</code>app/adapters/application.js
+import DS from 'ember-data';
+
+export default DS.RESTAdapter.extend({
+  sortQueryParams: function(params) {
+    var sortedKeys = Object.keys(params).sort().reverse();
+    var len = sortedKeys.length, newParams = {};
+
+    for (var i = 0; i < len; i++) {
+      newParams[sortedKeys[i]] = params[sortedKeys[i]];
+    }
+    return newParams;
+  }
+});
+<code>&#x60;</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">obj</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-toggleProperty" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>toggleProperty</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>keyName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Boolean</span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.Observable.html#method_toggleProperty">Ember.Observable</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_mixins_observable.js.html#l473"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;mixins&#x2F;observable.js:473</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Set the value of a boolean property to the opposite of its
+current value.
+
+<code>&#x60;</code>javascript
+starship.toggleProperty('warpDriveEngaged');
+<code>&#x60;</code></div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">keyName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+					<div class="param-description">The name of the property to toggle</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Boolean</span>:
+					The new property value
+			</div>
+		</div>
+
+</div>
+<div id="method-toString" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>toString</code></span>
+
+		<span class="paren">()</span>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.CoreObject.html#method_toString">Ember.CoreObject</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l484"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:484</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Returns a string representation which attempts to provide more information
+than Javascript's <code>toString</code> typically does, in a generic way for all Ember
+objects.
+
+<code>&#x60;</code>javascript
+App.Person = Em.Object.extend()
+person = App.Person.create()
+person.toString() //=> "<App.Person:ember1024>"
+<code>&#x60;</code>
+
+If the object's class is not defined on an Ember namespace, it will
+indicate it is a subclass of the registered superclass:
+
+   <code>&#x60;</code>javascript
+Student = App.Person.extend()
+student = Student.create()
+student.toString() //=> "<(subclass of App.Person):ember1025>"
+<code>&#x60;</code>
+
+If the method <code>toStringExtension</code> is defined, its return value will be
+included in the output.
+
+<code>&#x60;</code>javascript
+App.Teacher = App.Person.extend({
+  toStringExtension: function() {
+    return this.get('fullName');
+  }
+});
+teacher = App.Teacher.create()
+teacher.toString(); //=> "<App.Teacher:ember1026:Tom Dale>"
+<code>&#x60;</code></div>
+
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					string representation
+			</div>
+		</div>
+
+</div>
+<div id="method-updateRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>updateRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>store</code>
+				</li>
+				<li class="arg">
+						<code>type</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type">Promise</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+			<p>Inherited from
+			<a href="http://emberjs.com/api/data/classes/DS.Adapter.html#method_updateRecord">
+				DS.Adapter
+			</a>
+			but overwritten in
+		<a href="http://emberjs.com/api/data/files/addon_adapters_json-api.js.html#l116"><code>addon&#x2F;adapters&#x2F;json-api.js:116</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">store</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Store.html" class="crosslink external" target="_blank">DS.Store</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">type</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Model.html" class="crosslink external" target="_blank">DS.Model</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Promise</span>:
+					promise
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForCreateRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForCreateRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForCreateRecord">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l181"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:181</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForDeleteRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForDeleteRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>id</code>
+				</li>
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForDeleteRecord">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l202"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:202</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">id</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForFindAll" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForFindAll</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForFindAll">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l121"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:121</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForFindBelongTo" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForFindBelongTo</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>id</code>
+				</li>
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForFindBelongTo">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l171"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:171</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">id</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForFindHasMany" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForFindHasMany</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>id</code>
+				</li>
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForFindHasMany">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l161"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:161</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">id</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForFindMany" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForFindMany</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>ids</code>
+				</li>
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+				<li class="arg">
+						<code>snapshots</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForFindMany">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l150"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:150</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">ids</code>
+						<span class="type">Array</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshots</code>
+						<span class="type">Array</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForFindRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForFindRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>id</code>
+				</li>
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForFindRecord">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l110"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:110</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">id</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForQuery" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForQuery</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>query</code>
+				</li>
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForQuery">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l130"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:130</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">query</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForQueryRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForQueryRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>query</code>
+				</li>
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForQueryRecord">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l140"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:140</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">query</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlForUpdateRecord" class="method item inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlForUpdateRecord</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>id</code>
+				</li>
+				<li class="arg">
+						<code>modelName</code>
+				</li>
+				<li class="arg">
+						<code>snapshot</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlForUpdateRecord">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l191"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:191</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">id</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">modelName</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">snapshot</code>
+						<span class="type"><a href="http://emberjs.com/api/data/classes/DS.Snapshot.html" class="crosslink external" target="_blank">DS.Snapshot</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					url
+			</div>
+		</div>
+
+</div>
+<div id="method-urlPrefix" class="method item private inherited">
+	<div class="method-signature">
+	<span class="name"><code>urlPrefix</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>path</code>
+				</li>
+				<li class="arg">
+						<code>parentURL</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+		</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/data/classes/DS.BuildURLMixin.html#method_urlPrefix">DS.BuildURLMixin</a>:
+		<a href="http://emberjs.com/api/data/files/addon_-private_adapters_build-url-mixin.js.html#l213"><code>addon&#x2F;-private&#x2F;adapters&#x2F;build-url-mixin.js:213</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">path</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">parentURL</code>
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>:
+					urlPrefix
+			</div>
+		</div>
+
+</div>
+<div id="method-willDestroy" class="method item public inherited">
+	<div class="method-signature">
+	<span class="name"><code>willDestroy</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+		<span class="flag public">public</span>
+
+
+
+
+	<div class="meta">
+				<p>Inherited from
+				<a href="http://emberjs.com/api/classes/Ember.CoreObject.html#method_willDestroy">Ember.CoreObject</a>:
+		<a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l457"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:457</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description">Override to implement teardown.</div>
+
+
+
+</div>
+        </div>
+    </div>
+
+    <div id="properties" class="page-section">
+        <h2 class="off-left">Properties</h2>
+
+        <div class="item-list">
+<div id="prop-coalesceFindRequests" class="property item inherited">
+    <h3 class="name"><code>coalesceFindRequests</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+            <p>Inherited from
+            <a href="http://emberjs.com/api/data/classes/DS.Adapter.html#property_coalesceFindRequests">
+                DS.Adapter
+            </a>
+            but overwritten in
+        <a href="http://emberjs.com/api/data/files/addon_adapters_json-api.js.html#l43"><code>addon&#x2F;adapters&#x2F;json-api.js:43</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        By default the JSONAPIAdapter will send each find request coming from a <code>store.find</code>
+or from accessing a relationship separately to the server. If your server supports passing
+ids as a query string, you can set coalesceFindRequests to true to coalesce all find requests
+within a single runloop.
+
+For example, if you have an initial payload of:
+
+<code>&#x60;</code>javascript
+{
+  post: {
+    id: 1,
+    comments: [1, 2]
+  }
+}
+<code>&#x60;</code>
+
+By default calling <code>post.get(&#x27;comments&#x27;)</code> will trigger the following requests(assuming the
+comments haven't been loaded before):
+
+<code>&#x60;</code>
+GET /comments/1
+GET /comments/2
+<code>&#x60;</code>
+
+If you set coalesceFindRequests to <code>true</code> it will instead trigger the following request:
+
+<code>&#x60;</code>
+GET /comments?filter[id]=1,2
+<code>&#x60;</code>
+
+Setting coalesceFindRequests to <code>true</code> also works for <code>store.find</code> requests and <code>belongsTo</code>
+relationships accessed within the same runloop. If you set <code>coalesceFindRequests: true</code>
+
+<code>&#x60;</code>javascript
+store.findRecord('comment', 1);
+store.findRecord('comment', 2);
+<code>&#x60;</code>
+
+will also send a request to: <code>GET &#x2F;comments?filter[id]=1,2</code>
+
+Note: Requests coalescing rely on URL building strategy. So if you override <code>buildURL</code> in your app
+<code>groupRecordsForFindMany</code> more likely should be overridden as well in order for coalescing to work.
+    </div>
+
+
+
+</div>
+<div id="prop-concatenatedProperties" class="property item public inherited">
+    <h3 class="name"><code>concatenatedProperties</code></h3>
+    <span class="type">Array</span>
+
+
+        <span class="flag public">public</span>
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="http://emberjs.com/api/classes/Ember.CoreObject.html#property_concatenatedProperties">Ember.CoreObject</a>:
+        <a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l272"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:272</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Defines the properties that will be concatenated from the superclass
+(instead of overridden).
+
+By default, when you extend an Ember class a property defined in
+the subclass overrides a property with the same name that is defined
+in the superclass. However, there are some cases where it is preferable
+to build up a property's value by combining the superclass' property
+value with the subclass' value. An example of this in use within Ember
+is the <code>classNames</code> property of <code>Ember.View</code>.
+
+Here is some sample code showing the difference between a concatenated
+property and a normal one:
+
+<code>&#x60;</code>javascript
+App.BarView = Ember.View.extend({
+  someNonConcatenatedProperty: ['bar'],
+  classNames: ['bar']
+});
+
+App.FooBarView = App.BarView.extend({
+  someNonConcatenatedProperty: ['foo'],
+  classNames: ['foo']
+});
+
+var fooBarView = App.FooBarView.create();
+fooBarView.get('someNonConcatenatedProperty'); // ['foo']
+fooBarView.get('classNames'); // ['ember-view', 'bar', 'foo']
+<code>&#x60;</code>
+
+This behavior extends to object creation as well. Continuing the
+above example:
+
+<code>&#x60;</code>javascript
+var view = App.FooBarView.create({
+  someNonConcatenatedProperty: ['baz'],
+  classNames: ['baz']
+})
+view.get('someNonConcatenatedProperty'); // ['baz']
+view.get('classNames'); // ['ember-view', 'bar', 'foo', 'baz']
+<code>&#x60;</code>
+Adding a single property that is not an array will just add it in the array:
+
+<code>&#x60;</code>javascript
+var view = App.FooBarView.create({
+  classNames: 'baz'
+})
+view.get('classNames'); // ['ember-view', 'bar', 'foo', 'baz']
+<code>&#x60;</code>
+
+Using the <code>concatenatedProperties</code> property, we can tell Ember to mix the
+content of the properties.
+
+In <code>Ember.View</code> the <code>classNameBindings</code> and <code>attributeBindings</code> properties
+are also concatenated, in addition to <code>classNames</code>.
+
+This feature is available for you to use throughout the Ember object model,
+although typical app developers are likely to use it infrequently. Since
+it changes expectations about behavior of properties, you should properly
+document its usage in each individual concatenated property (to not
+mislead your users to think they can override the property in a subclass).
+    </div>
+
+        <p><strong>Default:</strong> null</p>
+
+
+</div>
+<div id="prop-defaultSerializer" class="property item inherited">
+    <h3 class="name"><code>defaultSerializer</code></h3>
+    <span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="http://emberjs.com/api/data/classes/DS.Adapter.html#property_defaultSerializer">DS.Adapter</a>:
+        <a href="http://emberjs.com/api/data/files/addon_adapter.js.html#l66"><code>addon&#x2F;adapter.js:66</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        If you would like your adapter to use a custom serializer you can
+set the <code>defaultSerializer</code> property to be the name of the custom
+serializer.
+
+Note the <code>defaultSerializer</code> serializer has a lower priority than
+a model specific serializer (i.e. <code>PostSerializer</code>) or the
+<code>application</code> serializer.
+
+<code>&#x60;</code>app/adapters/django.js
+import DS from 'ember-data';
+
+export default DS.Adapter.extend({
+  defaultSerializer: 'django'
+});
+<code>&#x60;</code>
+    </div>
+
+
+
+</div>
+<div id="prop-headers" class="property item inherited">
+    <h3 class="name"><code>headers</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#property_headers">DS.RESTAdapter</a>:
+        <a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l339"><code>addon&#x2F;adapters&#x2F;rest.js:339</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Some APIs require HTTP headers, e.g. to provide an API
+key. Arbitrary headers can be set as key/value pairs on the
+<code>RESTAdapter</code>'s <code>headers</code> object and Ember Data will send them
+along with each ajax request. For dynamic headers see [headers
+customization](/api/data/classes/DS.RESTAdapter.html#toc_headers-customization).
+
+<code>&#x60;</code>app/adapters/application.js
+import DS from 'ember-data';
+
+export default DS.RESTAdapter.extend({
+  headers: {
+    "API_KEY": "secret key",
+    "ANOTHER_HEADER": "Some header value"
+  }
+});
+<code>&#x60;</code>
+    </div>
+
+
+
+</div>
+<div id="prop-host" class="property item inherited">
+    <h3 class="name"><code>host</code></h3>
+    <span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#property_host">DS.RESTAdapter</a>:
+        <a href="http://emberjs.com/api/data/files/addon_adapters_rest.js.html#l322"><code>addon&#x2F;adapters&#x2F;rest.js:322</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        An adapter can target other hosts by setting the <code>host</code> property.
+
+<code>&#x60;</code>app/adapters/application.js
+import DS from 'ember-data';
+
+export default DS.RESTAdapter.extend({
+  host: 'https://api.example.com'
+});
+<code>&#x60;</code>
+
+Requests for the <code>Post</code> model would now target <code>https:&#x2F;&#x2F;api.example.com&#x2F;post&#x2F;</code>.
+    </div>
+
+
+
+</div>
+<div id="prop-isDestroyed" class="property item public inherited">
+    <h3 class="name"><code>isDestroyed</code></h3>
+    <span class="type">Unknown</span>
+
+
+        <span class="flag public">public</span>
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="http://emberjs.com/api/classes/Ember.CoreObject.html#property_isDestroyed">Ember.CoreObject</a>:
+        <a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l410"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:410</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Destroyed object property flag.
+
+if this property is <code>true</code> the observers and bindings were already
+removed by the effect of calling the <code>destroy()</code> method.
+    </div>
+
+        <p><strong>Default:</strong> false</p>
+
+
+</div>
+<div id="prop-isDestroying" class="property item public inherited">
+    <h3 class="name"><code>isDestroying</code></h3>
+    <span class="type">Unknown</span>
+
+
+        <span class="flag public">public</span>
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="http://emberjs.com/api/classes/Ember.CoreObject.html#property_isDestroying">Ember.CoreObject</a>:
+        <a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l422"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:422</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Destruction scheduled flag. The <code>destroy()</code> method has been called.
+
+The object stays intact until the end of the run loop at which point
+the <code>isDestroyed</code> flag is set.
+    </div>
+
+        <p><strong>Default:</strong> false</p>
+
+
+</div>
+<div id="prop-mergedProperties" class="property item public inherited">
+    <h3 class="name"><code>mergedProperties</code></h3>
+    <span class="type">Array</span>
+
+
+        <span class="flag public">public</span>
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="http://emberjs.com/api/classes/Ember.CoreObject.html#property_mergedProperties">Ember.CoreObject</a>:
+        <a href="http://emberjs.com/api/files/packages_ember-runtime_lib_system_core_object.js.html#l341"><code>packages&#x2F;ember-runtime&#x2F;lib&#x2F;system&#x2F;core_object.js:341</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Defines the properties that will be merged from the superclass
+(instead of overridden).
+
+By default, when you extend an Ember class a property defined in
+the subclass overrides a property with the same name that is defined
+in the superclass. However, there are some cases where it is preferable
+to build up a property's value by merging the superclass property value
+with the subclass property's value. An example of this in use within Ember
+is the <code>queryParams</code> property of routes.
+
+Here is some sample code showing the difference between a merged
+property and a normal one:
+
+<code>&#x60;</code>javascript
+App.BarRoute = Ember.Route.extend({
+  someNonMergedProperty: {
+    nonMerged: 'superclass value of nonMerged'
+  },
+  queryParams: {
+    page: {replace: false},
+    limit: {replace: true}
+  }
+});
+
+App.FooBarRoute = App.BarRoute.extend({
+  someNonMergedProperty: {
+    completelyNonMerged: 'subclass value of nonMerged'
+  },
+  queryParams: {
+    limit: {replace: false}
+  }
+});
+
+var fooBarRoute = App.FooBarRoute.create();
+
+fooBarRoute.get('someNonMergedProperty');
+// => { completelyNonMerged: 'subclass value of nonMerged' }
+//
+// Note the entire object, including the nonMerged property of
+// the superclass object, has been replaced
+
+fooBarRoute.get('queryParams');
+// => {
+//   page: {replace: false},
+//   limit: {replace: false}
+// }
+//
+// Note the page remains from the superclass, and the
+// <code>limit</code> property's value of <code>false</code> has been merged from
+// the subclass.
+<code>&#x60;</code>
+
+This behavior is not available during object <code>create</code> calls. It is only
+available at <code>extend</code> time.
+
+This feature is available for you to use throughout the Ember object model,
+although typical app developers are likely to use it infrequently. Since
+it changes expectations about behavior of properties, you should properly
+document its usage in each individual merged property (to not
+mislead your users to think they can override the property in a subclass).
+    </div>
+
+        <p><strong>Default:</strong> null</p>
+
+
+</div>
+<div id="prop-namespace" class="property item public">
+    <h3 class="name"><code>namespace</code></h3>
+    <span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+
+
+        <span class="flag public">public</span>
+
+
+
+    <div class="meta">
+            <p>Inherited from
+            <a href="http://emberjs.com/api/data/classes/DS.RESTAdapter.html#property_namespace">
+                DS.RESTAdapter
+            </a>
+            but overwritten in
+        <a href="../files/app_application_adapter.js.html#l12"><code>app&#x2F;application&#x2F;adapter.js:12</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The namespace for the API</p>
+
+    </div>
+
+        <p><strong>Default:</strong> &#x27;api/v1&#x27;</p>
+
+
+</div>
+        </div>
+    </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>
